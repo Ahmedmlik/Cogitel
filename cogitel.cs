@@ -1,0 +1,559 @@
+﻿using System;
+using System.Drawing;
+using System.Linq;
+using System.Reflection;
+using System.Windows.Forms;
+
+namespace Cogitel_QT
+{
+    public partial class cogitel : Form
+    {
+        public static cogitel Instance;
+        public cogitel()
+        {
+            InitializeComponent();
+            customizeDesing();
+            customizeDesing1();
+            Instance = this;
+            if (!System.Windows.Forms.SystemInformation.TerminalServerSession)
+            {
+                Type panelType = panelslidemenu.GetType();
+                PropertyInfo pi = panelType.GetProperty("DoubleBuffered", BindingFlags.Instance | BindingFlags.NonPublic);
+                pi.SetValue(panelslidemenu, true, null);
+            }
+            if (!System.Windows.Forms.SystemInformation.TerminalServerSession)
+            {
+                Type panelType = panelutilisateurmenu.GetType();
+                PropertyInfo pi = panelType.GetProperty("DoubleBuffered", BindingFlags.Instance | BindingFlags.NonPublic);
+                pi.SetValue(panelutilisateurmenu, true, null);
+            }
+            if (!System.Windows.Forms.SystemInformation.TerminalServerSession)
+            {
+                Type buttonType = button2.GetType();
+                PropertyInfo pi = buttonType.GetProperty("DoubleBuffered", BindingFlags.Instance | BindingFlags.NonPublic);
+                pi.SetValue(button2, true, null);
+            }
+            if (!System.Windows.Forms.SystemInformation.TerminalServerSession)
+            {
+                Type buttonType = button4.GetType();
+                PropertyInfo pi = buttonType.GetProperty("DoubleBuffered", BindingFlags.Instance | BindingFlags.NonPublic);
+                pi.SetValue(button4, true, null);
+            }
+            if (!System.Windows.Forms.SystemInformation.TerminalServerSession)
+            {
+                Type buttonType = button6.GetType();
+                PropertyInfo pi = buttonType.GetProperty("DoubleBuffered", BindingFlags.Instance | BindingFlags.NonPublic);
+                pi.SetValue(button6, true, null);
+            }
+            if (!System.Windows.Forms.SystemInformation.TerminalServerSession)
+            {
+                Type buttonType = button7.GetType();
+                PropertyInfo pi = buttonType.GetProperty("DoubleBuffered", BindingFlags.Instance | BindingFlags.NonPublic);
+                pi.SetValue(button7, true, null);
+            }
+            if (!System.Windows.Forms.SystemInformation.TerminalServerSession)
+            {
+                Type buttonType = buttonutili.GetType();
+                PropertyInfo pi = buttonType.GetProperty("DoubleBuffered", BindingFlags.Instance | BindingFlags.NonPublic);
+                pi.SetValue(buttonutili, true, null);
+            }
+        }
+        private void customizeDesing()
+        {
+            panelutilisateurmenu.Visible = false;
+        }
+        private void hidepanelutilisateurmenu()
+        {
+            if (panelutilisateurmenu.Visible == true)
+            {
+                panelutilisateurmenu.Visible = false;
+                panelRF.Visible = false;
+
+            }
+             
+            
+        }
+        private void hidepanelRF()
+        {
+            if (panelutilisateurmenu.Visible == true)
+            {
+                panelRF.Visible = false;
+                panelutilisateurmenu.Visible = false;
+            }
+
+
+        }
+        private void showpanelutilisateurmenu(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
+                hidepanelutilisateurmenu();
+                subMenu.Visible = true;
+            }
+            else
+                subMenu.Visible = false;
+        }
+        private void customizeDesing1()
+        {
+            panelRF.Visible = false;
+        }
+
+        private void showpanelRF(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
+                hidepanelRF();
+                subMenu.Visible = true;
+            }
+            else
+                subMenu.Visible = false;
+
+
+        }
+
+            bool close = true;
+        private void cogitel_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (close)
+            {
+
+                DialogResult result = MessageBox.Show("êtes-vous sûr de vouloir quitter", "Quitter", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    close = false;
+                    Application.Exit();
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        private void buttonutili_Click(object sender, EventArgs e)
+        {
+            showpanelutilisateurmenu(panelutilisateurmenu);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            cogitel.ActiveForm.Close();
+        }
+        private modifiermotdepasse formInstance1 = null;
+        private void button2_Click(object sender, EventArgs e)
+        {if (formInstance1 == null)
+            {
+                formInstance1 = new modifiermotdepasse();
+                formInstance1.FormClosed += (s, args) => formInstance1 = null;
+            }
+          
+            formInstance1.MdiParent = this;
+            formInstance1.Dock = DockStyle.Fill;
+            formInstance1.Show();
+            formInstance1.BringToFront();
+            hidepanelutilisateurmenu();
+        }
+
+
+
+
+        private Erc formInstance5 = null;
+        private void Erc_Click(object sender, EventArgs e)
+        {
+            hidepanelutilisateurmenu();
+            if (formInstance5 == null)
+            {
+                formInstance5 = new Erc();
+                formInstance5.FormClosed += (s, args) => formInstance5 = null;
+            }
+            formInstance5.MdiParent = this;
+            formInstance5.Dock = DockStyle.Fill;
+            formInstance5.WindowState = FormWindowState.Normal;
+            formInstance5.Show();
+            formInstance5.BringToFront();
+            panelslidemenu.Hide();
+
+        }
+
+        private void cogitel_Load(object sender, EventArgs e)
+        {
+          
+        }
+        private N__des_conds_et_des_aides_Conds formInstance = null;
+        private void button4_Click(object sender, EventArgs e)
+        {
+            hidepanelutilisateurmenu();
+            if (formInstance == null)
+            {
+                formInstance = new N__des_conds_et_des_aides_Conds();
+                formInstance.FormClosed += (s, args) => formInstance = null;
+            }
+            if (ButtonsVisibleget == false)
+            {
+                formInstance.SetButtonVisible(false);
+            }
+            formInstance.MdiParent = this;
+            formInstance.Dock = DockStyle.Fill;
+            formInstance.WindowState = FormWindowState.Normal;
+            formInstance.Show();
+            formInstance.BringToFront();
+            panelslidemenu.Hide();
+            
+        }
+
+        public void ShowOrHidePanel(bool show)
+        {
+            panelslidemenu.Visible = show;
+        }
+
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+            // Check if the slide menu is visible
+            if (panelslidemenu.Visible)
+            {
+                // If it is visible, hide the slide menu
+                panelslidemenu.Hide();
+            }
+            else
+            {
+                // If it is hidden, show the slide menu
+                panelslidemenu.Show();
+            }
+        }
+        private bool mouseDown;
+        private Point lastLocation;
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown = true;
+            lastLocation = e.Location;
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                this.Location = new Point(
+                    (this.Location.X - lastLocation.X) + e.X,
+                    (this.Location.Y - lastLocation.Y) + e.Y);
+
+                this.Update();
+            }
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
+        }
+        private bool maximized = false; // Variable pour stocker l'état actuel du formulaire
+        private void max_Click(object sender, EventArgs e)
+        {
+            if (!maximized) // Si le formulaire n'est pas déjà agrandi
+            {
+                this.WindowState = FormWindowState.Maximized;
+                maximized = true; // Mettre à jour l'état actuel du formulaire
+            }
+            else // Si le formulaire est déjà agrandi
+            {
+                this.WindowState = FormWindowState.Normal;
+                this.Size = new Size(800, 600);
+                maximized = false; // Mettre à jour l'état actuel du formulaire
+            }
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+ 
+        private Thèmes formInstance2 = null;
+        private void button6_Click(object sender, EventArgs e)
+        {
+            hidepanelutilisateurmenu();
+            if (formInstance2 == null)
+            {
+                formInstance2 = new Thèmes();
+                formInstance2.FormClosed += (s, args) => formInstance2 = null;
+            }
+            formInstance2.MdiParent = this;
+            formInstance2.Dock = DockStyle.Fill;
+            formInstance2.WindowState = FormWindowState.Normal;
+            formInstance2.Show();
+            formInstance2.BringToFront();
+            panelslidemenu.Hide();
+        }
+        private docpf formInstance3 = null;
+        private void button7_Click(object sender, EventArgs e)
+        {
+            hidepanelutilisateurmenu();
+            if (formInstance3 == null)
+            {
+                formInstance3 = new docpf();
+                formInstance3.FormClosed += (s, args) => formInstance3 = null;
+            }
+            formInstance3.MdiParent = this;
+            formInstance3.Dock = DockStyle.Fill;
+            formInstance3.WindowState = FormWindowState.Normal;
+            formInstance3.Show();
+            formInstance3.BringToFront();
+            panelslidemenu.Hide();
+        }
+
+        private void cogitel_SizeChanged(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+                this.Top = 0;
+                this.Left = 0;
+                this.Height = Screen.PrimaryScreen.WorkingArea.Height;
+                this.Width = Screen.PrimaryScreen.WorkingArea.Width;
+            }
+        }
+        private PrixPF formInstance4 = null;
+        private void button8_Click(object sender, EventArgs e)
+        {
+            hidepanelutilisateurmenu();
+            if (formInstance4 == null)
+            {
+                formInstance4 = new PrixPF();
+                formInstance4.FormClosed += (s, args) => formInstance4 = null;
+            }
+            formInstance4.MdiParent = this;
+            formInstance4.Dock = DockStyle.Fill;
+            formInstance4.WindowState = FormWindowState.Normal;
+            formInstance4.Show();
+            formInstance4.BringToFront();
+            panelslidemenu.Hide();
+        }
+        public void SetButtonVisible(bool isVisible)
+        {
+            // Définissez la propriété Visible du bouton en fonction de la valeur booléenne passée en paramètre
+            button2.Visible = isVisible;
+        }
+        public bool ButtonsVisibleget { get; set; }
+        private tableau_de_bord_RC formInstance6 = null;
+        private void button9_Click(object sender, EventArgs e)
+        {
+            hidepanelutilisateurmenu();
+            if (formInstance6 == null)
+            {
+                formInstance6 = new tableau_de_bord_RC();
+                formInstance6.FormClosed += (s, args) => formInstance6 = null;
+            }
+            formInstance6.MdiParent = this;
+            formInstance6.Dock = DockStyle.Fill;
+            formInstance6.WindowState = FormWindowState.Normal;
+            formInstance6.Show();
+            formInstance6.BringToFront();
+            panelslidemenu.Hide();
+        }
+        private prix_lot formInstance7 = null;
+        private void button10_Click(object sender, EventArgs e)
+        {
+            hidepanelutilisateurmenu();
+            if (formInstance7 == null)
+            {
+                formInstance7 = new prix_lot();
+                formInstance7.FormClosed += (s, args) => formInstance7 = null;
+            }
+            formInstance7.MdiParent = this;
+            formInstance7.Dock = DockStyle.Fill;
+            formInstance7.WindowState = FormWindowState.Normal;
+            formInstance7.Show();
+            formInstance7.BringToFront();
+            panelslidemenu.Hide();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            showpanelRF(panelRF);
+        }
+        private RFMR formInstance8 = null;
+        private void button12_Click(object sender, EventArgs e)
+        {
+            hidepanelutilisateurmenu();
+            hidepanelRF();
+            if (formInstance8 == null)
+            {
+                formInstance8 = new RFMR();
+                formInstance8.FormClosed += (s, args) => formInstance8 = null;
+            }
+            formInstance8.MdiParent = this;
+            formInstance8.Dock = DockStyle.Fill;
+            formInstance8.WindowState = FormWindowState.Normal;
+            formInstance8.Show();
+            formInstance8.BringToFront();
+            panelslidemenu.Hide();
+        }
+
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
+        }
+
+        private void max_MouseHover(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void max_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
+        }
+
+        private void button3_MouseHover(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void button3_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
+        }
+
+        private void button5_MouseHover(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void button5_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
+        }
+
+        private void buttonutili_MouseHover(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void buttonutili_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
+        }
+
+        private void button2_MouseHover(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void button2_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
+        }
+
+        private void button4_MouseHover(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void button4_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
+        }
+
+        private void button6_MouseHover(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void button6_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
+        }
+
+        private void button7_MouseHover(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void button7_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
+        }
+
+        private void button8_MouseHover(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void button8_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
+        }
+
+        private void button10_MouseHover(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void button10_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
+        }
+
+        private void Erc_MouseHover(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void Erc_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
+        }
+
+        private void button9_MouseHover(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void button9_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
+        }
+
+        private void button11_MouseHover(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void button11_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
+        }
+
+        private void button12_MouseHover(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void button12_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
+        }
+
+        private void button13_MouseHover(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void button13_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
+        }
+    }
+
+}
