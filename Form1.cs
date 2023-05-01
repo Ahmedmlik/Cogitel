@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
 using System.Threading;
 using System.Configuration;
+using System.Net.Sockets;
 
 
 
@@ -139,19 +140,17 @@ namespace Cogitel_QT
                     SqlDataReader reader = command2.ExecuteReader();
 
                     DateTime lastEmailDate = new DateTime(); // Initialiser la variable pour la première exécution
-
+                    bool emailSent = false;
                     while (reader.Read())
                     {
                         int differenceDates = Convert.ToInt32(reader["F70"]);
                         string numNonConformite = reader["N_de_la_NC"].ToString();
                         string email = reader["email"].ToString();
                         string Client = reader["Client"].ToString();
-
-
-
-
                         if (differenceDates == 5)
                         {
+                            
+
                             // Vérifier si la dernière date d'envoi est différente de la date actuelle
                             if (lastEmailDate.Date != DateTime.Now.Date)
                             {
@@ -171,20 +170,42 @@ namespace Cogitel_QT
                                 client.Credentials = new NetworkCredential(smtpUsername, smtpPassword);
                                 Console.WriteLine("messdae envoyer");
                                 MailMessage message = new MailMessage(from, to, subject, body);
-                                client.Send(message);
+                                string localIP = "";
+                                foreach (IPAddress ip in Dns.GetHostAddresses(Dns.GetHostName()))
+                                {
+                                    if (ip.AddressFamily == AddressFamily.InterNetwork)
+                                    {
+                                        localIP = ip.ToString();
+                                        break;
+                                    }
+                                }
 
-                                Thread.Sleep(1000);
+                                // Ajout de l'en-tête X-Originating-IP avec l'adresse IP locale
+                                message.Headers.Add("X-Originating-IP", localIP);
+                                message.Headers.Add("X-Mailer", "Microsoft Outlook");
+                                message.Headers.Add("X-Sender", "Cogitel_Conformite@outlook.fr");
+                                message.Headers.Add("X-Antispam", "none");
+                                message.Headers.Add("X-Antivirus", "none");
+                                client.Send(message);
+                                emailSent = true;
+
+
+                                Thread.Sleep(500);
 
                             }
-                            string sqlQuery4 = "UPDATE EmailConfig SET LastEmailSent = @lastEmailSent WHERE id_email = 1";
-                            SqlCommand command4 = new SqlCommand(sqlQuery4, connection);
-                            command4.Parameters.AddWithValue("@lastEmailSent", DateTime.Now);
-                            command4.ExecuteNonQuery();
+                           
                             // Fermeture de la connexion
                         }
                     }
 
                     reader.Close();
+                    if (emailSent)
+                    {
+                        string sqlQuery4 = "UPDATE EmailConfig SET LastEmailSent = @lastEmailSent WHERE id_email = 1";
+                        SqlCommand command4 = new SqlCommand(sqlQuery4, connection);
+                        command4.Parameters.AddWithValue("@lastEmailSent", DateTime.Now);
+                        command4.ExecuteNonQuery();
+                    }
                 }
             }
             
