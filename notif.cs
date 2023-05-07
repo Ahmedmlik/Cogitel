@@ -27,7 +27,7 @@ namespace Cogitel_QT
         
         private void notif_Load(object sender, EventArgs e)
         {
-            string query = "SELECT  N_de_la_NC, Client, F70  FROM NCE WHERE Date_réponse_client IS NULL ";
+            string query = "SELECT  N_de_la_NC, Client, F70  FROM NCE WHERE Date_réponse_client IS NULL ORDER BY F70 DESC ";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -48,7 +48,7 @@ namespace Cogitel_QT
                 dataGridView1.Columns["Client"].HeaderText = "Client";
                 dataGridView1.Columns["F70"].HeaderText = "Temps d'attente";
                 // Fermer la connexion à la base de données
-                dataGridView1.Columns["F70"].DefaultCellStyle.Format = "jours";
+                dataGridView1.Columns["F70"].DefaultCellStyle.Format = "0 'jours'";
                 connection.Close();
             }
 
