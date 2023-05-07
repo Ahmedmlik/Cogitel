@@ -48,6 +48,45 @@ namespace Cogitel_QT
 
         private void Erc_Load(object sender, System.EventArgs e)
         {
+            string sqlQueryYears = "SELECT DISTINCT YEAR(Date_de_réclamtion) as year FROM NCE";
+            using (SqlCommand command = new SqlCommand(sqlQueryYears, connection))
+            {
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable tableYears = new DataTable();
+                adapter.Fill(tableYears);
+                // Create an empty row
+                DataRow emptyRow = tableYears.NewRow();
+
+                // Set the value of the "year" column to DBNull.Value
+                emptyRow["year"] = DBNull.Value;
+
+                // Add the empty row to the DataTable
+                tableYears.Rows.InsertAt(emptyRow, 0);
+
+                // Bind the results to the ComboBox
+                comboBox1.DataSource = tableYears;
+                comboBox1.DisplayMember = "year";
+                comboBox1.ValueMember = "year";
+                comboBox1.SelectedIndex = 0;
+
+            }
+            string sqlQueryClient = "SELECT DISTINCT Client as Client FROM NCE";
+            using (SqlCommand command = new SqlCommand(sqlQueryClient, connection))
+            {
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable tableclient = new DataTable();
+                adapter.Fill(tableclient);
+                // Add an empty row to the DataTable
+                DataRow emptyRow = tableclient.NewRow();
+                emptyRow["Client"] = "";
+                tableclient.Rows.InsertAt(emptyRow, 0);
+
+                // Bind the results to the ComboBox
+                comboBox2.DataSource = tableclient;
+                comboBox2.DisplayMember = "Client";
+                comboBox2.ValueMember = "Client";
+                comboBox2.SelectedIndex = 0; // définit la valeur par défaut à vide
+            }
             textBox14.Text = "Rechercher...";
             textBox14.ForeColor = System.Drawing.Color.Black;
             LoadData();
@@ -374,58 +413,87 @@ namespace Cogitel_QT
             {
                 // Récupérer le chemin complet du fichier sélectionné
                 string filePath = saveFileDialog.FileName;
-
+                string selectedValue1 = comboBox1.SelectedValue?.ToString();
+                string selectedValue2 = comboBox2.SelectedValue?.ToString();
                 // Connexion à la base de données
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
                     Console.WriteLine("Connexion établie avec succès.");
+                    string sqlQuery = "SELECT * FROM NCE WHERE 1=1 ";
 
-                    // Récupération des données de la table
-                    string sqlQuery = "SELECT * FROM NCE ORDER BY id_NCE ASC";
-                    using (SqlCommand command = new SqlCommand(sqlQuery, connection))
+                    // Ajout des conditions de filtrage
+                    if (!string.IsNullOrEmpty(selectedValue1) && string.IsNullOrEmpty(selectedValue2))
                     {
-                        SqlDataAdapter adapter = new SqlDataAdapter(command);
-                        DataTable table = new DataTable();
-                        adapter.Fill(table);
-                        
-
-                        // Création du document Excel avec ClosedXML
-                        var workbook = new XLWorkbook();
-                        var worksheet = workbook.Worksheets.Add("NCE");
-
-                        // Ajout des en-têtes
-                        for (int i = 0; i < table.Columns.Count; i++)
+                        // Filtre par année
+                        if (int.TryParse(selectedValue1, out int year))
                         {
-                            worksheet.Cell(1, i + 1).Value = table.Columns[i].ColumnName;
+                            sqlQuery += $"AND YEAR(Date_de_réclamtion) = {year} ";
                         }
-
-                        // Ajout des données
-                        for (int row = 0; row < table.Rows.Count; row++)
+                    }
+                    else if (string.IsNullOrEmpty(selectedValue1) && !string.IsNullOrEmpty(selectedValue2))
+                    {
+                        // Filtre par client
+                        sqlQuery += $"AND Client = '{selectedValue2}' ";
+                    }
+                    else if (!string.IsNullOrEmpty(selectedValue1) && !string.IsNullOrEmpty(selectedValue2))
+                    {
+                        // Filtre par année et client
+                        if (int.TryParse(selectedValue1, out int year))
                         {
-                            for (int col = 0; col < table.Columns.Count; col++)
-                            {
-                                // Check if the value can be parsed as a number
-                                if (double.TryParse(table.Rows[row][col].ToString(), out double numValue))
-                                {
-                                    // Store the value as a number
-                                    worksheet.Cell(row + 2, col + 1).SetValue(numValue);
-                                }
-                                else
-                                {
-                                    string value = table.Rows[row][col].ToString().Replace(Environment.NewLine, " ");
+                            sqlQuery += $"AND YEAR(Date_de_réclamtion) = {year} ";
+                        }
+                        sqlQuery += $"AND Client = '{selectedValue2}' ";
+                    }
 
-                                    // Write the value to the cell
-                                    worksheet.Cell(row + 2, col + 1).Value = value;
+                    sqlQuery += "ORDER BY id_NCE ASC";
+
+                    using (SqlCommand command = new SqlCommand(sqlQuery, connection))
+                        {
+                           
+                            SqlDataAdapter adapter = new SqlDataAdapter(command);
+                            DataTable table = new DataTable();
+                            adapter.Fill(table);
+
+
+                            // Création du document Excel avec ClosedXML
+                            var workbook = new XLWorkbook();
+                            var worksheet = workbook.Worksheets.Add("NCE");
+
+                            // Ajout des en-têtes
+                            for (int i = 0; i < table.Columns.Count; i++)
+                            {
+                                worksheet.Cell(1, i + 1).Value = table.Columns[i].ColumnName;
+                            }
+
+                            // Ajout des données
+                            for (int row = 0; row < table.Rows.Count; row++)
+                            {
+                                for (int col = 0; col < table.Columns.Count; col++)
+                                {
+                                    // Check if the value can be parsed as a number
+                                    if (double.TryParse(table.Rows[row][col].ToString(), out double numValue))
+                                    {
+                                        // Store the value as a number
+                                        worksheet.Cell(row + 2, col + 1).SetValue(numValue);
+                                    }
+                                    else
+                                    {
+                                        string value = table.Rows[row][col].ToString().Replace(Environment.NewLine, " ");
+
+                                        // Write the value to the cell
+                                        worksheet.Cell(row + 2, col + 1).Value = value;
+                                    }
                                 }
                             }
+
+                            // Enregistrement du document Excel
+                            workbook.SaveAs(filePath);
+                            MessageBox.Show("Le fichier Excel a été enregistré avec succès !", "Succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                         }
-
-                        // Enregistrement du document Excel
-                        workbook.SaveAs(filePath);
-                        MessageBox.Show("Le fichier Excel a été enregistré avec succès !", "Succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    }
+                    
+                  
                 }
             }
         }
