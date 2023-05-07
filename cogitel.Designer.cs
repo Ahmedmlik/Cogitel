@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cogitel));
             this.panelslidemenu = new System.Windows.Forms.Panel();
             this.panelRF = new System.Windows.Forms.Panel();
@@ -45,13 +46,14 @@
             this.button2 = new System.Windows.Forms.Button();
             this.buttonutili = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.loginTableAdapter1 = new Cogitel_QT.CogitelDataSetTableAdapters.LoginTableAdapter();
+            this.loginTableAdapter2 = new Cogitel_QT.CogitelDataSetTableAdapters.LoginTableAdapter();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.button3 = new System.Windows.Forms.Button();
             this.max = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.loginTableAdapter1 = new Cogitel_QT.CogitelDataSetTableAdapters.LoginTableAdapter();
-            this.loginTableAdapter2 = new Cogitel_QT.CogitelDataSetTableAdapters.LoginTableAdapter();
             this.panelslidemenu.SuspendLayout();
             this.panelRF.SuspendLayout();
             this.panelutilisateurmenu.SuspendLayout();
@@ -344,6 +346,31 @@
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(202, 925);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(797, 28);
+            this.panel3.TabIndex = 11;
+            // 
+            // loginTableAdapter1
+            // 
+            this.loginTableAdapter1.ClearBeforeFill = true;
+            // 
+            // loginTableAdapter2
+            // 
+            this.loginTableAdapter2.ClearBeforeFill = true;
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            this.notifyIcon1.BalloonTipClicked += new System.EventHandler(this.notifyIcon1_BalloonTipClicked);
+            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.White;
@@ -412,24 +439,6 @@
             this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
             this.button1.MouseHover += new System.EventHandler(this.button1_MouseHover);
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(202, 925);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(797, 28);
-            this.panel3.TabIndex = 11;
-            // 
-            // loginTableAdapter1
-            // 
-            this.loginTableAdapter1.ClearBeforeFill = true;
-            // 
-            // loginTableAdapter2
-            // 
-            this.loginTableAdapter2.ClearBeforeFill = true;
-            // 
             // cogitel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -485,5 +494,6 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button12;
+        public System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }

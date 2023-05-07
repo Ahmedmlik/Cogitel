@@ -1,13 +1,19 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Reflection;
+using System.Text;
 using System.Windows.Forms;
 
 namespace Cogitel_QT
 {
     public partial class cogitel : Form
     {
+        string connectionString = ConfigurationManager.ConnectionStrings["MaConnexion"].ConnectionString;
+        SqlConnection connection;
         public static cogitel Instance;
         public cogitel()
         {
@@ -182,7 +188,7 @@ namespace Cogitel_QT
 
         private void cogitel_Load(object sender, EventArgs e)
         {
-          
+            AfficherNotificationNonConformitesSansReponse();
         }
         private N__des_conds_et_des_aides_Conds formInstance = null;
         private void button4_Click(object sender, EventArgs e)
@@ -553,6 +559,48 @@ namespace Cogitel_QT
         private void button13_MouseLeave(object sender, EventArgs e)
         {
             this.Cursor = Cursors.Arrow;
+        }
+        private void AfficherNotificationNonConformitesSansReponse()
+        {
+            
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT Client, N_de_la_NC FROM NCE WHERE Date_réponse_client IS NULL ";
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataReader reader = command.ExecuteReader();
+                List<string> nonConformities = new List<string>();
+                while (reader.Read())
+                {
+                    string client = reader.IsDBNull(0) ? "" : reader.GetString(0);
+                    string nonConformity = reader.IsDBNull(1) ? "" : reader.GetString(1);
+                    if (!string.IsNullOrEmpty(client) && !string.IsNullOrEmpty(nonConformity))
+                    {
+                        nonConformities.Add(client + " / " + nonConformity);
+                    }
+                   
+                }
+                // Fermeture de la connexion à la base de données
+                reader.Close();
+                connection.Close();
+                StringBuilder notificationTextBuilder = new StringBuilder();
+                notificationTextBuilder.AppendLine("Les non-conformités suivantes nécessitent une réponse :");
+                foreach (string nonConformity in nonConformities)
+                {
+                    string truncatedNonConformity = nonConformity.Substring(0, Math.Min(nonConformity.Length, 50));
+                    notificationTextBuilder.AppendLine("- " + truncatedNonConformity);
+                }
+                string notificationText = notificationTextBuilder.ToString();
+                // Affichez la notification avec les non-conformités avec une date de réponse vide
+                notifyIcon1.ShowBalloonTip(10000, "Non-conformités sans réponse", notificationText, ToolTipIcon.Warning);
+            }
+
+        }
+
+        private void notifyIcon1_BalloonTipClicked(object sender, EventArgs e)
+        {
+            notif formNotif = new notif();
+            formNotif.Show();
         }
     }
 

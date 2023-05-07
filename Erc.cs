@@ -48,6 +48,7 @@ namespace Cogitel_QT
 
         private void Erc_Load(object sender, System.EventArgs e)
         {
+            
             string sqlQueryYears = "SELECT DISTINCT YEAR(Date_de_réclamtion) as year FROM NCE";
             using (SqlCommand command = new SqlCommand(sqlQueryYears, connection))
             {
@@ -92,7 +93,7 @@ namespace Cogitel_QT
             LoadData();
             // Charger les données de la source de données
 
-          
+
             //Ouvrir une connexion à la base de données
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -151,7 +152,7 @@ namespace Cogitel_QT
         private int offset = 0;
         public void LoadData()
         {
-            
+
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -282,7 +283,7 @@ namespace Cogitel_QT
                 if (dialogResult == DialogResult.Yes)
                 {
                     // Supprimer la ligne correspondante de la base de données
-            
+
                     string query = "DELETE FROM NCE WHERE id_NCE = @id"; // Remplacer "MaTable" par le nom de votre table et "Id" par le nom de votre colonne d'identifiant unique
                     using (SqlConnection Connexion = new SqlConnection(connectionString))
                     {
@@ -352,7 +353,7 @@ namespace Cogitel_QT
 
         private void button5_Click(object sender, EventArgs e)
         {
-          
+
             string searchTerm = textBox14.Text;
             if (DateTime.TryParse(searchTerm, out DateTime searchDate))
             {
@@ -449,51 +450,51 @@ namespace Cogitel_QT
                     sqlQuery += "ORDER BY id_NCE ASC";
 
                     using (SqlCommand command = new SqlCommand(sqlQuery, connection))
+                    {
+
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+                        DataTable table = new DataTable();
+                        adapter.Fill(table);
+
+
+                        // Création du document Excel avec ClosedXML
+                        var workbook = new XLWorkbook();
+                        var worksheet = workbook.Worksheets.Add("NCE");
+
+                        // Ajout des en-têtes
+                        for (int i = 0; i < table.Columns.Count; i++)
                         {
-                           
-                            SqlDataAdapter adapter = new SqlDataAdapter(command);
-                            DataTable table = new DataTable();
-                            adapter.Fill(table);
+                            worksheet.Cell(1, i + 1).Value = table.Columns[i].ColumnName;
+                        }
 
-
-                            // Création du document Excel avec ClosedXML
-                            var workbook = new XLWorkbook();
-                            var worksheet = workbook.Worksheets.Add("NCE");
-
-                            // Ajout des en-têtes
-                            for (int i = 0; i < table.Columns.Count; i++)
+                        // Ajout des données
+                        for (int row = 0; row < table.Rows.Count; row++)
+                        {
+                            for (int col = 0; col < table.Columns.Count; col++)
                             {
-                                worksheet.Cell(1, i + 1).Value = table.Columns[i].ColumnName;
-                            }
-
-                            // Ajout des données
-                            for (int row = 0; row < table.Rows.Count; row++)
-                            {
-                                for (int col = 0; col < table.Columns.Count; col++)
+                                // Check if the value can be parsed as a number
+                                if (double.TryParse(table.Rows[row][col].ToString(), out double numValue))
                                 {
-                                    // Check if the value can be parsed as a number
-                                    if (double.TryParse(table.Rows[row][col].ToString(), out double numValue))
-                                    {
-                                        // Store the value as a number
-                                        worksheet.Cell(row + 2, col + 1).SetValue(numValue);
-                                    }
-                                    else
-                                    {
-                                        string value = table.Rows[row][col].ToString().Replace(Environment.NewLine, " ");
+                                    // Store the value as a number
+                                    worksheet.Cell(row + 2, col + 1).SetValue(numValue);
+                                }
+                                else
+                                {
+                                    string value = table.Rows[row][col].ToString().Replace(Environment.NewLine, " ");
 
-                                        // Write the value to the cell
-                                        worksheet.Cell(row + 2, col + 1).Value = value;
-                                    }
+                                    // Write the value to the cell
+                                    worksheet.Cell(row + 2, col + 1).Value = value;
                                 }
                             }
-
-                            // Enregistrement du document Excel
-                            workbook.SaveAs(filePath);
-                            MessageBox.Show("Le fichier Excel a été enregistré avec succès !", "Succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                         }
-                    
-                  
+
+                        // Enregistrement du document Excel
+                        workbook.SaveAs(filePath);
+                        MessageBox.Show("Le fichier Excel a été enregistré avec succès !", "Succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+
+
                 }
             }
         }
@@ -705,5 +706,6 @@ namespace Cogitel_QT
                 button3.PerformClick();
             }
         }
+        
     }
 }
