@@ -75,7 +75,7 @@
             this.panelslidemenu.Location = new System.Drawing.Point(0, 0);
             this.panelslidemenu.Margin = new System.Windows.Forms.Padding(4);
             this.panelslidemenu.Name = "panelslidemenu";
-            this.panelslidemenu.Size = new System.Drawing.Size(202, 953);
+            this.panelslidemenu.Size = new System.Drawing.Size(202, 600);
             this.panelslidemenu.TabIndex = 3;
             // 
             // panelRF
@@ -340,7 +340,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(202, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(797, 45);
+            this.panel1.Size = new System.Drawing.Size(869, 45);
             this.panel1.TabIndex = 9;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
@@ -351,9 +351,9 @@
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(202, 925);
+            this.panel3.Location = new System.Drawing.Point(202, 572);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(797, 28);
+            this.panel3.Size = new System.Drawing.Size(869, 28);
             this.panel3.TabIndex = 11;
             // 
             // loginTableAdapter1
@@ -378,7 +378,7 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = global::Cogitel_QT.Properties.Resources.minus_sign__1___1_;
-            this.button3.Location = new System.Drawing.Point(642, 0);
+            this.button3.Location = new System.Drawing.Point(714, 0);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(51, 41);
             this.button3.TabIndex = 10;
@@ -394,7 +394,7 @@
             this.max.FlatAppearance.BorderSize = 0;
             this.max.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.max.Image = global::Cogitel_QT.Properties.Resources.maximize__1_;
-            this.max.Location = new System.Drawing.Point(693, 0);
+            this.max.Location = new System.Drawing.Point(765, 0);
             this.max.Name = "max";
             this.max.Size = new System.Drawing.Size(60, 41);
             this.max.TabIndex = 9;
@@ -429,7 +429,7 @@
             this.button1.ForeColor = System.Drawing.Color.Green;
             this.button1.Image = global::Cogitel_QT.Properties.Resources.cancel__1_;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.button1.Location = new System.Drawing.Point(753, 0);
+            this.button1.Location = new System.Drawing.Point(825, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(40, 41);
             this.button1.TabIndex = 6;
@@ -441,10 +441,10 @@
             // 
             // cogitel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(999, 953);
+            this.ClientSize = new System.Drawing.Size(1071, 600);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelslidemenu);
@@ -456,8 +456,9 @@
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "cogitel";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "COGITEL QL";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.cogitel_FormClosing);
             this.Load += new System.EventHandler(this.cogitel_Load);
             this.SizeChanged += new System.EventHandler(this.cogitel_SizeChanged);
