@@ -171,6 +171,7 @@ namespace Cogitel_QT
         private Erc formInstance5 = null;
         private void Erc_Click(object sender, EventArgs e)
         {
+            
             hidepanelutilisateurmenu();
             if (formInstance5 == null)
             {
@@ -182,9 +183,13 @@ namespace Cogitel_QT
             formInstance5.WindowState = FormWindowState.Normal;
             formInstance5.Show();
             formInstance5.BringToFront();
+           
             panelslidemenu.Hide();
 
+
+
         }
+
 
         private void cogitel_Load(object sender, EventArgs e)
         {
@@ -603,6 +608,8 @@ namespace Cogitel_QT
             notif formNotif = new notif();
             formNotif.Show();
         }
+
+       
     }
 
 }

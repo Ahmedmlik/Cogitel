@@ -23,6 +23,7 @@ namespace Cogitel_QT
         public Erc()
         {
             InitializeComponent();
+            
             connection = new SqlConnection(connectionString);
             this.FormClosing += new FormClosingEventHandler(Erc_FormClosing);
             if (!System.Windows.Forms.SystemInformation.TerminalServerSession)
@@ -48,7 +49,7 @@ namespace Cogitel_QT
 
         private void Erc_Load(object sender, System.EventArgs e)
         {
-            
+           
             string sqlQueryYears = "SELECT DISTINCT YEAR(Date_de_réclamtion) as year FROM NCE";
             using (SqlCommand command = new SqlCommand(sqlQueryYears, connection))
             {
@@ -342,6 +343,7 @@ namespace Cogitel_QT
                 ERCAMS ercams = Application.OpenForms.OfType<ERCAMS>().FirstOrDefault();
                 ercams.Close();
             }
+            
         }
 
         private void button7_Click(object sender, EventArgs e)
