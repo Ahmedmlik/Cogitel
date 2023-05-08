@@ -382,6 +382,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="21_gbd_sust_cogitel_r_8_5_res_586x371 %283%29.ico" />
+    <None Include="Resources\eye.png" />
+    <None Include="Resources\eye %281%29.png" />
     <None Include="Resources\spreadsheet-column %281%29.png" />
     <None Include="Resources\excel %282%29.png" />
     <None Include="Resources\excel %281%29.png" />

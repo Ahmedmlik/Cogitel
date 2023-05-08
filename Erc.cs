@@ -773,5 +773,17 @@ namespace Cogitel_QT
 
             }
         }
+
+        private void button10_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip toolTip = new System.Windows.Forms.ToolTip();
+            toolTip.SetToolTip(this.button10, "Consulter");
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void button10_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
+        }
     }
 }
