@@ -48,7 +48,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.loginTableAdapter1 = new Cogitel_QT.CogitelDataSetTableAdapters.LoginTableAdapter();
-            this.loginTableAdapter2 = new Cogitel_QT.CogitelDataSetTableAdapters.LoginTableAdapter();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.button3 = new System.Windows.Forms.Button();
             this.max = new System.Windows.Forms.Button();
@@ -247,10 +246,6 @@
             // 
             this.loginTableAdapter1.ClearBeforeFill = true;
             // 
-            // loginTableAdapter2
-            // 
-            this.loginTableAdapter2.ClearBeforeFill = true;
-            // 
             // notifyIcon1
             // 
             resources.ApplyResources(this.notifyIcon1, "notifyIcon1");
@@ -348,7 +343,6 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
-        private CogitelDataSetTableAdapters.LoginTableAdapter loginTableAdapter2;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Panel panelRF;
