@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using static Cogitel_QT.CogitelDataSet;
 using System.Configuration;
 
+
 namespace Cogitel_QT
 {
     public partial class docpf : Form
@@ -804,75 +805,7 @@ namespace Cogitel_QT
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
-                textBox1.Text = selectedRow.Cells["dOCUMENTDataGridViewTextBoxColumn"].Value.ToString().Replace("\n", Environment.NewLine);
-                textBox1.ForeColor = Color.Black;
-                textBox1.Multiline = true;
 
-                textBox2.Text = selectedRow.Cells["nOFDataGridViewTextBoxColumn"].Value.ToString().Replace("\n", Environment.NewLine);
-                textBox2.ForeColor = Color.Black;
-                textBox2.Multiline = true;
-
-                textBox3.Text = selectedRow.Cells["cATEGDataGridViewTextBoxColumn"].Value.ToString().Replace("\n", Environment.NewLine);
-                textBox3.ForeColor = Color.Black;
-                textBox3.Multiline = true;
-
-                textBox4.Text = selectedRow.Cells["cLIENTDataGridViewTextBoxColumn"].Value.ToString().Replace("\n", Environment.NewLine);
-                textBox4.ForeColor = Color.Black;
-                textBox4.Multiline = true;
-
-                textBox5.Text = selectedRow.Cells["fAMILLEDataGridViewTextBoxColumn"].Value.ToString().Replace("\n", Environment.NewLine);
-                textBox5.ForeColor = Color.Black;
-                textBox5.Multiline = true;
-
-                textBox6.Text = selectedRow.Cells["rEFDataGridViewTextBoxColumn"].Value.ToString().Replace("\n", Environment.NewLine);
-                textBox6.ForeColor = Color.Black;
-                textBox6.Multiline = true;
-
-                textBox7.Text = selectedRow.Cells["dESIGNTIONDataGridViewTextBoxColumn"].Value.ToString().Replace("\n", Environment.NewLine);
-                textBox7.ForeColor = Color.Black;
-                textBox7.Multiline = true;
-
-                textBox8.Text = selectedRow.Cells["gRAMMAGEDataGridViewTextBoxColumn"].Value.ToString().Replace("\n", Environment.NewLine);
-                textBox8.ForeColor = Color.Black;
-                textBox8.Multiline = true;
-
-                textBox9.Text = selectedRow.Cells["lTDataGridViewTextBoxColumn"].Value.ToString().Replace("\n", Environment.NewLine);
-                textBox9.ForeColor = Color.Black;
-                textBox9.Multiline = true;
-
-                textBox10.Text = selectedRow.Cells["lDDataGridViewTextBoxColumn"].Value.ToString().Replace("\n", Environment.NewLine);
-                textBox10.ForeColor = Color.Black;
-                textBox10.Multiline = true;
-
-                textBox11.Text = selectedRow.Cells["nbPosesDataGridViewTextBoxColumn"].Value.ToString().Replace("\n", Environment.NewLine);
-                textBox11.ForeColor = Color.Black;
-                textBox11.Multiline = true;
-
-                textBox12.Text = selectedRow.Cells["nbcylindresDataGridViewTextBoxColumn"].Value.ToString().Replace("\n", Environment.NewLine);
-                textBox12.ForeColor = Color.Black;
-                textBox12.Multiline = true;
-
-                textBox13.Text = selectedRow.Cells["pRIXDEVENTEDataGridViewTextBoxColumn"].Value.ToString().Replace("\n", Environment.NewLine);
-                textBox13.ForeColor = Color.Black;
-                textBox13.Multiline = true;
-                textBox1.Size = new System.Drawing.Size(214, 67);
-                textBox2.Size = new System.Drawing.Size(214, 67);
-                textBox3.Size = new System.Drawing.Size(214, 67);
-                textBox4.Size = new System.Drawing.Size(214, 67);
-                textBox5.Size = new System.Drawing.Size(214, 67);
-                textBox6.Size = new System.Drawing.Size(214, 67);
-                textBox7.Size = new System.Drawing.Size(214, 67);
-                textBox8.Size = new System.Drawing.Size(214, 67);
-                textBox9.Size = new System.Drawing.Size(214, 67);
-                textBox10.Size = new System.Drawing.Size(214, 67);
-                textBox11.Size = new System.Drawing.Size(214, 67);
-                textBox12.Size = new System.Drawing.Size(214, 67);
-                textBox13.Size = new System.Drawing.Size(214, 67);
-
-            }
         }
 
         private void docpf_KeyDown(object sender, KeyEventArgs e)
@@ -929,13 +862,6 @@ namespace Cogitel_QT
 
         private void dataGridView1_Scroll(object sender, ScrollEventArgs e)
         {
-            if (e.Type == ScrollEventType.SmallIncrement && e.ScrollOrientation == ScrollOrientation.VerticalScroll && e.NewValue >= dataGridView1.Rows.Count - dataGridView1.DisplayedRowCount(true))
-            {
-                int firstDisplayedRowIndex = dataGridView1.FirstDisplayedScrollingRowIndex;
-                offset += limit;
-                LoadData();
-                dataGridView1.FirstDisplayedScrollingRowIndex = firstDisplayedRowIndex;
-            }
 
         }
 
@@ -1016,6 +942,11 @@ namespace Cogitel_QT
         private void button6_MouseLeave(object sender, EventArgs e)
         {
             this.Cursor = Cursors.Arrow;
+        }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

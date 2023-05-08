@@ -81,8 +81,11 @@ namespace Cogitel_QT
             this.panel3 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.pFBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cogitelDataSet = new Cogitel_QT.CogitelDataSet();
+            this.pFTableAdapter = new Cogitel_QT.CogitelDataSetTableAdapters.PFTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.id_pf = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idpfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dOCUMENTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nOFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cATEGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -96,9 +99,6 @@ namespace Cogitel_QT
             this.nbPosesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nbcylindresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRIXDEVENTEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pFBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cogitelDataSet = new Cogitel_QT.CogitelDataSet();
-            this.pFTableAdapter = new Cogitel_QT.CogitelDataSetTableAdapters.PFTableAdapter();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
@@ -108,9 +108,9 @@ namespace Cogitel_QT
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pFBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cogitelDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -765,6 +765,20 @@ namespace Cogitel_QT
             this.button5.MouseLeave += new System.EventHandler(this.button5_MouseLeave);
             this.button5.MouseHover += new System.EventHandler(this.button5_MouseHover);
             // 
+            // pFBindingSource
+            // 
+            this.pFBindingSource.DataMember = "PF";
+            this.pFBindingSource.DataSource = this.cogitelDataSet;
+            // 
+            // cogitelDataSet
+            // 
+            this.cogitelDataSet.DataSetName = "CogitelDataSet";
+            this.cogitelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pFTableAdapter
+            // 
+            this.pFTableAdapter.ClearBeforeFill = true;
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowDrop = true;
@@ -793,7 +807,7 @@ namespace Cogitel_QT
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id_pf,
+            this.idpfDataGridViewTextBoxColumn,
             this.dOCUMENTDataGridViewTextBoxColumn,
             this.nOFDataGridViewTextBoxColumn,
             this.cATEGDataGridViewTextBoxColumn,
@@ -820,6 +834,7 @@ namespace Cogitel_QT
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dataGridView1.Location = new System.Drawing.Point(0, 301);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -842,41 +857,37 @@ namespace Cogitel_QT
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(897, 306);
-            this.dataGridView1.TabIndex = 27;
+            this.dataGridView1.TabIndex = 33;
             this.dataGridView1.TabStop = false;
             this.dataGridView1.VirtualMode = true;
-            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            this.dataGridView1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dataGridView1_Scroll);
             // 
-            // id_pf
+            // idpfDataGridViewTextBoxColumn
             // 
-            this.id_pf.DataPropertyName = "id_pf";
-            this.id_pf.HeaderText = "id_pf";
-            this.id_pf.MinimumWidth = 6;
-            this.id_pf.Name = "id_pf";
-            this.id_pf.ReadOnly = true;
-            this.id_pf.Visible = false;
-            this.id_pf.Width = 75;
+            this.idpfDataGridViewTextBoxColumn.DataPropertyName = "id_pf";
+            this.idpfDataGridViewTextBoxColumn.HeaderText = "id_pf";
+            this.idpfDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idpfDataGridViewTextBoxColumn.Name = "idpfDataGridViewTextBoxColumn";
+            this.idpfDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idpfDataGridViewTextBoxColumn.Visible = false;
+            this.idpfDataGridViewTextBoxColumn.Width = 73;
             // 
             // dOCUMENTDataGridViewTextBoxColumn
             // 
             this.dOCUMENTDataGridViewTextBoxColumn.DataPropertyName = "DOCUMENT";
             this.dOCUMENTDataGridViewTextBoxColumn.HeaderText = "DOCUMENT";
-            this.dOCUMENTDataGridViewTextBoxColumn.MinimumWidth = 100;
+            this.dOCUMENTDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dOCUMENTDataGridViewTextBoxColumn.Name = "dOCUMENTDataGridViewTextBoxColumn";
             this.dOCUMENTDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dOCUMENTDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dOCUMENTDataGridViewTextBoxColumn.Width = 161;
+            this.dOCUMENTDataGridViewTextBoxColumn.Width = 184;
             // 
             // nOFDataGridViewTextBoxColumn
             // 
             this.nOFDataGridViewTextBoxColumn.DataPropertyName = "NOF";
-            this.nOFDataGridViewTextBoxColumn.HeaderText = "OF";
+            this.nOFDataGridViewTextBoxColumn.HeaderText = "NOF";
             this.nOFDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nOFDataGridViewTextBoxColumn.Name = "nOFDataGridViewTextBoxColumn";
             this.nOFDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nOFDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.nOFDataGridViewTextBoxColumn.Width = 53;
+            this.nOFDataGridViewTextBoxColumn.Width = 94;
             // 
             // cATEGDataGridViewTextBoxColumn
             // 
@@ -885,8 +896,7 @@ namespace Cogitel_QT
             this.cATEGDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.cATEGDataGridViewTextBoxColumn.Name = "cATEGDataGridViewTextBoxColumn";
             this.cATEGDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cATEGDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.cATEGDataGridViewTextBoxColumn.Width = 103;
+            this.cATEGDataGridViewTextBoxColumn.Width = 126;
             // 
             // cLIENTDataGridViewTextBoxColumn
             // 
@@ -895,8 +905,7 @@ namespace Cogitel_QT
             this.cLIENTDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.cLIENTDataGridViewTextBoxColumn.Name = "cLIENTDataGridViewTextBoxColumn";
             this.cLIENTDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cLIENTDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.cLIENTDataGridViewTextBoxColumn.Width = 107;
+            this.cLIENTDataGridViewTextBoxColumn.Width = 130;
             // 
             // fAMILLEDataGridViewTextBoxColumn
             // 
@@ -905,8 +914,7 @@ namespace Cogitel_QT
             this.fAMILLEDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.fAMILLEDataGridViewTextBoxColumn.Name = "fAMILLEDataGridViewTextBoxColumn";
             this.fAMILLEDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fAMILLEDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.fAMILLEDataGridViewTextBoxColumn.Width = 121;
+            this.fAMILLEDataGridViewTextBoxColumn.Width = 144;
             // 
             // rEFDataGridViewTextBoxColumn
             // 
@@ -915,8 +923,7 @@ namespace Cogitel_QT
             this.rEFDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.rEFDataGridViewTextBoxColumn.Name = "rEFDataGridViewTextBoxColumn";
             this.rEFDataGridViewTextBoxColumn.ReadOnly = true;
-            this.rEFDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.rEFDataGridViewTextBoxColumn.Width = 68;
+            this.rEFDataGridViewTextBoxColumn.Width = 91;
             // 
             // dESIGNTIONDataGridViewTextBoxColumn
             // 
@@ -925,8 +932,7 @@ namespace Cogitel_QT
             this.dESIGNTIONDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dESIGNTIONDataGridViewTextBoxColumn.Name = "dESIGNTIONDataGridViewTextBoxColumn";
             this.dESIGNTIONDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dESIGNTIONDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dESIGNTIONDataGridViewTextBoxColumn.Width = 172;
+            this.dESIGNTIONDataGridViewTextBoxColumn.Width = 195;
             // 
             // gRAMMAGEDataGridViewTextBoxColumn
             // 
@@ -935,8 +941,7 @@ namespace Cogitel_QT
             this.gRAMMAGEDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.gRAMMAGEDataGridViewTextBoxColumn.Name = "gRAMMAGEDataGridViewTextBoxColumn";
             this.gRAMMAGEDataGridViewTextBoxColumn.ReadOnly = true;
-            this.gRAMMAGEDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.gRAMMAGEDataGridViewTextBoxColumn.Width = 163;
+            this.gRAMMAGEDataGridViewTextBoxColumn.Width = 186;
             // 
             // lTDataGridViewTextBoxColumn
             // 
@@ -945,8 +950,7 @@ namespace Cogitel_QT
             this.lTDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.lTDataGridViewTextBoxColumn.Name = "lTDataGridViewTextBoxColumn";
             this.lTDataGridViewTextBoxColumn.ReadOnly = true;
-            this.lTDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.lTDataGridViewTextBoxColumn.Width = 48;
+            this.lTDataGridViewTextBoxColumn.Width = 71;
             // 
             // lDDataGridViewTextBoxColumn
             // 
@@ -955,52 +959,34 @@ namespace Cogitel_QT
             this.lDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.lDDataGridViewTextBoxColumn.Name = "lDDataGridViewTextBoxColumn";
             this.lDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.lDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.lDDataGridViewTextBoxColumn.Width = 51;
+            this.lDDataGridViewTextBoxColumn.Width = 74;
             // 
             // nbPosesDataGridViewTextBoxColumn
             // 
             this.nbPosesDataGridViewTextBoxColumn.DataPropertyName = "Nb_Poses";
-            this.nbPosesDataGridViewTextBoxColumn.HeaderText = "Nb Poses";
+            this.nbPosesDataGridViewTextBoxColumn.HeaderText = "Nb_Poses";
             this.nbPosesDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nbPosesDataGridViewTextBoxColumn.Name = "nbPosesDataGridViewTextBoxColumn";
             this.nbPosesDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nbPosesDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.nbPosesDataGridViewTextBoxColumn.Width = 126;
+            this.nbPosesDataGridViewTextBoxColumn.Width = 156;
             // 
             // nbcylindresDataGridViewTextBoxColumn
             // 
             this.nbcylindresDataGridViewTextBoxColumn.DataPropertyName = "Nb_cylindres";
-            this.nbcylindresDataGridViewTextBoxColumn.HeaderText = "Nb cylindres";
+            this.nbcylindresDataGridViewTextBoxColumn.HeaderText = "Nb_cylindres";
             this.nbcylindresDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nbcylindresDataGridViewTextBoxColumn.Name = "nbcylindresDataGridViewTextBoxColumn";
             this.nbcylindresDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nbcylindresDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.nbcylindresDataGridViewTextBoxColumn.Width = 154;
+            this.nbcylindresDataGridViewTextBoxColumn.Width = 184;
             // 
             // pRIXDEVENTEDataGridViewTextBoxColumn
             // 
             this.pRIXDEVENTEDataGridViewTextBoxColumn.DataPropertyName = "PRIX_DE_VENTE";
-            this.pRIXDEVENTEDataGridViewTextBoxColumn.HeaderText = "PRIX DE VENTE";
+            this.pRIXDEVENTEDataGridViewTextBoxColumn.HeaderText = "PRIX_DE_VENTE";
             this.pRIXDEVENTEDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.pRIXDEVENTEDataGridViewTextBoxColumn.Name = "pRIXDEVENTEDataGridViewTextBoxColumn";
             this.pRIXDEVENTEDataGridViewTextBoxColumn.ReadOnly = true;
-            this.pRIXDEVENTEDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.pRIXDEVENTEDataGridViewTextBoxColumn.Width = 205;
-            // 
-            // pFBindingSource
-            // 
-            this.pFBindingSource.DataMember = "PF";
-            this.pFBindingSource.DataSource = this.cogitelDataSet;
-            // 
-            // cogitelDataSet
-            // 
-            this.cogitelDataSet.DataSetName = "CogitelDataSet";
-            this.cogitelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pFTableAdapter
-            // 
-            this.pFTableAdapter.ClearBeforeFill = true;
+            this.pRIXDEVENTEDataGridViewTextBoxColumn.Width = 242;
             // 
             // docpf
             // 
@@ -1049,9 +1035,9 @@ namespace Cogitel_QT
             this.tableLayoutPanel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pFBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cogitelDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1102,10 +1088,12 @@ namespace Cogitel_QT
         private Panel panel3;
         private Button button7;
         private Button button5;
-        private DataGridView dataGridView1;
         private Button button3;
         private Button button2;
-        private DataGridViewTextBoxColumn id_pf;
+        private DataGridViewTextBoxColumn timestamp2DataGridViewTextBoxColumn;
+        private Label label14;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn idpfDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn dOCUMENTDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn nOFDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn cATEGDataGridViewTextBoxColumn;
@@ -1119,7 +1107,5 @@ namespace Cogitel_QT
         private DataGridViewTextBoxColumn nbPosesDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn nbcylindresDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn pRIXDEVENTEDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn timestamp2DataGridViewTextBoxColumn;
-        private Label label14;
     }
 }

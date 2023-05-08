@@ -410,7 +410,7 @@
             // 
             this.tableLayoutPanel4.AutoSize = true;
             this.tableLayoutPanel4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
+            this.tableLayoutPanel4.BackColor = System.Drawing.Color.DarkGray;
             this.tableLayoutPanel4.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
             this.tableLayoutPanel4.ColumnCount = 5;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -437,7 +437,7 @@
             this.label13.AutoSize = true;
             this.label13.Dock = System.Windows.Forms.DockStyle.Top;
             this.label13.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.ForeColor = System.Drawing.Color.Black;
             this.label13.Location = new System.Drawing.Point(897, 2);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(217, 27);
@@ -449,7 +449,7 @@
             this.label9.AutoSize = true;
             this.label9.Dock = System.Windows.Forms.DockStyle.Top;
             this.label9.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(674, 2);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(215, 27);
@@ -461,7 +461,7 @@
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Top;
             this.label8.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(451, 2);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(215, 27);
@@ -473,7 +473,7 @@
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Top;
             this.label7.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(228, 2);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(215, 54);
@@ -485,7 +485,7 @@
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Top;
             this.label6.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(5, 2);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(215, 27);
@@ -576,7 +576,7 @@
             // 
             this.tableLayoutPanel2.AutoSize = true;
             this.tableLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.DarkGray;
             this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
             this.tableLayoutPanel2.ColumnCount = 5;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -604,7 +604,7 @@
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Top;
             this.label5.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(897, 2);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(217, 27);
@@ -616,7 +616,7 @@
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Top;
             this.label4.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(674, 2);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(215, 27);
@@ -628,7 +628,7 @@
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Top;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(451, 2);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(215, 54);
@@ -640,7 +640,7 @@
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(228, 2);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(215, 27);
@@ -652,7 +652,7 @@
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(5, 2);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(215, 27);
@@ -684,10 +684,11 @@
             // 
             // textBox11
             // 
-            this.textBox11.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox11.BackColor = System.Drawing.SystemColors.GrayText;
             this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox11.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox11.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox11.ForeColor = System.Drawing.Color.White;
             this.textBox11.Location = new System.Drawing.Point(3, 3);
             this.textBox11.Name = "textBox11";
             this.textBox11.ReadOnly = true;
@@ -699,10 +700,11 @@
             // 
             this.textBox12.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.textBox12.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBox12.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox12.BackColor = System.Drawing.SystemColors.GrayText;
             this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox12.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox12.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox12.ForeColor = System.Drawing.Color.White;
             this.textBox12.Location = new System.Drawing.Point(226, 3);
             this.textBox12.Name = "textBox12";
             this.textBox12.ReadOnly = true;
@@ -725,10 +727,11 @@
             // 
             // textBox14
             // 
-            this.textBox14.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox14.BackColor = System.Drawing.SystemColors.GrayText;
             this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox14.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox14.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox14.ForeColor = System.Drawing.Color.White;
             this.textBox14.Location = new System.Drawing.Point(672, 3);
             this.textBox14.Name = "textBox14";
             this.textBox14.ReadOnly = true;
@@ -740,10 +743,11 @@
             // 
             this.textBox13.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.textBox13.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBox13.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox13.BackColor = System.Drawing.SystemColors.GrayText;
             this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox13.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox13.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox13.ForeColor = System.Drawing.Color.White;
             this.textBox13.Location = new System.Drawing.Point(449, 3);
             this.textBox13.Name = "textBox13";
             this.textBox13.ReadOnly = true;
@@ -755,7 +759,7 @@
             // 
             this.tableLayoutPanel6.AutoSize = true;
             this.tableLayoutPanel6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
+            this.tableLayoutPanel6.BackColor = System.Drawing.Color.DarkGray;
             this.tableLayoutPanel6.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
             this.tableLayoutPanel6.ColumnCount = 5;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -781,9 +785,10 @@
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.DarkGray;
             this.label10.Dock = System.Windows.Forms.DockStyle.Top;
             this.label10.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(897, 2);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(217, 27);
@@ -793,6 +798,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.DarkGreen;
             this.label11.Dock = System.Windows.Forms.DockStyle.Top;
             this.label11.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
@@ -805,6 +811,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.DarkGreen;
             this.label12.Dock = System.Windows.Forms.DockStyle.Top;
             this.label12.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
@@ -817,6 +824,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.DarkGreen;
             this.label15.Dock = System.Windows.Forms.DockStyle.Top;
             this.label15.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
@@ -829,6 +837,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.DarkGreen;
             this.label16.Dock = System.Windows.Forms.DockStyle.Top;
             this.label16.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
@@ -875,10 +884,11 @@
             // 
             this.textBox17.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.textBox17.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBox17.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox17.BackColor = System.Drawing.SystemColors.GrayText;
             this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox17.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox17.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox17.ForeColor = System.Drawing.Color.White;
             this.textBox17.Location = new System.Drawing.Point(226, 3);
             this.textBox17.Name = "textBox17";
             this.textBox17.ReadOnly = true;
@@ -925,7 +935,7 @@
             // 
             this.tableLayoutPanel8.AutoSize = true;
             this.tableLayoutPanel8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
+            this.tableLayoutPanel8.BackColor = System.Drawing.Color.DarkGray;
             this.tableLayoutPanel8.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
             this.tableLayoutPanel8.ColumnCount = 5;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -951,9 +961,10 @@
             // label17
             // 
             this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.DarkGray;
             this.label17.Dock = System.Windows.Forms.DockStyle.Top;
             this.label17.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.ForeColor = System.Drawing.Color.Black;
             this.label17.Location = new System.Drawing.Point(897, 2);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(217, 54);
@@ -965,7 +976,7 @@
             this.label18.AutoSize = true;
             this.label18.Dock = System.Windows.Forms.DockStyle.Top;
             this.label18.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.ForeColor = System.Drawing.Color.Black;
             this.label18.Location = new System.Drawing.Point(674, 2);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(215, 27);
@@ -975,9 +986,10 @@
             // label19
             // 
             this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.DarkGray;
             this.label19.Dock = System.Windows.Forms.DockStyle.Top;
             this.label19.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.ForeColor = System.Drawing.Color.Black;
             this.label19.Location = new System.Drawing.Point(451, 2);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(215, 54);
@@ -987,6 +999,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.DarkGreen;
             this.label20.Dock = System.Windows.Forms.DockStyle.Top;
             this.label20.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.White;
@@ -1001,7 +1014,7 @@
             this.label21.AutoSize = true;
             this.label21.Dock = System.Windows.Forms.DockStyle.Top;
             this.label21.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.ForeColor = System.Drawing.Color.Black;
             this.label21.Location = new System.Drawing.Point(5, 2);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(215, 27);
@@ -1033,10 +1046,11 @@
             // 
             // textBox21
             // 
-            this.textBox21.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox21.BackColor = System.Drawing.SystemColors.GrayText;
             this.textBox21.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox21.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox21.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox21.ForeColor = System.Drawing.Color.White;
             this.textBox21.Location = new System.Drawing.Point(3, 3);
             this.textBox21.Name = "textBox21";
             this.textBox21.ReadOnly = true;
@@ -1061,10 +1075,11 @@
             // 
             this.textBox23.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.textBox23.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBox23.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox23.BackColor = System.Drawing.SystemColors.GrayText;
             this.textBox23.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox23.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox23.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox23.ForeColor = System.Drawing.Color.White;
             this.textBox23.Location = new System.Drawing.Point(449, 3);
             this.textBox23.Name = "textBox23";
             this.textBox23.ReadOnly = true;
@@ -1098,7 +1113,7 @@
             // 
             this.tableLayoutPanel10.AutoSize = true;
             this.tableLayoutPanel10.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
+            this.tableLayoutPanel10.BackColor = System.Drawing.Color.DarkGray;
             this.tableLayoutPanel10.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
             this.tableLayoutPanel10.ColumnCount = 5;
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -1126,7 +1141,7 @@
             this.label22.AutoSize = true;
             this.label22.Dock = System.Windows.Forms.DockStyle.Top;
             this.label22.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.White;
+            this.label22.ForeColor = System.Drawing.Color.Black;
             this.label22.Location = new System.Drawing.Point(897, 2);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(217, 27);
@@ -1138,7 +1153,7 @@
             this.label23.AutoSize = true;
             this.label23.Dock = System.Windows.Forms.DockStyle.Top;
             this.label23.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.White;
+            this.label23.ForeColor = System.Drawing.Color.Black;
             this.label23.Location = new System.Drawing.Point(674, 2);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(215, 27);
@@ -1148,6 +1163,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.DarkGreen;
             this.label24.Dock = System.Windows.Forms.DockStyle.Top;
             this.label24.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.White;
@@ -1162,7 +1178,7 @@
             this.label25.AutoSize = true;
             this.label25.Dock = System.Windows.Forms.DockStyle.Top;
             this.label25.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.White;
+            this.label25.ForeColor = System.Drawing.Color.Black;
             this.label25.Location = new System.Drawing.Point(228, 2);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(215, 54);
@@ -1172,14 +1188,15 @@
             // label26
             // 
             this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.Color.DarkGreen;
             this.label26.Dock = System.Windows.Forms.DockStyle.Top;
             this.label26.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.White;
             this.label26.Location = new System.Drawing.Point(5, 2);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(215, 54);
+            this.label26.Size = new System.Drawing.Size(215, 81);
             this.label26.TabIndex = 0;
-            this.label26.Text = "Nom et prénom du conducteur du défaut";
+            this.label26.Text = "Nom et prénom du conducteur du défaut         ";
             // 
             // tableLayoutPanel11
             // 
@@ -1240,10 +1257,11 @@
             // 
             // textBox29
             // 
-            this.textBox29.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox29.BackColor = System.Drawing.SystemColors.GrayText;
             this.textBox29.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox29.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox29.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox29.ForeColor = System.Drawing.Color.White;
             this.textBox29.Location = new System.Drawing.Point(672, 3);
             this.textBox29.Name = "textBox29";
             this.textBox29.ReadOnly = true;
@@ -1254,10 +1272,11 @@
             // 
             // textBox30
             // 
-            this.textBox30.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox30.BackColor = System.Drawing.SystemColors.GrayText;
             this.textBox30.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox30.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox30.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox30.ForeColor = System.Drawing.Color.White;
             this.textBox30.Location = new System.Drawing.Point(895, 3);
             this.textBox30.Name = "textBox30";
             this.textBox30.ReadOnly = true;
@@ -1270,7 +1289,7 @@
             // 
             this.tableLayoutPanel12.AutoSize = true;
             this.tableLayoutPanel12.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
+            this.tableLayoutPanel12.BackColor = System.Drawing.Color.DarkGray;
             this.tableLayoutPanel12.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
             this.tableLayoutPanel12.ColumnCount = 5;
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -1296,33 +1315,35 @@
             // label27
             // 
             this.label27.AutoSize = true;
+            this.label27.BackColor = System.Drawing.Color.DarkGreen;
             this.label27.Dock = System.Windows.Forms.DockStyle.Top;
             this.label27.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.White;
             this.label27.Location = new System.Drawing.Point(897, 2);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(217, 54);
+            this.label27.Size = new System.Drawing.Size(217, 81);
             this.label27.TabIndex = 9;
-            this.label27.Text = "Laize du produit non conforme (mm)";
+            this.label27.Text = "Laize du produit non conforme (mm)               ";
             // 
             // label28
             // 
             this.label28.AutoSize = true;
+            this.label28.BackColor = System.Drawing.Color.DarkGreen;
             this.label28.Dock = System.Windows.Forms.DockStyle.Top;
             this.label28.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.White;
             this.label28.Location = new System.Drawing.Point(674, 2);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(215, 54);
+            this.label28.Size = new System.Drawing.Size(215, 81);
             this.label28.TabIndex = 4;
-            this.label28.Text = "Grammage du produit NC";
+            this.label28.Text = "Grammage du produit NC                                                         ";
             // 
             // label29
             // 
             this.label29.AutoSize = true;
             this.label29.Dock = System.Windows.Forms.DockStyle.Top;
             this.label29.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.Color.White;
+            this.label29.ForeColor = System.Drawing.Color.Black;
             this.label29.Location = new System.Drawing.Point(451, 2);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(215, 81);
@@ -1334,7 +1355,7 @@
             this.label30.AutoSize = true;
             this.label30.Dock = System.Windows.Forms.DockStyle.Top;
             this.label30.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.Color.White;
+            this.label30.ForeColor = System.Drawing.Color.Black;
             this.label30.Location = new System.Drawing.Point(228, 2);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(215, 27);
@@ -1346,7 +1367,7 @@
             this.label31.AutoSize = true;
             this.label31.Dock = System.Windows.Forms.DockStyle.Top;
             this.label31.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.Color.White;
+            this.label31.ForeColor = System.Drawing.Color.Black;
             this.label31.Location = new System.Drawing.Point(5, 2);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(215, 54);
@@ -1378,10 +1399,11 @@
             // 
             // textBox31
             // 
-            this.textBox31.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox31.BackColor = System.Drawing.SystemColors.GrayText;
             this.textBox31.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox31.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox31.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox31.ForeColor = System.Drawing.Color.White;
             this.textBox31.Location = new System.Drawing.Point(3, 3);
             this.textBox31.Name = "textBox31";
             this.textBox31.ReadOnly = true;
@@ -1444,7 +1466,7 @@
             // 
             this.tableLayoutPanel14.AutoSize = true;
             this.tableLayoutPanel14.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
+            this.tableLayoutPanel14.BackColor = System.Drawing.Color.DarkGray;
             this.tableLayoutPanel14.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
             this.tableLayoutPanel14.ColumnCount = 5;
             this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -1472,7 +1494,7 @@
             this.label32.AutoSize = true;
             this.label32.Dock = System.Windows.Forms.DockStyle.Top;
             this.label32.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.ForeColor = System.Drawing.Color.White;
+            this.label32.ForeColor = System.Drawing.Color.Black;
             this.label32.Location = new System.Drawing.Point(897, 2);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(217, 27);
@@ -1484,7 +1506,7 @@
             this.label33.AutoSize = true;
             this.label33.Dock = System.Windows.Forms.DockStyle.Top;
             this.label33.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.ForeColor = System.Drawing.Color.White;
+            this.label33.ForeColor = System.Drawing.Color.Black;
             this.label33.Location = new System.Drawing.Point(674, 2);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(215, 27);
@@ -1496,7 +1518,7 @@
             this.label34.AutoSize = true;
             this.label34.Dock = System.Windows.Forms.DockStyle.Top;
             this.label34.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.ForeColor = System.Drawing.Color.White;
+            this.label34.ForeColor = System.Drawing.Color.Black;
             this.label34.Location = new System.Drawing.Point(451, 2);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(215, 27);
@@ -1508,7 +1530,7 @@
             this.label35.AutoSize = true;
             this.label35.Dock = System.Windows.Forms.DockStyle.Top;
             this.label35.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.ForeColor = System.Drawing.Color.White;
+            this.label35.ForeColor = System.Drawing.Color.Black;
             this.label35.Location = new System.Drawing.Point(228, 2);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(215, 54);
@@ -1518,14 +1540,15 @@
             // label36
             // 
             this.label36.AutoSize = true;
+            this.label36.BackColor = System.Drawing.Color.DarkGreen;
             this.label36.Dock = System.Windows.Forms.DockStyle.Top;
             this.label36.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.White;
             this.label36.Location = new System.Drawing.Point(5, 2);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(215, 27);
+            this.label36.Size = new System.Drawing.Size(215, 54);
             this.label36.TabIndex = 0;
-            this.label36.Text = "Nombre de pistes";
+            this.label36.Text = "Nombre de pistes                         ";
             // 
             // tableLayoutPanel15
             // 
@@ -1592,10 +1615,11 @@
             // 
             // textBox39
             // 
-            this.textBox39.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox39.BackColor = System.Drawing.SystemColors.GrayText;
             this.textBox39.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox39.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox39.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox39.ForeColor = System.Drawing.Color.White;
             this.textBox39.Location = new System.Drawing.Point(672, 3);
             this.textBox39.Name = "textBox39";
             this.textBox39.ReadOnly = true;
@@ -1608,10 +1632,11 @@
             // 
             // textBox40
             // 
-            this.textBox40.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox40.BackColor = System.Drawing.SystemColors.GrayText;
             this.textBox40.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox40.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox40.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox40.ForeColor = System.Drawing.Color.White;
             this.textBox40.Location = new System.Drawing.Point(895, 3);
             this.textBox40.Name = "textBox40";
             this.textBox40.ReadOnly = true;
@@ -1624,7 +1649,7 @@
             // 
             this.tableLayoutPanel16.AutoSize = true;
             this.tableLayoutPanel16.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
+            this.tableLayoutPanel16.BackColor = System.Drawing.Color.DarkGray;
             this.tableLayoutPanel16.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
             this.tableLayoutPanel16.ColumnCount = 5;
             this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -1650,33 +1675,35 @@
             // label37
             // 
             this.label37.AutoSize = true;
+            this.label37.BackColor = System.Drawing.Color.DarkGreen;
             this.label37.Dock = System.Windows.Forms.DockStyle.Top;
             this.label37.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.ForeColor = System.Drawing.Color.White;
             this.label37.Location = new System.Drawing.Point(897, 2);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(217, 27);
+            this.label37.Size = new System.Drawing.Size(217, 54);
             this.label37.TabIndex = 9;
-            this.label37.Text = "Quantité NC (ML)";
+            this.label37.Text = "Quantité NC (ML)                 ";
             // 
             // label38
             // 
             this.label38.AutoSize = true;
+            this.label38.BackColor = System.Drawing.Color.DarkGreen;
             this.label38.Dock = System.Windows.Forms.DockStyle.Top;
             this.label38.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label38.ForeColor = System.Drawing.Color.White;
             this.label38.Location = new System.Drawing.Point(674, 2);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(215, 27);
+            this.label38.Size = new System.Drawing.Size(215, 54);
             this.label38.TabIndex = 4;
-            this.label38.Text = "Quantité NC (Kg)";
+            this.label38.Text = "Quantité NC (Kg)                       ";
             // 
             // label39
             // 
             this.label39.AutoSize = true;
             this.label39.Dock = System.Windows.Forms.DockStyle.Top;
             this.label39.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.ForeColor = System.Drawing.Color.White;
+            this.label39.ForeColor = System.Drawing.Color.Black;
             this.label39.Location = new System.Drawing.Point(451, 2);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(215, 54);
@@ -1688,7 +1715,7 @@
             this.label40.AutoSize = true;
             this.label40.Dock = System.Windows.Forms.DockStyle.Top;
             this.label40.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.ForeColor = System.Drawing.Color.White;
+            this.label40.ForeColor = System.Drawing.Color.Black;
             this.label40.Location = new System.Drawing.Point(228, 2);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(215, 27);
@@ -1700,7 +1727,7 @@
             this.label41.AutoSize = true;
             this.label41.Dock = System.Windows.Forms.DockStyle.Top;
             this.label41.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.ForeColor = System.Drawing.Color.White;
+            this.label41.ForeColor = System.Drawing.Color.Black;
             this.label41.Location = new System.Drawing.Point(5, 2);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(215, 54);
@@ -1758,11 +1785,11 @@
             // 
             // textBox43
             // 
-            this.textBox43.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox43.BackColor = System.Drawing.SystemColors.GrayText;
             this.textBox43.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox43.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox43.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox43.ForeColor = System.Drawing.Color.Black;
+            this.textBox43.ForeColor = System.Drawing.Color.White;
             this.textBox43.Location = new System.Drawing.Point(449, 3);
             this.textBox43.Name = "textBox43";
             this.textBox43.ReadOnly = true;
@@ -1774,10 +1801,11 @@
             // 
             // textBox44
             // 
-            this.textBox44.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox44.BackColor = System.Drawing.SystemColors.GrayText;
             this.textBox44.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox44.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox44.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox44.ForeColor = System.Drawing.Color.White;
             this.textBox44.Location = new System.Drawing.Point(672, 3);
             this.textBox44.Name = "textBox44";
             this.textBox44.ReadOnly = true;
@@ -1788,10 +1816,11 @@
             // 
             // textBox45
             // 
-            this.textBox45.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox45.BackColor = System.Drawing.SystemColors.GrayText;
             this.textBox45.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox45.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox45.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox45.ForeColor = System.Drawing.Color.White;
             this.textBox45.Location = new System.Drawing.Point(895, 3);
             this.textBox45.Name = "textBox45";
             this.textBox45.Size = new System.Drawing.Size(221, 31);
@@ -1803,7 +1832,7 @@
             // 
             this.tableLayoutPanel18.AutoSize = true;
             this.tableLayoutPanel18.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
+            this.tableLayoutPanel18.BackColor = System.Drawing.Color.DarkGray;
             this.tableLayoutPanel18.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
             this.tableLayoutPanel18.ColumnCount = 5;
             this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -1829,18 +1858,20 @@
             // label42
             // 
             this.label42.AutoSize = true;
+            this.label42.BackColor = System.Drawing.Color.DarkGreen;
             this.label42.Dock = System.Windows.Forms.DockStyle.Top;
             this.label42.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label42.ForeColor = System.Drawing.Color.White;
             this.label42.Location = new System.Drawing.Point(897, 2);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(217, 27);
+            this.label42.Size = new System.Drawing.Size(217, 54);
             this.label42.TabIndex = 9;
-            this.label42.Text = "Quantité à livrer (Kg)";
+            this.label42.Text = "Quantité à livrer (Kg)                ";
             // 
             // label43
             // 
             this.label43.AutoSize = true;
+            this.label43.BackColor = System.Drawing.Color.DarkGreen;
             this.label43.Dock = System.Windows.Forms.DockStyle.Top;
             this.label43.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label43.ForeColor = System.Drawing.Color.White;
@@ -1853,6 +1884,7 @@
             // label44
             // 
             this.label44.AutoSize = true;
+            this.label44.BackColor = System.Drawing.Color.DarkGreen;
             this.label44.Dock = System.Windows.Forms.DockStyle.Top;
             this.label44.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label44.ForeColor = System.Drawing.Color.White;
@@ -1867,7 +1899,7 @@
             this.label45.AutoSize = true;
             this.label45.Dock = System.Windows.Forms.DockStyle.Top;
             this.label45.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.ForeColor = System.Drawing.Color.White;
+            this.label45.ForeColor = System.Drawing.Color.Black;
             this.label45.Location = new System.Drawing.Point(228, 2);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(215, 54);
@@ -1879,7 +1911,7 @@
             this.label46.AutoSize = true;
             this.label46.Dock = System.Windows.Forms.DockStyle.Top;
             this.label46.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.ForeColor = System.Drawing.Color.White;
+            this.label46.ForeColor = System.Drawing.Color.Black;
             this.label46.Location = new System.Drawing.Point(5, 2);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(215, 54);
@@ -1911,10 +1943,11 @@
             // 
             // textBox46
             // 
-            this.textBox46.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox46.BackColor = System.Drawing.SystemColors.GrayText;
             this.textBox46.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox46.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox46.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox46.ForeColor = System.Drawing.Color.White;
             this.textBox46.Location = new System.Drawing.Point(3, 3);
             this.textBox46.Name = "textBox46";
             this.textBox46.ReadOnly = true;
@@ -1926,10 +1959,11 @@
             // 
             // textBox47
             // 
-            this.textBox47.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox47.BackColor = System.Drawing.SystemColors.GrayText;
             this.textBox47.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox47.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox47.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox47.ForeColor = System.Drawing.Color.White;
             this.textBox47.Location = new System.Drawing.Point(226, 3);
             this.textBox47.Name = "textBox47";
             this.textBox47.ReadOnly = true;
@@ -1940,10 +1974,11 @@
             // 
             // textBox48
             // 
-            this.textBox48.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox48.BackColor = System.Drawing.SystemColors.GrayText;
             this.textBox48.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox48.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox48.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox48.ForeColor = System.Drawing.Color.White;
             this.textBox48.Location = new System.Drawing.Point(449, 3);
             this.textBox48.Name = "textBox48";
             this.textBox48.ReadOnly = true;
@@ -1956,10 +1991,11 @@
             // 
             this.textBox49.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.textBox49.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBox49.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox49.BackColor = System.Drawing.SystemColors.GrayText;
             this.textBox49.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox49.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox49.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox49.ForeColor = System.Drawing.Color.White;
             this.textBox49.Location = new System.Drawing.Point(672, 3);
             this.textBox49.Name = "textBox49";
             this.textBox49.ReadOnly = true;
@@ -1982,7 +2018,7 @@
             // 
             this.tableLayoutPanel20.AutoSize = true;
             this.tableLayoutPanel20.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
+            this.tableLayoutPanel20.BackColor = System.Drawing.Color.DarkGray;
             this.tableLayoutPanel20.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
             this.tableLayoutPanel20.ColumnCount = 5;
             this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -2010,7 +2046,7 @@
             this.label47.AutoSize = true;
             this.label47.Dock = System.Windows.Forms.DockStyle.Top;
             this.label47.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.ForeColor = System.Drawing.Color.White;
+            this.label47.ForeColor = System.Drawing.Color.Black;
             this.label47.Location = new System.Drawing.Point(897, 2);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(217, 54);
@@ -2020,6 +2056,7 @@
             // label48
             // 
             this.label48.AutoSize = true;
+            this.label48.BackColor = System.Drawing.Color.DarkGreen;
             this.label48.Dock = System.Windows.Forms.DockStyle.Top;
             this.label48.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label48.ForeColor = System.Drawing.Color.White;
@@ -2032,6 +2069,7 @@
             // label49
             // 
             this.label49.AutoSize = true;
+            this.label49.BackColor = System.Drawing.Color.DarkGreen;
             this.label49.Dock = System.Windows.Forms.DockStyle.Top;
             this.label49.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label49.ForeColor = System.Drawing.Color.White;
@@ -2044,6 +2082,7 @@
             // label50
             // 
             this.label50.AutoSize = true;
+            this.label50.BackColor = System.Drawing.Color.DarkGreen;
             this.label50.Dock = System.Windows.Forms.DockStyle.Top;
             this.label50.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label50.ForeColor = System.Drawing.Color.White;
@@ -2056,14 +2095,15 @@
             // label51
             // 
             this.label51.AutoSize = true;
+            this.label51.BackColor = System.Drawing.Color.DarkGreen;
             this.label51.Dock = System.Windows.Forms.DockStyle.Top;
             this.label51.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label51.ForeColor = System.Drawing.Color.White;
             this.label51.Location = new System.Drawing.Point(5, 2);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(215, 27);
+            this.label51.Size = new System.Drawing.Size(215, 54);
             this.label51.TabIndex = 0;
-            this.label51.Text = "Prix de vente (DT)";
+            this.label51.Text = "Prix de vente (DT)                   ";
             // 
             // tableLayoutPanel21
             // 
@@ -2149,7 +2189,7 @@
             // 
             this.tableLayoutPanel22.AutoSize = true;
             this.tableLayoutPanel22.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
+            this.tableLayoutPanel22.BackColor = System.Drawing.Color.DarkGray;
             this.tableLayoutPanel22.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
             this.tableLayoutPanel22.ColumnCount = 5;
             this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -2177,7 +2217,7 @@
             this.label52.AutoSize = true;
             this.label52.Dock = System.Windows.Forms.DockStyle.Top;
             this.label52.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label52.ForeColor = System.Drawing.Color.White;
+            this.label52.ForeColor = System.Drawing.Color.Black;
             this.label52.Location = new System.Drawing.Point(897, 2);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(217, 27);
@@ -2189,7 +2229,7 @@
             this.label53.AutoSize = true;
             this.label53.Dock = System.Windows.Forms.DockStyle.Top;
             this.label53.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.ForeColor = System.Drawing.Color.White;
+            this.label53.ForeColor = System.Drawing.Color.Black;
             this.label53.Location = new System.Drawing.Point(674, 2);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(215, 27);
@@ -2201,7 +2241,7 @@
             this.label54.AutoSize = true;
             this.label54.Dock = System.Windows.Forms.DockStyle.Top;
             this.label54.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label54.ForeColor = System.Drawing.Color.White;
+            this.label54.ForeColor = System.Drawing.Color.Black;
             this.label54.Location = new System.Drawing.Point(451, 2);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(215, 27);
@@ -2213,7 +2253,7 @@
             this.label55.AutoSize = true;
             this.label55.Dock = System.Windows.Forms.DockStyle.Top;
             this.label55.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label55.ForeColor = System.Drawing.Color.White;
+            this.label55.ForeColor = System.Drawing.Color.Black;
             this.label55.Location = new System.Drawing.Point(228, 2);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(215, 54);
@@ -2225,7 +2265,7 @@
             this.label56.AutoSize = true;
             this.label56.Dock = System.Windows.Forms.DockStyle.Top;
             this.label56.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label56.ForeColor = System.Drawing.Color.White;
+            this.label56.ForeColor = System.Drawing.Color.Black;
             this.label56.Location = new System.Drawing.Point(5, 2);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(215, 54);
@@ -2317,7 +2357,7 @@
             // 
             this.tableLayoutPanel24.AutoSize = true;
             this.tableLayoutPanel24.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
+            this.tableLayoutPanel24.BackColor = System.Drawing.Color.DarkGray;
             this.tableLayoutPanel24.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
             this.tableLayoutPanel24.ColumnCount = 5;
             this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -2345,7 +2385,7 @@
             this.label57.AutoSize = true;
             this.label57.Dock = System.Windows.Forms.DockStyle.Top;
             this.label57.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label57.ForeColor = System.Drawing.Color.White;
+            this.label57.ForeColor = System.Drawing.Color.Black;
             this.label57.Location = new System.Drawing.Point(897, 2);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(217, 27);
@@ -2357,7 +2397,7 @@
             this.label58.AutoSize = true;
             this.label58.Dock = System.Windows.Forms.DockStyle.Top;
             this.label58.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.ForeColor = System.Drawing.Color.White;
+            this.label58.ForeColor = System.Drawing.Color.Black;
             this.label58.Location = new System.Drawing.Point(674, 2);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(215, 54);
@@ -2369,7 +2409,7 @@
             this.label59.AutoSize = true;
             this.label59.Dock = System.Windows.Forms.DockStyle.Top;
             this.label59.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label59.ForeColor = System.Drawing.Color.White;
+            this.label59.ForeColor = System.Drawing.Color.Black;
             this.label59.Location = new System.Drawing.Point(451, 2);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(215, 27);
@@ -2381,7 +2421,7 @@
             this.label60.AutoSize = true;
             this.label60.Dock = System.Windows.Forms.DockStyle.Top;
             this.label60.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label60.ForeColor = System.Drawing.Color.White;
+            this.label60.ForeColor = System.Drawing.Color.Black;
             this.label60.Location = new System.Drawing.Point(228, 2);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(215, 27);
@@ -2393,7 +2433,7 @@
             this.label61.AutoSize = true;
             this.label61.Dock = System.Windows.Forms.DockStyle.Top;
             this.label61.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label61.ForeColor = System.Drawing.Color.White;
+            this.label61.ForeColor = System.Drawing.Color.Black;
             this.label61.Location = new System.Drawing.Point(5, 2);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(215, 27);
@@ -2487,7 +2527,7 @@
             // 
             this.tableLayoutPanel26.AutoSize = true;
             this.tableLayoutPanel26.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
+            this.tableLayoutPanel26.BackColor = System.Drawing.Color.DarkGray;
             this.tableLayoutPanel26.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
             this.tableLayoutPanel26.ColumnCount = 5;
             this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -2515,7 +2555,7 @@
             this.label62.AutoSize = true;
             this.label62.Dock = System.Windows.Forms.DockStyle.Top;
             this.label62.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label62.ForeColor = System.Drawing.Color.White;
+            this.label62.ForeColor = System.Drawing.Color.Black;
             this.label62.Location = new System.Drawing.Point(897, 2);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(217, 27);
@@ -2527,7 +2567,7 @@
             this.label63.AutoSize = true;
             this.label63.Dock = System.Windows.Forms.DockStyle.Top;
             this.label63.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label63.ForeColor = System.Drawing.Color.White;
+            this.label63.ForeColor = System.Drawing.Color.Black;
             this.label63.Location = new System.Drawing.Point(674, 2);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(215, 27);
@@ -2539,7 +2579,7 @@
             this.label64.AutoSize = true;
             this.label64.Dock = System.Windows.Forms.DockStyle.Top;
             this.label64.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label64.ForeColor = System.Drawing.Color.White;
+            this.label64.ForeColor = System.Drawing.Color.Black;
             this.label64.Location = new System.Drawing.Point(451, 2);
             this.label64.Name = "label64";
             this.label64.Size = new System.Drawing.Size(215, 54);
@@ -2551,7 +2591,7 @@
             this.label65.AutoSize = true;
             this.label65.Dock = System.Windows.Forms.DockStyle.Top;
             this.label65.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.ForeColor = System.Drawing.Color.White;
+            this.label65.ForeColor = System.Drawing.Color.Black;
             this.label65.Location = new System.Drawing.Point(228, 2);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(215, 27);
@@ -2563,7 +2603,7 @@
             this.label66.AutoSize = true;
             this.label66.Dock = System.Windows.Forms.DockStyle.Top;
             this.label66.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label66.ForeColor = System.Drawing.Color.White;
+            this.label66.ForeColor = System.Drawing.Color.Black;
             this.label66.Location = new System.Drawing.Point(5, 2);
             this.label66.Name = "label66";
             this.label66.Size = new System.Drawing.Size(215, 27);
@@ -2595,10 +2635,11 @@
             // 
             // textBox66
             // 
-            this.textBox66.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox66.BackColor = System.Drawing.SystemColors.GrayText;
             this.textBox66.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox66.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox66.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox66.ForeColor = System.Drawing.Color.White;
             this.textBox66.Location = new System.Drawing.Point(3, 3);
             this.textBox66.Name = "textBox66";
             this.textBox66.ReadOnly = true;
@@ -2624,10 +2665,11 @@
             // 
             this.textBox68.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.textBox68.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBox68.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox68.BackColor = System.Drawing.SystemColors.GrayText;
             this.textBox68.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox68.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox68.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox68.ForeColor = System.Drawing.Color.White;
             this.textBox68.Location = new System.Drawing.Point(449, 3);
             this.textBox68.Name = "textBox68";
             this.textBox68.ReadOnly = true;
@@ -2663,7 +2705,7 @@
             // 
             this.tableLayoutPanel28.AutoSize = true;
             this.tableLayoutPanel28.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
+            this.tableLayoutPanel28.BackColor = System.Drawing.Color.DarkGray;
             this.tableLayoutPanel28.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
             this.tableLayoutPanel28.ColumnCount = 5;
             this.tableLayoutPanel28.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -2691,7 +2733,7 @@
             this.label67.AutoSize = true;
             this.label67.Dock = System.Windows.Forms.DockStyle.Top;
             this.label67.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label67.ForeColor = System.Drawing.Color.White;
+            this.label67.ForeColor = System.Drawing.Color.Black;
             this.label67.Location = new System.Drawing.Point(897, 2);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(217, 27);
@@ -2703,7 +2745,7 @@
             this.label68.AutoSize = true;
             this.label68.Dock = System.Windows.Forms.DockStyle.Top;
             this.label68.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label68.ForeColor = System.Drawing.Color.White;
+            this.label68.ForeColor = System.Drawing.Color.Black;
             this.label68.Location = new System.Drawing.Point(674, 2);
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(215, 27);
@@ -2713,6 +2755,7 @@
             // label69
             // 
             this.label69.AutoSize = true;
+            this.label69.BackColor = System.Drawing.Color.DarkGreen;
             this.label69.Dock = System.Windows.Forms.DockStyle.Top;
             this.label69.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label69.ForeColor = System.Drawing.Color.White;
@@ -2727,7 +2770,7 @@
             this.label70.AutoSize = true;
             this.label70.Dock = System.Windows.Forms.DockStyle.Top;
             this.label70.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label70.ForeColor = System.Drawing.Color.White;
+            this.label70.ForeColor = System.Drawing.Color.Black;
             this.label70.Location = new System.Drawing.Point(228, 2);
             this.label70.Name = "label70";
             this.label70.Size = new System.Drawing.Size(215, 54);
@@ -2737,20 +2780,22 @@
             // label71
             // 
             this.label71.AutoSize = true;
+            this.label71.BackColor = System.Drawing.Color.DarkGreen;
             this.label71.Dock = System.Windows.Forms.DockStyle.Top;
             this.label71.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label71.ForeColor = System.Drawing.Color.White;
             this.label71.Location = new System.Drawing.Point(5, 2);
             this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(215, 27);
+            this.label71.Size = new System.Drawing.Size(215, 54);
             this.label71.TabIndex = 0;
-            this.label71.Text = "Délais de réponse";
+            this.label71.Text = "Délais de réponse                  ";
             // 
             // ERCAMS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(1140, 1102);
             this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel27);

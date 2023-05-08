@@ -592,6 +592,7 @@ namespace Cogitel_QT
                 }
                 string notificationText = notificationTextBuilder.ToString();
                 // Affichez la notification avec les non-conformités avec une date de réponse vide
+                notifyIcon1.Visible = true; // add this line
                 notifyIcon1.ShowBalloonTip(30000, "Non-conformités sans réponse", notificationText, ToolTipIcon.Warning);
             }
 
