@@ -85,6 +85,14 @@ namespace Cogitel_QT
             // Définissez la propriété Visible du bouton en fonction de la valeur booléenne passée en paramètre
             button2.Visible = isVisible;
         }
+        public void SetButtonVisible1(bool isVisible)
+        {
+            // Définissez la propriété Visible du bouton en fonction de la valeur booléenne passée en paramètre
+            button1.Visible = isVisible;
+            button2.Visible = isVisible;
+            label14.Visible = isVisible;
+
+        }
         private void button4_Click(object sender, EventArgs e)
         {
 

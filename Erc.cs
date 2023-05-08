@@ -706,6 +706,72 @@ namespace Cogitel_QT
                 button3.PerformClick();
             }
         }
-        
+        private ERCAMS formInstance2 = null;
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (formInstance2 == null)
+            {
+                formInstance2 = new ERCAMS(this);
+                formInstance2.FormClosed += (s, args) => formInstance2 = null;
+            }
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                int selectedId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["id_NCE"].Value);
+                formInstance2.SelectedId = selectedId;
+                cogitel mainForm = (cogitel)this.MdiParent;
+
+                // Create a new instance of the form to open
+
+                // Set the MdiParent property to the main form
+                formInstance2.SetButtonVisible1(false);
+                formInstance2.MdiParent = mainForm;
+                formInstance2.Dock = DockStyle.Fill;
+                formInstance2.BringToFront();
+                formInstance2.WindowState = FormWindowState.Normal;
+                for (int i = 1; i <= 70; i++)
+                {
+                    System.Windows.Forms.Control ctrl = formInstance2.Controls.Find("textBox" + i.ToString(), true).FirstOrDefault();
+                    if (ctrl is TextBox)
+                    {
+                        ((TextBox)ctrl).Multiline = true;
+                        ((TextBox)ctrl).Size = new System.Drawing.Size(214, 100);
+                        ((TextBox)ctrl).ReadOnly = true;
+
+                    }
+                }
+                formInstance2.Show();
+                // Show the new form
+
+
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+
+                // Vérifier si le formulaire ERCAMS a été créé et initialisé
+                if (formInstance2 != null && formInstance2.IsHandleCreated)
+                {
+                    // Récupérer les valeurs de chaque cellule de la ligne sélectionnée et les affecter aux textboxes dans Form2
+                    for (int i = 1; i < 71; i++)
+                    {
+                        System.Windows.Forms.Control ctrl = formInstance2.Controls.Find("textBox" + i, true).FirstOrDefault();
+                        if (ctrl is TextBox)
+                        {
+                            ((TextBox)ctrl).Text = selectedRow.Cells[i].Value.ToString().Replace("\n", Environment.NewLine);
+
+                            if (ctrl is TextBox)
+                            {
+                                if (DateTime.TryParse(ctrl.Text, out DateTime date))
+                                {
+                                    ctrl.Text = date.ToString("dd/MM/yyyy");
+                                }
+                            }
+
+
+                        }
+                    }
+                }
+
+
+
+            }
+        }
     }
 }

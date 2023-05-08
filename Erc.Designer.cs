@@ -124,6 +124,7 @@
             this.duréedetraitementjoursDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sansouavecAvoirDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.f70DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button10 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nCEBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cogitelDataSet)).BeginInit();
@@ -142,7 +143,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1238, 40);
+            this.panel1.Size = new System.Drawing.Size(1306, 40);
             this.panel1.TabIndex = 2;
             this.panel1.TabStop = true;
             // 
@@ -166,7 +167,7 @@
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Image = global::Cogitel_QT.Properties.Resources.minus_sign__1___1_;
-            this.button6.Location = new System.Drawing.Point(1084, 0);
+            this.button6.Location = new System.Drawing.Point(1152, 0);
             this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(77, 40);
@@ -184,7 +185,7 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Image = global::Cogitel_QT.Properties.Resources.cancel__1_;
-            this.button4.Location = new System.Drawing.Point(1161, 0);
+            this.button4.Location = new System.Drawing.Point(1229, 0);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(77, 40);
@@ -211,6 +212,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(243)))));
+            this.panel3.Controls.Add(this.button10);
             this.panel3.Controls.Add(this.comboBox2);
             this.panel3.Controls.Add(this.comboBox1);
             this.panel3.Controls.Add(this.button3);
@@ -224,7 +226,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 40);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1238, 50);
+            this.panel3.Size = new System.Drawing.Size(1306, 50);
             this.panel3.TabIndex = 35;
             // 
             // comboBox2
@@ -235,7 +237,7 @@
             this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBox2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(767, 0);
+            this.comboBox2.Location = new System.Drawing.Point(835, 0);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(292, 32);
             this.comboBox2.TabIndex = 43;
@@ -249,7 +251,7 @@
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBox1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(1059, 0);
+            this.comboBox1.Location = new System.Drawing.Point(1127, 0);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(89, 32);
             this.comboBox1.TabIndex = 42;
@@ -262,9 +264,9 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = global::Cogitel_QT.Properties.Resources.bin__1_;
-            this.button3.Location = new System.Drawing.Point(671, 0);
+            this.button3.Location = new System.Drawing.Point(653, 0);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(90, 50);
+            this.button3.Size = new System.Drawing.Size(84, 50);
             this.button3.TabIndex = 41;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -277,9 +279,9 @@
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Image = global::Cogitel_QT.Properties.Resources.spreadsheet_column__1_;
-            this.button9.Location = new System.Drawing.Point(581, 0);
+            this.button9.Location = new System.Drawing.Point(569, 0);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(90, 50);
+            this.button9.Size = new System.Drawing.Size(84, 50);
             this.button9.TabIndex = 40;
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
@@ -292,7 +294,7 @@
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Image = global::Cogitel_QT.Properties.Resources.excel__2_;
-            this.button8.Location = new System.Drawing.Point(1148, 0);
+            this.button8.Location = new System.Drawing.Point(1216, 0);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(90, 50);
             this.button8.TabIndex = 38;
@@ -308,9 +310,9 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = global::Cogitel_QT.Properties.Resources.edit__2___1_;
-            this.button2.Location = new System.Drawing.Point(491, 0);
+            this.button2.Location = new System.Drawing.Point(485, 0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(90, 50);
+            this.button2.Size = new System.Drawing.Size(84, 50);
             this.button2.TabIndex = 37;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -326,7 +328,7 @@
             this.button1.Image = global::Cogitel_QT.Properties.Resources.add__8___1_;
             this.button1.Location = new System.Drawing.Point(401, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 50);
+            this.button1.Size = new System.Drawing.Size(84, 50);
             this.button1.TabIndex = 36;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -516,7 +518,7 @@
             this.dataGridView1.ShowCellToolTips = false;
             this.dataGridView1.ShowEditingIcon = false;
             this.dataGridView1.ShowRowErrors = false;
-            this.dataGridView1.Size = new System.Drawing.Size(1238, 655);
+            this.dataGridView1.Size = new System.Drawing.Size(1306, 655);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.VirtualMode = true;
             this.dataGridView1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dataGridView1_Scroll);
@@ -1161,12 +1163,23 @@
             this.f70DataGridViewTextBoxColumn.ReadOnly = true;
             this.f70DataGridViewTextBoxColumn.Width = 82;
             // 
+            // button10
+            // 
+            this.button10.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button10.Location = new System.Drawing.Point(737, 0);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(75, 50);
+            this.button10.TabIndex = 44;
+            this.button10.Text = "button10";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
             // Erc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1238, 745);
+            this.ClientSize = new System.Drawing.Size(1306, 745);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -1283,5 +1296,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button button10;
     }
 }
