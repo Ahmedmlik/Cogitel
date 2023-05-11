@@ -1078,6 +1078,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn pDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prixFacturationDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn timestamp3DataGridViewTextBoxColumn;
     }
 }

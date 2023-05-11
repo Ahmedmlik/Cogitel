@@ -1090,7 +1090,6 @@ namespace Cogitel_QT
         private Button button5;
         private Button button3;
         private Button button2;
-        private DataGridViewTextBoxColumn timestamp2DataGridViewTextBoxColumn;
         private Label label14;
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn idpfDataGridViewTextBoxColumn;
