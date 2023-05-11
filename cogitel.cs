@@ -13,7 +13,6 @@ namespace Cogitel_QT
     public partial class cogitel : Form
     {
         string connectionString = ConfigurationManager.ConnectionStrings["MaConnexion"].ConnectionString;
-        SqlConnection connection;
         public static cogitel Instance;
         public cogitel()
         {

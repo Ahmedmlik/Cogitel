@@ -16,7 +16,7 @@ namespace Cogitel_QT
     public partial class notif : Form
     {
         string connectionString = ConfigurationManager.ConnectionStrings["MaConnexion"].ConnectionString;
-        SqlConnection connection;
+        
         public notif()
         {
             InitializeComponent();
