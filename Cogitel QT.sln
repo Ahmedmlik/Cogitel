@@ -5,7 +5,7 @@ VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cogitel QT", "Cogitel QT.csproj", "{D6CB8A2A-8905-4D0A-A532-5C8F0C8BACD9}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup QT", "..\Setup QT\Setup QT.vdproj", "{42288F9A-FE26-400C-A24C-9BEC4D012572}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "..\Setup\Setup.vdproj", "{8ED943FE-0181-4C56-AF7C-060DDEEAFD41}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,8 +17,8 @@ Global
 		{D6CB8A2A-8905-4D0A-A532-5C8F0C8BACD9}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{D6CB8A2A-8905-4D0A-A532-5C8F0C8BACD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6CB8A2A-8905-4D0A-A532-5C8F0C8BACD9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{42288F9A-FE26-400C-A24C-9BEC4D012572}.Debug|Any CPU.ActiveCfg = Release
-		{42288F9A-FE26-400C-A24C-9BEC4D012572}.Release|Any CPU.ActiveCfg = Release
+		{8ED943FE-0181-4C56-AF7C-060DDEEAFD41}.Debug|Any CPU.ActiveCfg = Release
+		{8ED943FE-0181-4C56-AF7C-060DDEEAFD41}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
