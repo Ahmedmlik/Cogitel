@@ -971,8 +971,9 @@ namespace Cogitel_QT
                                 SqlCommand command = new SqlCommand();
                                 command.Connection = connection;
                                 command.CommandType = System.Data.CommandType.Text;
-                                command.CommandText = "INSERT INTO PrixPF ( Article, Désignation, s_clinet, Qté_Stock, N_de_lot, Q, F, Prix_unitaire, P, date) VALUES(@Article, @Désignation, @s_clinet, @Qté_Stock, @N_de_lot, @Q, @F, @Prix_unitaire, @P, @date)";
-                                command.Parameters.AddWithValue("@Article", worksheet.Cell(i, 1).Value.ToString());
+                                command.CommandText = "INSERT INTO PrixPF (N_de_doc,Article, Désignation, s_clinet, Qté_Stock, N_de_lot, Q, F, Prix_unitaire, P, date) VALUES(@N_de_doc, @Article, @Désignation, @s_clinet, @Qté_Stock, @N_de_lot, @Q, @F, @Prix_unitaire, @P, @date)";
+                            command.Parameters.AddWithValue("@N_de_doc", worksheet.Cell(i, 5).Value.ToString().Substring(0, 7));
+                            command.Parameters.AddWithValue("@Article", worksheet.Cell(i, 1).Value.ToString());
                                 command.Parameters.AddWithValue("@Désignation", worksheet.Cell(i, 2).Value.ToString());
                                 command.Parameters.AddWithValue("@s_clinet", worksheet.Cell(i, 3).Value.ToString());
                                 command.Parameters.AddWithValue("@Qté_Stock", worksheet.Cell(i, 4).Value.ToString());
