@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cogitel));
             this.panelslidemenu = new System.Windows.Forms.Panel();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
             this.panelRF = new System.Windows.Forms.Panel();
             this.button13 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
@@ -46,6 +49,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.buttonutili = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button17 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.max = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -64,6 +68,9 @@
             this.panelslidemenu.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuPopup;
             this.panelslidemenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
             this.panelslidemenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelslidemenu.Controls.Add(this.button16);
+            this.panelslidemenu.Controls.Add(this.button15);
+            this.panelslidemenu.Controls.Add(this.button14);
             this.panelslidemenu.Controls.Add(this.panelRF);
             this.panelslidemenu.Controls.Add(this.button11);
             this.panelslidemenu.Controls.Add(this.button9);
@@ -72,6 +79,27 @@
             this.panelslidemenu.Controls.Add(this.buttonutili);
             resources.ApplyResources(this.panelslidemenu, "panelslidemenu");
             this.panelslidemenu.Name = "panelslidemenu";
+            // 
+            // button16
+            // 
+            resources.ApplyResources(this.button16, "button16");
+            this.button16.FlatAppearance.BorderSize = 0;
+            this.button16.Name = "button16";
+            this.button16.UseVisualStyleBackColor = true;
+            // 
+            // button15
+            // 
+            resources.ApplyResources(this.button15, "button15");
+            this.button15.FlatAppearance.BorderSize = 0;
+            this.button15.Name = "button15";
+            this.button15.UseVisualStyleBackColor = true;
+            // 
+            // button14
+            // 
+            resources.ApplyResources(this.button14, "button14");
+            this.button14.FlatAppearance.BorderSize = 0;
+            this.button14.Name = "button14";
+            this.button14.UseVisualStyleBackColor = true;
             // 
             // panelRF
             // 
@@ -225,6 +253,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.button17);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.max);
             this.panel1.Controls.Add(this.button5);
@@ -234,6 +263,17 @@
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
+            // 
+            // button17
+            // 
+            resources.ApplyResources(this.button17, "button17");
+            this.button17.FlatAppearance.BorderSize = 0;
+            this.button17.Image = global::Cogitel_QT.Properties.Resources.exit__1_;
+            this.button17.Name = "button17";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            this.button17.MouseLeave += new System.EventHandler(this.button17_MouseLeave);
+            this.button17.MouseHover += new System.EventHandler(this.button17_MouseHover);
             // 
             // button3
             // 
@@ -350,5 +390,9 @@
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button12;
         public System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button button17;
     }
 }

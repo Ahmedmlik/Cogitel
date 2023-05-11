@@ -32,7 +32,6 @@
             this.textap = new System.Windows.Forms.TextBox();
             this.Valider = new System.Windows.Forms.Button();
             this.Annuler = new System.Windows.Forms.Button();
-            this.textnnu = new System.Windows.Forms.TextBox();
             this.textnu = new System.Windows.Forms.TextBox();
             this.textnp = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -49,7 +48,7 @@
             this.textap.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textap.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textap.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textap.Location = new System.Drawing.Point(128, 198);
+            this.textap.Location = new System.Drawing.Point(128, 142);
             this.textap.Margin = new System.Windows.Forms.Padding(4);
             this.textap.Name = "textap";
             this.textap.Size = new System.Drawing.Size(416, 25);
@@ -68,7 +67,7 @@
             this.Valider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Valider.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Valider.ForeColor = System.Drawing.Color.White;
-            this.Valider.Location = new System.Drawing.Point(137, 302);
+            this.Valider.Location = new System.Drawing.Point(128, 302);
             this.Valider.Margin = new System.Windows.Forms.Padding(4);
             this.Valider.Name = "Valider";
             this.Valider.Size = new System.Drawing.Size(148, 35);
@@ -87,7 +86,7 @@
             this.Annuler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Annuler.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Annuler.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.Annuler.Location = new System.Drawing.Point(405, 302);
+            this.Annuler.Location = new System.Drawing.Point(396, 302);
             this.Annuler.Margin = new System.Windows.Forms.Padding(4);
             this.Annuler.Name = "Annuler";
             this.Annuler.Size = new System.Drawing.Size(148, 35);
@@ -97,22 +96,6 @@
             this.Annuler.Click += new System.EventHandler(this.Annuler_Click);
             this.Annuler.MouseLeave += new System.EventHandler(this.Annuler_MouseLeave);
             this.Annuler.MouseHover += new System.EventHandler(this.Annuler_MouseHover);
-            // 
-            // textnnu
-            // 
-            this.textnnu.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textnnu.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textnnu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textnnu.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textnnu.Location = new System.Drawing.Point(128, 142);
-            this.textnnu.Margin = new System.Windows.Forms.Padding(4);
-            this.textnnu.Name = "textnnu";
-            this.textnnu.Size = new System.Drawing.Size(416, 25);
-            this.textnnu.TabIndex = 1;
-            this.textnnu.TabStop = false;
-            this.textnnu.Enter += new System.EventHandler(this.textnnu_Enter);
-            this.textnnu.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textnnu_KeyDown);
-            this.textnnu.Leave += new System.EventHandler(this.textnnu_Leave);
             // 
             // textnu
             // 
@@ -135,7 +118,7 @@
             this.textnp.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textnp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textnp.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textnp.Location = new System.Drawing.Point(128, 231);
+            this.textnp.Location = new System.Drawing.Point(128, 217);
             this.textnp.Margin = new System.Windows.Forms.Padding(4);
             this.textnp.Name = "textnp";
             this.textnp.Size = new System.Drawing.Size(416, 25);
@@ -206,7 +189,6 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textnp);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.textnnu);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textap);
             this.Controls.Add(this.textnu);
@@ -237,7 +219,6 @@
         private System.Windows.Forms.TextBox textap;
         private System.Windows.Forms.Button Valider;
         private System.Windows.Forms.Button Annuler;
-        private System.Windows.Forms.TextBox textnnu;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textnu;
         private System.Windows.Forms.PictureBox pictureBox2;

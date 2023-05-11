@@ -117,21 +117,15 @@ namespace Cogitel_QT
 
         }
 
-            bool close = true;
+        private bool isClosing = false; // Ajouter une variable pour suivre l'état de fermeture
         private void cogitel_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (close)
+            if (!isClosing) // Vérifier si ce n'est pas une fermeture programmée
             {
-
-                DialogResult result = MessageBox.Show("êtes-vous sûr de vouloir quitter", "Quitter", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
+                DialogResult result = MessageBox.Show("Êtes-vous sûr de vouloir quitter ?", "Quitter", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.No)
                 {
-                    close = false;
-                    Application.Exit();
-                }
-                else
-                {
-                    e.Cancel = true;
+                    e.Cancel = true; // Annuler la fermeture du formulaire
                 }
             }
         }
@@ -148,7 +142,7 @@ namespace Cogitel_QT
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            cogitel.ActiveForm.Close();
+            System.Windows.Forms.Application.Exit();
         }
         private modifiermotdepasse formInstance1 = null;
         private void button2_Click(object sender, EventArgs e)
@@ -609,7 +603,32 @@ namespace Cogitel_QT
             formNotif.Show();
         }
 
-       
+        private void button17_Click(object sender, EventArgs e)
+        {
+            isClosing = true; // Indiquer une fermeture programmée
+            DialogResult result = MessageBox.Show("Êtes-vous sûr de vouloir vous déconnecter ?", "Déconnexion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+             
+                Close();
+
+                // Redémarrer l'application
+                Application.Restart();
+            }
+        }
+
+        private void button17_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip toolTip = new System.Windows.Forms.ToolTip();
+            toolTip.SetToolTip(this.button8, "Déconnecter");
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void button17_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
+
+        }
     }
 
 }

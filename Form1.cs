@@ -85,7 +85,7 @@ namespace Cogitel_QT
                 }
                 else
                 {
-                    MessageBox.Show("utilisateur ou Mot de passe incorrect ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Utilisateur ou Mot de passe incorrect ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     textBox2.Text = "";
                     textBox1.Text = "";
                     textBox1.Text = "Nom d'utilisateur";

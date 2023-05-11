@@ -385,6 +385,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="21_gbd_sust_cogitel_r_8_5_res_586x371 %283%29.ico" />
+    <None Include="Resources\exit %281%29.png" />
     <None Include="Resources\téléchargement-removebg-preview.png" />
     <None Include="Resources\téléchargement.png" />
     <None Include="Resources\eye.png" />

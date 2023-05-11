@@ -4,6 +4,8 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Security.Cryptography;
 using System.Text;
+using System.Collections.Generic;
+
 
 
 namespace Cogitel_QT
@@ -28,7 +30,7 @@ namespace Cogitel_QT
 
         private void Valider_Click(object sender, EventArgs e)
         {
-            if (textnu.Text == "Nom d'utilisateur" || textap.Text == "Ancien mot de passe" || textnnu.Text == "Nouveau nom d'utilisateur" || textnp.Text == "Nouveau mot de passe")
+            if (textnu.Text == "Nom d'utilisateur" || textap.Text == "Ancien mot de passe" || textnp.Text == "Nouveau mot de passe")
             {
                 MessageBox.Show("Veuillez remplir tous les champs.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -68,9 +70,23 @@ namespace Cogitel_QT
                 con.sda.Fill(dt);
                 if (dt.Rows.Count > 0)
                 {
-                    con.dataSend("Update [Login] set Utilisateur = '" + textnnu.Text + "' ,  MotdePasse = '" + hashedPassword + "'  Where Utilisateur = '" + textnu.Text + "' and MotdePasse = '" + ahashedPassword + "'");
-                    MessageBox.Show("Nom de l'Utilisateur et le mot de passe a été changé avec succès", "message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    con.dataSend("Update [Login] set  MotdePasse = '" + hashedPassword + "'  Where Utilisateur = '" + textnu.Text + "' and MotdePasse = '" + ahashedPassword + "'");
+                    List<Form> formsToClose = new List<Form>();
+
+                    // Ajouter les formulaires à la liste
+                    foreach (Form form in Application.OpenForms)
+                    {
+                        formsToClose.Add(form);
+                    }
+
+                    // Fermer les formulaires
+                    foreach (Form form in formsToClose)
+                    {
+                        form.Close();
+                    }
+
+                    Application.Restart();
+
                 }
 
                 else
@@ -82,8 +98,6 @@ namespace Cogitel_QT
                     textap.Text = "Ancien mot de passe";
                     textap.ForeColor = Color.Gray;
                     textap.UseSystemPasswordChar = false;
-                    textnnu.Text = "Nouveau nom d'utilisateur";
-                    textnnu.ForeColor = Color.Gray;
                     textnp.Text = "Nouveau mot de passe";
                     textnp.ForeColor = Color.Gray;
                     textnp.UseSystemPasswordChar = false;
@@ -94,17 +108,7 @@ namespace Cogitel_QT
             }
         }
 
-        private void textnu_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                textnnu.Focus();
-            }
-            else
-            {
-                textnu.Focus();
-            }
-        }
+
 
         private void textap_KeyDown(object sender, KeyEventArgs e)
         {
@@ -118,17 +122,7 @@ namespace Cogitel_QT
             }
         }
 
-        private void textnnu_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                textap.Focus();
-            }
-            else
-            {
-                textnnu.Focus();
-            }
-        }
+     
 
         private void textnp_KeyDown(object sender, KeyEventArgs e)
         {
@@ -150,8 +144,6 @@ namespace Cogitel_QT
             textap.Text = "Ancien mot de passe";
             textap.ForeColor = Color.Gray;
             textap.UseSystemPasswordChar = false;
-            textnnu.Text = "Nouveau nom d'utilisateur";
-            textnnu.ForeColor = Color.Gray;
             textnp.Text = "Nouveau mot de passe";
             textnp.ForeColor = Color.Gray;
             textnp.UseSystemPasswordChar = false;
@@ -235,24 +227,9 @@ namespace Cogitel_QT
             this.Cursor = Cursors.Arrow;
         }
 
-        private void textnnu_Enter(object sender, EventArgs e)
-        {
-            if (textnnu.Text == "Nouveau nom d'utilisateur")
-            {
-                textnnu.Text = "";
-                textnnu.ForeColor = Color.Black;
-            }
-        }
+      
 
-        private void textnnu_Leave(object sender, EventArgs e)
-        {
-            if (textnnu.Text == "")
-            {
-                textnnu.Text = "Nouveau nom d'utilisateur";
-                textnnu.ForeColor = Color.Gray;
-            }
-
-        }
+     
 
         private void textnp_Enter(object sender, EventArgs e)
         {
@@ -292,6 +269,18 @@ namespace Cogitel_QT
         private void Annuler_MouseLeave(object sender, EventArgs e)
         {
             this.Cursor = Cursors.Arrow;
+        }
+
+        private void textnu_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                textap.Focus();
+            }
+            else
+            {
+                textnu.Focus();
+            }
         }
     }
 }
