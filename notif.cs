@@ -58,5 +58,14 @@ namespace Cogitel_QT
         {
             this.Close();
         }
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
+        }
     }
 }

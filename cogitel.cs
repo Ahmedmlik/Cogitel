@@ -598,8 +598,18 @@ namespace Cogitel_QT
 
         private void notifyIcon1_BalloonTipClicked(object sender, EventArgs e)
         {
-            notif formNotif = new notif();
-            formNotif.Show();
+            if (formInstance9 == null || formInstance9.IsDisposed)
+            {
+                formInstance9 = new notif();
+                formInstance9.MdiParent = this; // "this" fait référence à votre formulaire MDI
+                formInstance9.FormClosed += (s, args) => formInstance9 = null;
+                formInstance9.Show();
+            }
+            else
+            {
+                formInstance9.BringToFront();
+            }
+
         }
 
         private void button17_Click(object sender, EventArgs e)
@@ -626,6 +636,31 @@ namespace Cogitel_QT
         private void button17_MouseLeave(object sender, EventArgs e)
         {
             this.Cursor = Cursors.Arrow;
+
+        }
+        private notif formInstance9 = null;
+        private bool isFormOpen = false;
+        private void button18_Click(object sender, EventArgs e)
+        {
+            if (!isFormOpen)
+            {
+                formInstance9 = new notif();
+                formInstance9.MdiParent = this; // "this" fait référence à votre formulaire MDI
+                formInstance9.FormClosed += (s, args) =>
+                {
+                    formInstance9 = null;
+                    isFormOpen = false;
+                };
+                formInstance9.Dock = DockStyle.Fill;
+                formInstance9.Show();
+
+                isFormOpen = true;
+            }
+            else
+            {
+                formInstance9.Close();
+                isFormOpen = false;
+            }
 
         }
     }

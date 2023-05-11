@@ -179,6 +179,12 @@
     <Compile Include="ERCAMS.Designer.cs">
       <DependentUpon>ERCAMS.cs</DependentUpon>
     </Compile>
+    <Compile Include="expoexcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="expoexcel.Designer.cs">
+      <DependentUpon>expoexcel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,6 +261,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ERCAMS.resx">
       <DependentUpon>ERCAMS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="expoexcel.resx">
+      <DependentUpon>expoexcel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -389,6 +398,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="21_gbd_sust_cogitel_r_8_5_res_586x371 %283%29.ico" />
+    <None Include="Resources\bell %281%29.png" />
     <None Include="Resources\exit %281%29.png" />
     <None Include="Resources\téléchargement-removebg-preview.png" />
     <None Include="Resources\téléchargement.png" />

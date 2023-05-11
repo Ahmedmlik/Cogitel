@@ -83,6 +83,16 @@ namespace Cogitel_QT.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bell__1_ {
+            get {
+                object obj = ResourceManager.GetObject("bell (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bin__1_ {
             get {
                 object obj = ResourceManager.GetObject("bin (1)", resourceCulture);

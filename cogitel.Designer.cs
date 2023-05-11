@@ -57,6 +57,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.loginTableAdapter1 = new Cogitel_QT.CogitelDataSetTableAdapters.LoginTableAdapter();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.button18 = new System.Windows.Forms.Button();
             this.panelslidemenu.SuspendLayout();
             this.panelRF.SuspendLayout();
             this.panelutilisateurmenu.SuspendLayout();
@@ -253,6 +254,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.button18);
             this.panel1.Controls.Add(this.button17);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.max);
@@ -339,6 +341,15 @@
             resources.ApplyResources(this.notifyIcon1, "notifyIcon1");
             this.notifyIcon1.BalloonTipClicked += new System.EventHandler(this.notifyIcon1_BalloonTipClicked);
             // 
+            // button18
+            // 
+            resources.ApplyResources(this.button18, "button18");
+            this.button18.FlatAppearance.BorderSize = 0;
+            this.button18.Image = global::Cogitel_QT.Properties.Resources.bell__1_;
+            this.button18.Name = "button18";
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
+            // 
             // cogitel
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -394,5 +405,6 @@
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button button18;
     }
 }
