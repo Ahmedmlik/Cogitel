@@ -248,7 +248,8 @@ namespace Cogitel_QT
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text) || string.IsNullOrEmpty(textBox4.Text) || string.IsNullOrEmpty(textBox5.Text) || string.IsNullOrEmpty(textBox6.Text) || string.IsNullOrEmpty(textBox7.Text) || string.IsNullOrEmpty(textBox8.Text) || string.IsNullOrEmpty(textBox9.Text) || string.IsNullOrEmpty(textBox10.Text) || string.IsNullOrEmpty(textBox11.Text) || string.IsNullOrEmpty(textBox12.Text) || string.IsNullOrEmpty(textBox13.Text))
+            if (textBox1.Text == "Saisie DOCUMENT" || textBox2.Text == "Saisie OF" || textBox3.Text == "Saisie CATEG" || textBox4.Text == "Saisie CLIENT" || textBox5.Text == "Saisie FAMILLE" || textBox6.Text == "Saisie REF" || textBox7.Text == "Saisie DESIGNTION" || textBox8.Text == "Saisie GRAMMAGE" || textBox9.Text == "Saisie LT" || textBox10.Text == "Saisie LD" || textBox11.Text == "Saisie Nb Poses" || textBox12.Text == "Saisie Nb cylindres" || textBox13.Text == "Saisie PRIX DE VENTE" ||
+                string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text) || string.IsNullOrEmpty(textBox4.Text) || string.IsNullOrEmpty(textBox5.Text) || string.IsNullOrEmpty(textBox6.Text) || string.IsNullOrEmpty(textBox7.Text) || string.IsNullOrEmpty(textBox8.Text) || string.IsNullOrEmpty(textBox9.Text) || string.IsNullOrEmpty(textBox10.Text) || string.IsNullOrEmpty(textBox11.Text) || string.IsNullOrEmpty(textBox12.Text) || string.IsNullOrEmpty(textBox13.Text))
             {
                 MessageBox.Show("Veuillez remplir toutes les cases .", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -322,103 +323,111 @@ namespace Cogitel_QT
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
-            if (dataGridView1.SelectedRows.Count > 0 && !textBox1.Text.Contains("Saisie DOCUMENT") && !textBox2.Text.Contains("Saisie OF") && !textBox3.Text.Contains("Saisie CATEG") && !textBox4.Text.Contains("Saisie CLIENT") && !textBox5.Text.Contains("Saisie FAMILLE") && !textBox6.Text.Contains("Saisie REF") && !textBox7.Text.Contains("Saisie DESIGNTION") && !textBox8.Text.Contains("Saisie GRAMMAGE") && !textBox9.Text.Contains("Saisie LT") && !textBox10.Text.Contains("Saisie LD") && !textBox11.Text.Contains("Saisie Nb Poses") && !textBox12.Text.Contains("Saisie Nb cylindres") && !textBox13.Text.Contains("Saisie PRIX DE VENTE"))
+           
+           
+                if (dataGridView1.SelectedRows.Count > 0 && !textBox1.Text.Contains("Saisie DOCUMENT") && !textBox2.Text.Contains("Saisie OF") && !textBox3.Text.Contains("Saisie CATEG") && !textBox4.Text.Contains("Saisie CLIENT") && !textBox5.Text.Contains("Saisie FAMILLE") && !textBox6.Text.Contains("Saisie REF") && !textBox7.Text.Contains("Saisie DESIGNTION") && !textBox8.Text.Contains("Saisie GRAMMAGE") && !textBox9.Text.Contains("Saisie LT") && !textBox10.Text.Contains("Saisie LD") && !textBox11.Text.Contains("Saisie Nb Poses") && !textBox12.Text.Contains("Saisie Nb cylindres") && !textBox13.Text.Contains("Saisie PRIX DE VENTE"))
             {
-                DialogResult dialogResult = MessageBox.Show("Voulez-vous vraiment modifier cette ligne ?", "Confirmation de modification", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
+                if (textBox1.Text == "Saisie DOCUMENT" || textBox2.Text == "Saisie OF" || textBox3.Text == "Saisie CATEG" || textBox4.Text == "Saisie CLIENT" || textBox5.Text == "Saisie FAMILLE" || textBox6.Text == "Saisie REF" || textBox7.Text == "Saisie DESIGNTION" || textBox8.Text == "Saisie GRAMMAGE" || textBox9.Text == "Saisie LT" || textBox10.Text == "Saisie LD" || textBox11.Text == "Saisie Nb Poses" || textBox12.Text == "Saisie Nb cylindres" || textBox13.Text == "Saisie PRIX DE VENTE" ||
+            string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text) || string.IsNullOrEmpty(textBox4.Text) || string.IsNullOrEmpty(textBox5.Text) || string.IsNullOrEmpty(textBox6.Text) || string.IsNullOrEmpty(textBox7.Text) || string.IsNullOrEmpty(textBox8.Text) || string.IsNullOrEmpty(textBox9.Text) || string.IsNullOrEmpty(textBox10.Text) || string.IsNullOrEmpty(textBox11.Text) || string.IsNullOrEmpty(textBox12.Text) || string.IsNullOrEmpty(textBox13.Text))
                 {
+                    MessageBox.Show("Veuillez remplir toutes les cases .", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    DialogResult dialogResult = MessageBox.Show("Voulez-vous vraiment modifier cette ligne ?", "Confirmation de modification", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
 
-                    connection = new SqlConnection(connectionString);
-                    // Mettre à jour les données dans la base de données pour la ligne modifiée
-                    string document = textBox1.Text;
-                    string of = textBox2.Text;
-                    string categ = textBox3.Text;
-                    string client = textBox4.Text;
-                    string famille = textBox5.Text;
-                    string reference = textBox6.Text;
-                    string designation = textBox7.Text;
-                    float grammage = float.Parse(textBox8.Text);
-                    float lt = float.Parse(textBox9.Text);
-                    float ld = float.Parse(textBox10.Text);
-                    int nb_poses = int.Parse(textBox11.Text);
-                    int nb_cylindres = int.Parse(textBox12.Text);
-                    float prix_vente = float.Parse(textBox13.Text);
+                        connection = new SqlConnection(connectionString);
+                        // Mettre à jour les données dans la base de données pour la ligne modifiée
+                        string document = textBox1.Text;
+                        string of = textBox2.Text;
+                        string categ = textBox3.Text;
+                        string client = textBox4.Text;
+                        string famille = textBox5.Text;
+                        string reference = textBox6.Text;
+                        string designation = textBox7.Text;
+                        float grammage = float.Parse(textBox8.Text);
+                        float lt = float.Parse(textBox9.Text);
+                        float ld = float.Parse(textBox10.Text);
+                        int nb_poses = int.Parse(textBox11.Text);
+                        int nb_cylindres = int.Parse(textBox12.Text);
+                        float prix_vente = float.Parse(textBox13.Text);
 
-                    // Récupérer l'id de la ligne sélectionnée dans le DataGridView
-                    int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["id_pf"].Value);
+                        // Récupérer l'id de la ligne sélectionnée dans le DataGridView
+                        int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["id_pf"].Value);
 
-                    connection.Open();
-                    string updateQuery = "UPDATE [PF] SET [DOCUMENT] = @document, [NOF] = @of, [CATEG] = @categ, [CLIENT] = @client, [FAMILLE] = @famille, [REF] = @reference, [DESIGNTION] = @designation, [GRAMMAGE] = @grammage, [LT] = @lt, [LD] = @ld, [Nb_Poses] = @nb_poses, [Nb_cylindres] = @nb_cylindres, [PRIX_DE_VENTE] = @prix_vente WHERE [id_pf] = @id";
-                    SqlCommand updateCommand = new SqlCommand(updateQuery, connection);
-                    updateCommand.Parameters.AddWithValue("@document", document);
-                    updateCommand.Parameters.AddWithValue("@of", of);
-                    updateCommand.Parameters.AddWithValue("@categ", categ);
-                    updateCommand.Parameters.AddWithValue("@client", client);
-                    updateCommand.Parameters.AddWithValue("@famille", famille);
-                    updateCommand.Parameters.AddWithValue("@reference", reference);
-                    updateCommand.Parameters.AddWithValue("@designation", designation);
-                    updateCommand.Parameters.AddWithValue("@grammage", grammage);
-                    updateCommand.Parameters.AddWithValue("@lt", lt);
-                    updateCommand.Parameters.AddWithValue("@ld", ld);
-                    updateCommand.Parameters.AddWithValue("@nb_poses", nb_poses);
-                    updateCommand.Parameters.AddWithValue("@nb_cylindres", nb_cylindres);
-                    updateCommand.Parameters.AddWithValue("@prix_vente", prix_vente);
-                    updateCommand.Parameters.AddWithValue("@id", id);
-                    updateCommand.ExecuteNonQuery();
-                    connection.Close();
-                    allData.Clear();
-                    LoadData();
-                    MessageBox.Show("Les données ont été modifiées avec succès .");
-                    textBox1.Text = "Saisie DOCUMENT";
-                    textBox1.ForeColor = Color.Gray;
-                    textBox2.Text = "Saisie OF";
-                    textBox2.ForeColor = Color.Gray;
-                    textBox3.Text = "Saisie CATEG";
-                    textBox3.ForeColor = Color.Gray;
-                    textBox4.Text = "Saisie CLIENT";
-                    textBox4.ForeColor = Color.Gray;
-                    textBox5.Text = "Saisie FAMILLE";
-                    textBox5.ForeColor = Color.Gray;
-                    textBox6.Text = "Saisie REF";
-                    textBox6.ForeColor = Color.Gray;
-                    textBox7.Text = "Saisie DESIGNTION";
-                    textBox7.ForeColor = Color.Gray;
-                    textBox8.Text = "Saisie GRAMMAGE";
-                    textBox8.ForeColor = Color.Gray;
-                    textBox9.Text = "Saisie LT";
-                    textBox9.ForeColor = Color.Gray;
-                    textBox10.Text = "Saisie LD";
-                    textBox10.ForeColor = Color.Gray;
-                    textBox11.Text = "Saisie Nb Poses";
-                    textBox11.ForeColor = Color.Gray;
-                    textBox12.Text = "Saisie Nb cylindres";
-                    textBox12.ForeColor = Color.Gray;
-                    textBox13.Text = "Saisie PRIX DE VENTE";
-                    textBox13.ForeColor = Color.Gray;
-                    textBox1.Multiline = false;
-                    textBox2.Multiline = false;
-                    textBox3.Multiline = false;
-                    textBox4.Multiline = false;
-                    textBox5.Multiline = false;
-                    textBox6.Multiline = false;
-                    textBox7.Multiline = false;
-                    textBox8.Multiline = false;
-                    textBox9.Multiline = false;
-                    textBox10.Multiline = false;
-                    textBox11.Multiline = false;
-                    textBox12.Multiline = false;
-                    textBox13.Multiline = false;
+                        connection.Open();
+                        string updateQuery = "UPDATE [PF] SET [DOCUMENT] = @document, [NOF] = @of, [CATEG] = @categ, [CLIENT] = @client, [FAMILLE] = @famille, [REF] = @reference, [DESIGNTION] = @designation, [GRAMMAGE] = @grammage, [LT] = @lt, [LD] = @ld, [Nb_Poses] = @nb_poses, [Nb_cylindres] = @nb_cylindres, [PRIX_DE_VENTE] = @prix_vente WHERE [id_pf] = @id";
+                        SqlCommand updateCommand = new SqlCommand(updateQuery, connection);
+                        updateCommand.Parameters.AddWithValue("@document", document);
+                        updateCommand.Parameters.AddWithValue("@of", of);
+                        updateCommand.Parameters.AddWithValue("@categ", categ);
+                        updateCommand.Parameters.AddWithValue("@client", client);
+                        updateCommand.Parameters.AddWithValue("@famille", famille);
+                        updateCommand.Parameters.AddWithValue("@reference", reference);
+                        updateCommand.Parameters.AddWithValue("@designation", designation);
+                        updateCommand.Parameters.AddWithValue("@grammage", grammage);
+                        updateCommand.Parameters.AddWithValue("@lt", lt);
+                        updateCommand.Parameters.AddWithValue("@ld", ld);
+                        updateCommand.Parameters.AddWithValue("@nb_poses", nb_poses);
+                        updateCommand.Parameters.AddWithValue("@nb_cylindres", nb_cylindres);
+                        updateCommand.Parameters.AddWithValue("@prix_vente", prix_vente);
+                        updateCommand.Parameters.AddWithValue("@id", id);
+                        updateCommand.ExecuteNonQuery();
+                        connection.Close();
+                        allData.Clear();
+                        LoadData();
+                        MessageBox.Show("Les données ont été modifiées avec succès .");
+                        textBox1.Text = "Saisie DOCUMENT";
+                        textBox1.ForeColor = Color.Gray;
+                        textBox2.Text = "Saisie OF";
+                        textBox2.ForeColor = Color.Gray;
+                        textBox3.Text = "Saisie CATEG";
+                        textBox3.ForeColor = Color.Gray;
+                        textBox4.Text = "Saisie CLIENT";
+                        textBox4.ForeColor = Color.Gray;
+                        textBox5.Text = "Saisie FAMILLE";
+                        textBox5.ForeColor = Color.Gray;
+                        textBox6.Text = "Saisie REF";
+                        textBox6.ForeColor = Color.Gray;
+                        textBox7.Text = "Saisie DESIGNTION";
+                        textBox7.ForeColor = Color.Gray;
+                        textBox8.Text = "Saisie GRAMMAGE";
+                        textBox8.ForeColor = Color.Gray;
+                        textBox9.Text = "Saisie LT";
+                        textBox9.ForeColor = Color.Gray;
+                        textBox10.Text = "Saisie LD";
+                        textBox10.ForeColor = Color.Gray;
+                        textBox11.Text = "Saisie Nb Poses";
+                        textBox11.ForeColor = Color.Gray;
+                        textBox12.Text = "Saisie Nb cylindres";
+                        textBox12.ForeColor = Color.Gray;
+                        textBox13.Text = "Saisie PRIX DE VENTE";
+                        textBox13.ForeColor = Color.Gray;
+                        textBox1.Multiline = false;
+                        textBox2.Multiline = false;
+                        textBox3.Multiline = false;
+                        textBox4.Multiline = false;
+                        textBox5.Multiline = false;
+                        textBox6.Multiline = false;
+                        textBox7.Multiline = false;
+                        textBox8.Multiline = false;
+                        textBox9.Multiline = false;
+                        textBox10.Multiline = false;
+                        textBox11.Multiline = false;
+                        textBox12.Multiline = false;
+                        textBox13.Multiline = false;
+                    }
                 }
 
+                }
+                else
+                {
+                    MessageBox.Show("Veuillez sélectionner par double Click une ligne pour l'éditer.", "Aucune ligne sélectionnée", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-            }
-            else
-            {
-                MessageBox.Show("Veuillez sélectionner par double Click une ligne pour l'éditer.", "Aucune ligne sélectionnée", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-            }
-           
+                }
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -806,7 +815,74 @@ namespace Cogitel_QT
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
+            DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+            textBox1.Text = selectedRow.Cells["dOCUMENTDataGridViewTextBoxColumn"].Value.ToString().Replace("\n", Environment.NewLine);
+            textBox1.ForeColor = System.Drawing.Color.Black; ;
+            textBox1.Multiline = true;
+
+            textBox2.Text = selectedRow.Cells["nOFDataGridViewTextBoxColumn"].Value.ToString().Replace("\n", Environment.NewLine);
+            textBox2.ForeColor = System.Drawing.Color.Black;
+            textBox2.Multiline = true;
+
+            textBox3.Text = selectedRow.Cells["cATEGDataGridViewTextBoxColumn"].Value.ToString().Replace("\n", Environment.NewLine);
+            textBox3.ForeColor = System.Drawing.Color.Black;
+            textBox3.Multiline = true;
+
+            textBox4.Text = selectedRow.Cells["cLIENTDataGridViewTextBoxColumn"].Value.ToString();
+            textBox4.ForeColor = System.Drawing.Color.Black;
+            textBox4.Multiline = true;
+
+            textBox5.Text = selectedRow.Cells["fAMILLEDataGridViewTextBoxColumn"].Value.ToString().Replace("\n", Environment.NewLine);
+            textBox5.ForeColor = System.Drawing.Color.Black;
+            textBox5.Multiline = true;
+
+            textBox6.Text = selectedRow.Cells["rEFDataGridViewTextBoxColumn"].Value.ToString().Replace("\n", Environment.NewLine);
+            textBox6.ForeColor = System.Drawing.Color.Black;
+            textBox6.Multiline = true;
+
+            textBox7.Text = selectedRow.Cells["dESIGNTIONDataGridViewTextBoxColumn"].Value.ToString().Replace("\n", Environment.NewLine);
+            textBox7.ForeColor = System.Drawing.Color.Black;
+            textBox7.Multiline = true;
+
+            textBox8.Text = selectedRow.Cells["gRAMMAGEDataGridViewTextBoxColumn"].Value.ToString().Replace("\n", Environment.NewLine);
+            textBox8.ForeColor = System.Drawing.Color.Black;
+            textBox8.Multiline = true;
+
+            textBox9.Text = selectedRow.Cells["lTDataGridViewTextBoxColumn"].Value.ToString().Replace("\n", Environment.NewLine);
+            textBox9.ForeColor = System.Drawing.Color.Black;
+            textBox9.Multiline = true;
+
+            textBox10.Text = selectedRow.Cells["lDDataGridViewTextBoxColumn"].Value.ToString().Replace("\n", Environment.NewLine);
+            textBox10.ForeColor = System.Drawing.Color.Black;
+            textBox10.Multiline = true;
+
+            textBox11.Text = selectedRow.Cells["nbPosesDataGridViewTextBoxColumn"].Value.ToString().Replace("\n", Environment.NewLine);
+            textBox11.ForeColor = System.Drawing.Color.Black;
+            textBox11.Multiline = true;
+
+            textBox12.Text = selectedRow.Cells["nbcylindresDataGridViewTextBoxColumn"].Value.ToString().Replace("\n", Environment.NewLine);
+            textBox12.ForeColor = System.Drawing.Color.Black;
+            textBox12.Multiline = true;
+
+            textBox13.Text = selectedRow.Cells["pRIXDEVENTEDataGridViewTextBoxColumn"].Value.ToString().Replace("\n", Environment.NewLine);
+            textBox13.ForeColor = System.Drawing.Color.Black;
+            textBox13.Multiline = true;
+
+            textBox1.Size = new System.Drawing.Size(214, 67);
+            textBox2.Size = new System.Drawing.Size(214, 67);
+            textBox3.Size = new System.Drawing.Size(214, 67);
+            textBox4.Size = new System.Drawing.Size(214, 67);
+            textBox5.Size = new System.Drawing.Size(214, 67);
+            textBox6.Size = new System.Drawing.Size(214, 67);
+            textBox7.Size = new System.Drawing.Size(214, 67);
+            textBox8.Size = new System.Drawing.Size(214, 67);
+            textBox9.Size = new System.Drawing.Size(214, 67);
+            textBox10.Size = new System.Drawing.Size(214, 67);
+            textBox11.Size = new System.Drawing.Size(214, 67);
+            textBox12.Size = new System.Drawing.Size(214, 67);
+            textBox13.Size = new System.Drawing.Size(214, 67);
         }
+    
 
         private void docpf_KeyDown(object sender, KeyEventArgs e)
         {
@@ -862,7 +938,13 @@ namespace Cogitel_QT
 
         private void dataGridView1_Scroll(object sender, ScrollEventArgs e)
         {
-
+            if (e.Type == ScrollEventType.SmallIncrement && e.ScrollOrientation == ScrollOrientation.VerticalScroll && e.NewValue >= dataGridView1.Rows.Count - dataGridView1.DisplayedRowCount(true))
+            {
+                int firstDisplayedRowIndex = dataGridView1.FirstDisplayedScrollingRowIndex;
+                offset += limit;
+                LoadData();
+                dataGridView1.FirstDisplayedScrollingRowIndex = firstDisplayedRowIndex;
+            }
         }
 
 
@@ -944,9 +1026,6 @@ namespace Cogitel_QT
             this.Cursor = Cursors.Arrow;
         }
 
-        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        
     }
 }

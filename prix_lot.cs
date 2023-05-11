@@ -190,8 +190,10 @@ namespace Cogitel_QT
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text) || string.IsNullOrEmpty(textBox4.Text) || string.IsNullOrEmpty(textBox5.Text) || string.IsNullOrEmpty(textBox6.Text) || string.IsNullOrEmpty(textBox7.Text) )
-            {
+            if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text) || string.IsNullOrEmpty(textBox4.Text) || string.IsNullOrEmpty(textBox5.Text) || string.IsNullOrEmpty(textBox6.Text) || string.IsNullOrEmpty(textBox7.Text) ||
+                (textBox1.Text == "Saisie RÉFÉRENCE" || textBox2.Text == "Saisie DÉSIGNATION" || textBox3.Text == "Saisie N°LOT" || textBox4.Text == "Saisie DATE" || textBox5.Text == "Saisie QUANTITÉ" || textBox6.Text == "Saisie UNITÉ" || textBox7.Text == "Saisie PRIX LOT"))
+            { 
+                
                 MessageBox.Show("Veuillez remplir toutes les cases .", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
@@ -252,74 +254,84 @@ namespace Cogitel_QT
         {
             if (dataGridView1.SelectedRows.Count > 0 && !textBox1.Text.Contains("Saisie RÉFÉRENCE") && !textBox2.Text.Contains("Saisie DÉSIGNATION") && !textBox3.Text.Contains("Saisie N°LOT")  && !textBox5.Text.Contains("Saisie QUANTITÉ") && !textBox6.Text.Contains("Saisie UNITÉ") && !textBox7.Text.Contains("Saisie PRIX LOT") )
             {
-                DialogResult dialogResult = MessageBox.Show("Voulez-vous vraiment modifier cette ligne ?", "Confirmation de modification", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
+                if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text) || string.IsNullOrEmpty(textBox4.Text) || string.IsNullOrEmpty(textBox5.Text) || string.IsNullOrEmpty(textBox6.Text) || string.IsNullOrEmpty(textBox7.Text) ||
+              (textBox1.Text == "Saisie RÉFÉRENCE" || textBox2.Text == "Saisie DÉSIGNATION" || textBox3.Text == "Saisie N°LOT" || textBox4.Text == "Saisie DATE" || textBox5.Text == "Saisie QUANTITÉ" || textBox6.Text == "Saisie UNITÉ" || textBox7.Text == "Saisie PRIX LOT"))
                 {
 
-                    connection = new SqlConnection(connectionString);
-                    // Mettre à jour les données dans la base de données pour la ligne modifiée
-                    string reff = textBox1.Text;
-                    string Désignation = textBox2.Text;
-                    string Nlot = textBox3.Text;
-                    string unité = textBox6.Text;
-                    float qté = float.Parse(textBox5.Text);
-                    float prix_lot = float.Parse(textBox7.Text);
-                    DateTime? nullableDate = null;
-                    DateTime date;
-
-                    if (string.IsNullOrWhiteSpace(textBox4.Text))
+                    MessageBox.Show("Veuillez remplir toutes les cases .", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    DialogResult dialogResult = MessageBox.Show("Voulez-vous vraiment modifier cette ligne ?", "Confirmation de modification", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
                     {
-                        // If the TextBox is empty or contains only white spaces, set nullableDate to null
-                        nullableDate = null;
+
+                        connection = new SqlConnection(connectionString);
+                        // Mettre à jour les données dans la base de données pour la ligne modifiée
+                        string reff = textBox1.Text;
+                        string Désignation = textBox2.Text;
+                        string Nlot = textBox3.Text;
+                        string unité = textBox6.Text;
+                        float qté = float.Parse(textBox5.Text);
+                        float prix_lot = float.Parse(textBox7.Text);
+                        DateTime? nullableDate = null;
+                        DateTime date;
+
+                        if (string.IsNullOrWhiteSpace(textBox4.Text))
+                        {
+                            // If the TextBox is empty or contains only white spaces, set nullableDate to null
+                            nullableDate = null;
+                        }
+                        else if (DateTime.TryParse(textBox4.Text, out date))
+                        {
+                            // If the TextBox contains a valid date, assign the value to nullableDate
+                            nullableDate = date;
+                        }
+
+                        // Récupérer l'id de la ligne sélectionnée dans le DataGridView
+                        int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["id_lot"].Value);
+
+                        connection.Open();
+                        string updateQuery = "UPDATE [prix_lot] SET [ref] = @reff, [Désignation] = @Désignation, [Nlot] = @Nlot, [date] = @nullableDate, [qté] = @qté, [unité] = @unité, [prix_lot] = @prix_lot  WHERE [id_lot] = @id";
+                        SqlCommand updateCommand = new SqlCommand(updateQuery, connection);
+                        updateCommand.Parameters.AddWithValue("@reff", reff);
+                        updateCommand.Parameters.AddWithValue("@Désignation", Désignation);
+                        updateCommand.Parameters.AddWithValue("@Nlot", Nlot);
+                        updateCommand.Parameters.AddWithValue("@unité", unité);
+                        updateCommand.Parameters.AddWithValue("@qté", qté);
+                        updateCommand.Parameters.AddWithValue("@prix_lot", prix_lot);
+                        updateCommand.Parameters.AddWithValue("@nullableDate", nullableDate.HasValue ? (object)nullableDate : DBNull.Value);
+                        updateCommand.Parameters.AddWithValue("@id", id);
+                        updateCommand.ExecuteNonQuery();
+                        connection.Close();
+                        allData.Clear();
+                        LoadData();
+                        MessageBox.Show("Les données ont été modifiées avec succès .");
+                        textBox1.Text = "Saisie RÉFÉRENCE";
+                        textBox1.ForeColor = System.Drawing.Color.Gray;
+                        textBox2.Text = "Saisie DÉSIGNATION";
+                        textBox2.ForeColor = System.Drawing.Color.Gray;
+                        textBox3.Text = "Saisie N°LOT";
+                        textBox3.ForeColor = System.Drawing.Color.Gray;
+                        textBox4.Text = "Saisie DATE";
+                        textBox4.ForeColor = System.Drawing.Color.Gray;
+                        textBox5.Text = "Saisie QUANTITÉ";
+                        textBox5.ForeColor = System.Drawing.Color.Gray;
+                        textBox6.Text = "Saisie UNITÉ";
+                        textBox6.ForeColor = System.Drawing.Color.Gray;
+                        textBox7.Text = "Saisie PRIX LOT";
+                        textBox7.ForeColor = System.Drawing.Color.Gray;
+                        textBox1.Multiline = false;
+                        textBox2.Multiline = false;
+                        textBox3.Multiline = false;
+                        textBox4.Multiline = false;
+                        textBox5.Multiline = false;
+                        textBox6.Multiline = false;
+                        textBox7.Multiline = false;
+
+
+
                     }
-                    else if (DateTime.TryParse(textBox4.Text, out date))
-                    {
-                        // If the TextBox contains a valid date, assign the value to nullableDate
-                        nullableDate = date;
-                    }
-
-                    // Récupérer l'id de la ligne sélectionnée dans le DataGridView
-                    int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["id_lot"].Value);
-
-                    connection.Open();
-                    string updateQuery = "UPDATE [prix_lot] SET [ref] = @reff, [Désignation] = @Désignation, [Nlot] = @Nlot, [date] = @nullableDate, [qté] = @qté, [unité] = @unité, [prix_lot] = @prix_lot  WHERE [id_lot] = @id";
-                    SqlCommand updateCommand = new SqlCommand(updateQuery, connection);
-                    updateCommand.Parameters.AddWithValue("@reff", reff);
-                    updateCommand.Parameters.AddWithValue("@Désignation", Désignation);
-                    updateCommand.Parameters.AddWithValue("@Nlot", Nlot);
-                    updateCommand.Parameters.AddWithValue("@unité", unité);
-                    updateCommand.Parameters.AddWithValue("@qté", qté);
-                    updateCommand.Parameters.AddWithValue("@prix_lot", prix_lot);
-                    updateCommand.Parameters.AddWithValue("@nullableDate", nullableDate.HasValue ? (object)nullableDate : DBNull.Value);
-                    updateCommand.Parameters.AddWithValue("@id", id);
-                    updateCommand.ExecuteNonQuery();
-                    connection.Close();
-                    allData.Clear();
-                    LoadData();
-                    MessageBox.Show("Les données ont été modifiées avec succès .");
-                    textBox1.Text = "Saisie RÉFÉRENCE";
-                    textBox1.ForeColor = System.Drawing.Color.Gray;
-                    textBox2.Text = "Saisie DÉSIGNATION";
-                    textBox2.ForeColor = System.Drawing.Color.Gray;
-                    textBox3.Text = "Saisie N°LOT";
-                    textBox3.ForeColor = System.Drawing.Color.Gray;
-                    textBox4.Text = "Saisie DATE";
-                    textBox4.ForeColor = System.Drawing.Color.Gray;
-                    textBox5.Text = "Saisie QUANTITÉ";
-                    textBox5.ForeColor = System.Drawing.Color.Gray;
-                    textBox6.Text = "Saisie UNITÉ";
-                    textBox6.ForeColor = System.Drawing.Color.Gray;
-                    textBox7.Text = "Saisie PRIX LOT";
-                    textBox7.ForeColor = System.Drawing.Color.Gray;
-                    textBox1.Multiline = false;
-                    textBox2.Multiline = false;
-                    textBox3.Multiline = false;
-                    textBox4.Multiline = false;
-                    textBox5.Multiline = false;
-                    textBox6.Multiline = false;
-                    textBox7.Multiline = false;
-                   
-
                 }
             }
 

@@ -244,7 +244,8 @@ namespace Cogitel_QT
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text) || string.IsNullOrEmpty(textBox4.Text) || string.IsNullOrEmpty(textBox5.Text) || string.IsNullOrEmpty(textBox6.Text) || string.IsNullOrEmpty(textBox7.Text) || string.IsNullOrEmpty(textBox8.Text) || string.IsNullOrEmpty(textBox9.Text) || string.IsNullOrEmpty(textBox10.Text) || string.IsNullOrEmpty(textBox11.Text))
+            if (textBox1.Text == "Saisie N° de doc" || textBox2.Text == "Saisie Article" || textBox3.Text == "Saisie Désignation" || textBox4.Text == "Saisie S.Client" || textBox5.Text == "Saisie Qté Stock" || textBox6.Text == "Saisie N° de lot" || textBox7.Text == "Saisie Q" || textBox8.Text == "Saisie F" || textBox9.Text == "Saisie Prix unitaire" || textBox10.Text == "Saisie P" || textBox11.Text == "Saisie date" ||
+                string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text) || string.IsNullOrEmpty(textBox4.Text) || string.IsNullOrEmpty(textBox5.Text) || string.IsNullOrEmpty(textBox6.Text) || string.IsNullOrEmpty(textBox7.Text) || string.IsNullOrEmpty(textBox8.Text) || string.IsNullOrEmpty(textBox9.Text) || string.IsNullOrEmpty(textBox10.Text) || string.IsNullOrEmpty(textBox11.Text))
             {
                 MessageBox.Show("Veuillez remplir toutes les cases .", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -317,93 +318,100 @@ namespace Cogitel_QT
         {
             if (dataGridView1.SelectedRows.Count > 0 && !textBox1.Text.Contains("Saisie N° de doc") && !textBox2.Text.Contains("Saisie Article") && !textBox3.Text.Contains("Saisie Désignation") && !textBox4.Text.Contains("Saisie Qté Stock") && !textBox5.Text.Contains("Saisie N° de lot") && !textBox6.Text.Contains("Saisie Q") && !textBox7.Text.Contains("Saisie F") && !textBox8.Text.Contains("Saisie Prix unitaire") && !textBox9.Text.Contains("Saisie P") && !textBox10.Text.Contains("Saisie date") && !textBox11.Text.Contains("Prix Facturation"))
             {
-                DialogResult dialogResult = MessageBox.Show("Voulez-vous vraiment modifier cette ligne ?", "Confirmation de modification", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
+                if (textBox1.Text == "Saisie N° de doc" || textBox2.Text == "Saisie Article" || textBox3.Text == "Saisie Désignation" || textBox4.Text == "Saisie S.Client" || textBox5.Text == "Saisie Qté Stock" || textBox6.Text == "Saisie N° de lot" || textBox7.Text == "Saisie Q" || textBox8.Text == "Saisie F" || textBox9.Text == "Saisie Prix unitaire" || textBox10.Text == "Saisie P" || textBox11.Text == "Saisie date" ||
+                string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text) || string.IsNullOrEmpty(textBox4.Text) || string.IsNullOrEmpty(textBox5.Text) || string.IsNullOrEmpty(textBox6.Text) || string.IsNullOrEmpty(textBox7.Text) || string.IsNullOrEmpty(textBox8.Text) || string.IsNullOrEmpty(textBox9.Text) || string.IsNullOrEmpty(textBox10.Text) || string.IsNullOrEmpty(textBox11.Text))
                 {
-
-                    connection = new SqlConnection(connectionString);
-                    // Mettre à jour les données dans la base de données pour la ligne modifiée
-                    string N_de_doc = textBox1.Text;
-                    string Article = textBox2.Text;
-                    string Désignation = textBox3.Text;
-                    string SClient = textBox4.Text;
-                    string Qté_Stock = textBox5.Text;
-                    string N_de_lot = textBox6.Text;
-                    string Q = textBox7.Text;
-                    float F = float.Parse(textBox8.Text);
-                    float Prix_unitaire = float.Parse(textBox9.Text);
-                    float P = float.Parse(textBox10.Text);
-                    DateTime? nullableDate = null;
-                    DateTime date;
-
-                    if (string.IsNullOrWhiteSpace(textBox11.Text))
+                    MessageBox.Show("Veuillez remplir toutes les cases .", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    DialogResult dialogResult = MessageBox.Show("Voulez-vous vraiment modifier cette ligne ?", "Confirmation de modification", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
                     {
-                        // If the TextBox is empty or contains only white spaces, set nullableDate to null
-                        nullableDate = null;
+
+                        connection = new SqlConnection(connectionString);
+                        // Mettre à jour les données dans la base de données pour la ligne modifiée
+                        string N_de_doc = textBox1.Text;
+                        string Article = textBox2.Text;
+                        string Désignation = textBox3.Text;
+                        string SClient = textBox4.Text;
+                        string Qté_Stock = textBox5.Text;
+                        string N_de_lot = textBox6.Text;
+                        string Q = textBox7.Text;
+                        float F = float.Parse(textBox8.Text);
+                        float Prix_unitaire = float.Parse(textBox9.Text);
+                        float P = float.Parse(textBox10.Text);
+                        DateTime? nullableDate = null;
+                        DateTime date;
+
+                        if (string.IsNullOrWhiteSpace(textBox11.Text))
+                        {
+                            // If the TextBox is empty or contains only white spaces, set nullableDate to null
+                            nullableDate = null;
+                        }
+                        else if (DateTime.TryParse(textBox11.Text, out date))
+                        {
+                            // If the TextBox contains a valid date, assign the value to nullableDate
+                            nullableDate = date;
+                        }
+
+                        // Récupérer l'id de la ligne sélectionnée dans le DataGridView
+                        int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["id_pricpf"].Value);
+
+                        connection.Open();
+                        string updateQuery = "UPDATE [PrixPF] SET [N_de_doc] = @N_de_doc, [Article] = @Article, [Désignation] = @Désignation, [s_clinet] = @SClient, [Qté_Stock] = @Qté_Stock, [N_de_lot] = N_de_lot, [Q] = @Q, [F] = @F, [Prix_unitaire] = @Prix_unitaire, [P] = @P, [date] = @nullableDate  WHERE [id_pricpf] = @id";
+                        SqlCommand updateCommand = new SqlCommand(updateQuery, connection);
+                        updateCommand.Parameters.AddWithValue("@N_de_doc", N_de_doc);
+                        updateCommand.Parameters.AddWithValue("@Article", Article);
+                        updateCommand.Parameters.AddWithValue("@Désignation", Désignation);
+                        updateCommand.Parameters.AddWithValue("@Qté_Stock", Qté_Stock);
+                        updateCommand.Parameters.AddWithValue("@N_de_lot", N_de_lot);
+                        updateCommand.Parameters.AddWithValue("@Q", Q);
+                        updateCommand.Parameters.AddWithValue("@F", F);
+                        updateCommand.Parameters.AddWithValue("@Prix_unitaire ", Prix_unitaire);
+                        updateCommand.Parameters.AddWithValue("@P", P);
+                        updateCommand.Parameters.AddWithValue("@nullableDate", nullableDate.HasValue ? (object)nullableDate : DBNull.Value);
+                        updateCommand.Parameters.AddWithValue("@SClient", SClient);
+                        updateCommand.Parameters.AddWithValue("@id", id);
+                        updateCommand.ExecuteNonQuery();
+                        connection.Close();
+                        allData.Clear();
+                        LoadData();
+                        MessageBox.Show("Les données ont été modifiées avec succès .");
+                        textBox1.Text = "Saisie N° de doc";
+                        textBox1.ForeColor = System.Drawing.Color.Gray;
+                        textBox2.Text = "Saisie Article";
+                        textBox2.ForeColor = System.Drawing.Color.Gray;
+                        textBox3.Text = "Saisie Désignation";
+                        textBox3.ForeColor = System.Drawing.Color.Gray;
+                        textBox5.Text = "Saisie Qté Stock";
+                        textBox5.ForeColor = System.Drawing.Color.Gray;
+                        textBox6.Text = "Saisie N° de lot";
+                        textBox6.ForeColor = System.Drawing.Color.Gray;
+                        textBox7.Text = "Saisie Q";
+                        textBox7.ForeColor = System.Drawing.Color.Gray;
+                        textBox8.Text = "Saisie F";
+                        textBox8.ForeColor = System.Drawing.Color.Gray; ;
+                        textBox9.Text = "Saisie Prix unitaire";
+                        textBox9.ForeColor = System.Drawing.Color.Gray;
+                        textBox10.Text = "Saisie P";
+                        textBox10.ForeColor = System.Drawing.Color.Gray;
+                        textBox11.Text = "Saisie date";
+                        textBox11.ForeColor = System.Drawing.Color.Gray;
+                        textBox4.Text = "Saisie S.Client";
+                        textBox4.ForeColor = System.Drawing.Color.Gray;
+                        textBox1.Multiline = false;
+                        textBox2.Multiline = false;
+                        textBox3.Multiline = false;
+                        textBox4.Multiline = false;
+                        textBox5.Multiline = false;
+                        textBox6.Multiline = false;
+                        textBox7.Multiline = false;
+                        textBox8.Multiline = false;
+                        textBox9.Multiline = false;
+                        textBox10.Multiline = false;
+                        textBox11.Multiline = false;
                     }
-                    else if (DateTime.TryParse(textBox11.Text, out date))
-                    {
-                        // If the TextBox contains a valid date, assign the value to nullableDate
-                        nullableDate = date;
-                    }
-
-                    // Récupérer l'id de la ligne sélectionnée dans le DataGridView
-                    int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["id_pricpf"].Value);
-
-                    connection.Open();
-                    string updateQuery = "UPDATE [PrixPF] SET [N_de_doc] = @N_de_doc, [Article] = @Article, [Désignation] = @Désignation, [s_clinet] = @SClient, [Qté_Stock] = @Qté_Stock, [N_de_lot] = N_de_lot, [Q] = @Q, [F] = @F, [Prix_unitaire] = @Prix_unitaire, [P] = @P, [date] = @nullableDate  WHERE [id_pricpf] = @id";
-                    SqlCommand updateCommand = new SqlCommand(updateQuery, connection);
-                    updateCommand.Parameters.AddWithValue("@N_de_doc", N_de_doc);
-                    updateCommand.Parameters.AddWithValue("@Article", Article);
-                    updateCommand.Parameters.AddWithValue("@Désignation", Désignation);
-                    updateCommand.Parameters.AddWithValue("@Qté_Stock", Qté_Stock);
-                    updateCommand.Parameters.AddWithValue("@N_de_lot", N_de_lot);
-                    updateCommand.Parameters.AddWithValue("@Q", Q);
-                    updateCommand.Parameters.AddWithValue("@F", F);
-                    updateCommand.Parameters.AddWithValue("@Prix_unitaire ", Prix_unitaire);
-                    updateCommand.Parameters.AddWithValue("@P", P);
-                    updateCommand.Parameters.AddWithValue("@nullableDate", nullableDate.HasValue ? (object)nullableDate : DBNull.Value);
-                    updateCommand.Parameters.AddWithValue("@SClient", SClient);
-                    updateCommand.Parameters.AddWithValue("@id", id);
-                    updateCommand.ExecuteNonQuery();
-                    connection.Close();
-                    allData.Clear();
-                    LoadData();
-                    MessageBox.Show("Les données ont été modifiées avec succès .");
-                    textBox1.Text = "Saisie N° de doc";
-                    textBox1.ForeColor = System.Drawing.Color.Gray;
-                    textBox2.Text = "Saisie Article";
-                    textBox2.ForeColor = System.Drawing.Color.Gray;
-                    textBox3.Text = "Saisie Désignation";
-                    textBox3.ForeColor = System.Drawing.Color.Gray;
-                    textBox5.Text = "Saisie Qté Stock";
-                    textBox5.ForeColor = System.Drawing.Color.Gray;
-                    textBox6.Text = "Saisie N° de lot";
-                    textBox6.ForeColor = System.Drawing.Color.Gray;
-                    textBox7.Text = "Saisie Q";
-                    textBox7.ForeColor = System.Drawing.Color.Gray;
-                    textBox8.Text = "Saisie F";
-                    textBox8.ForeColor = System.Drawing.Color.Gray; ;
-                    textBox9.Text = "Saisie Prix unitaire";
-                    textBox9.ForeColor = System.Drawing.Color.Gray;
-                    textBox10.Text = "Saisie P";
-                    textBox10.ForeColor = System.Drawing.Color.Gray;
-                    textBox11.Text = "Saisie date";
-                    textBox11.ForeColor = System.Drawing.Color.Gray;
-                    textBox4.Text = "Saisie S.Client";
-                    textBox4.ForeColor = System.Drawing.Color.Gray;
-                    textBox1.Multiline = false;
-                    textBox2.Multiline = false;
-                    textBox3.Multiline = false;
-                    textBox4.Multiline = false;
-                    textBox5.Multiline = false;
-                    textBox6.Multiline = false;
-                    textBox7.Multiline = false;
-                    textBox8.Multiline = false;
-                    textBox9.Multiline = false;
-                    textBox10.Multiline = false;
-                    textBox11.Multiline = false;
-
                 }
             }
 
