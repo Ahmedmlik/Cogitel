@@ -847,5 +847,91 @@ namespace Cogitel_QT
         {
             this.Cursor = Cursors.Arrow;
         }
+
+        private void MRFMR_Load(object sender, EventArgs e)
+        {
+            //Ouvrir une connexion à la base de données
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                //Définir la commande SQL pour récupérer les données de la table PF
+                SqlCommand cmd = new SqlCommand("SELECT * FROM [dbo].[PrixPF]", connection);
+
+                //Exécuter la commande SQL et récupérer les résultats dans un objet SqlDataReader
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                //Créer des collections d'autocomplétion pour chaque TextBox
+                AutoCompleteStringCollection collection1 = new AutoCompleteStringCollection();
+
+
+                //Parcourir chaque ligne de résultats et ajouter les valeurs appropriées aux collections d'autocomplétion
+                while (dr.Read())
+                {
+                    collection1.Add(dr["N_de_doc"].ToString());
+
+
+                }
+                //Lier chaque collection d'autocomplétion à son TextBox correspondant
+                textBox6.AutoCompleteCustomSource = collection1;
+                //Fermer le DataReader et la connexion
+                dr.Close();
+
+            }
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                //Définir la commande SQL pour récupérer les données de la table PF
+                SqlCommand cmd = new SqlCommand("SELECT * FROM [dbo].[prix_lot]", connection);
+
+                //Exécuter la commande SQL et récupérer les résultats dans un objet SqlDataReader
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                //Créer des collections d'autocomplétion pour chaque TextBox
+                AutoCompleteStringCollection collection2 = new AutoCompleteStringCollection();
+
+
+                //Parcourir chaque ligne de résultats et ajouter les valeurs appropriées aux collections d'autocomplétion
+                while (dr.Read())
+                {
+                    collection2.Add(dr["ref"].ToString());
+
+
+                }
+                //Lier chaque collection d'autocomplétion à son TextBox correspondant
+                textBox13.AutoCompleteCustomSource = collection2;
+                //Fermer le DataReader et la connexion
+                dr.Close();
+
+            }
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                //Définir la commande SQL pour récupérer les données de la table PF
+                SqlCommand cmd = new SqlCommand("SELECT * FROM [dbo].[prix_lot]", connection);
+
+                //Exécuter la commande SQL et récupérer les résultats dans un objet SqlDataReader
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                //Créer des collections d'autocomplétion pour chaque TextBox
+                AutoCompleteStringCollection collection2 = new AutoCompleteStringCollection();
+
+
+                //Parcourir chaque ligne de résultats et ajouter les valeurs appropriées aux collections d'autocomplétion
+                while (dr.Read())
+                {
+                    collection2.Add(dr["Nlot"].ToString());
+
+
+                }
+                //Lier chaque collection d'autocomplétion à son TextBox correspondant
+                textBox18.AutoCompleteCustomSource = collection2;
+                //Fermer le DataReader et la connexion
+                dr.Close();
+
+            }
+        }
     }
 }
