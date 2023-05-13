@@ -663,10 +663,23 @@ namespace Cogitel_QT
             }
 
         }
+        private RFMS formInstance10 = null;
 
         private void button13_Click(object sender, EventArgs e)
         {
-
+            hidepanelutilisateurmenu();
+            hidepanelRF();
+            if (formInstance10 == null)
+            {
+                formInstance10 = new RFMS();
+                formInstance10.FormClosed += (s, args) => formInstance10 = null;
+            }
+            formInstance10.MdiParent = this;
+            formInstance10.Dock = DockStyle.Fill;
+            formInstance10.WindowState = FormWindowState.Normal;
+            formInstance10.Show();
+            formInstance10.BringToFront();
+            panelslidemenu.Hide();
         }
     }
 

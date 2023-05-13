@@ -1,6 +1,6 @@
 ﻿namespace Cogitel_QT
 {
-    partial class RFMR
+    partial class RFMS
     {
         /// <summary>
         /// Required designer variable.
@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox14 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -46,9 +46,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.id_ME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.cogitelDataSet = new Cogitel_QT.CogitelDataSet();
+            this.mSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mSTableAdapter = new Cogitel_QT.CogitelDataSetTableAdapters.MSTableAdapter();
+            this.id_MS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ndelaNCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datedelaréclamationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stadededétectionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -95,78 +98,132 @@
             this.remboursementnetfournisseurDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.actionfournisseurDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mEBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cogitelDataSet = new Cogitel_QT.CogitelDataSet();
-            this.mETableAdapter = new Cogitel_QT.CogitelDataSetTableAdapters.METableAdapter();
-            this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mEBindingSource)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cogitelDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mSBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // dataGridView1
             // 
-            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(52)))), ((int)(((byte)(76)))));
-            this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1000, 40);
-            this.panel1.TabIndex = 3;
-            this.panel1.TabStop = true;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label14.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(0, 0);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(354, 33);
-            this.label14.TabIndex = 11;
-            this.label14.Text = "ETAT DES RÉCLAMATIONS ME";
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(52)))), ((int)(((byte)(76)))));
-            this.button6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Image = global::Cogitel_QT.Properties.Resources.minus_sign__1___1_;
-            this.button6.Location = new System.Drawing.Point(846, 0);
-            this.button6.Margin = new System.Windows.Forms.Padding(4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(77, 40);
-            this.button6.TabIndex = 10;
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            this.button6.MouseLeave += new System.EventHandler(this.button6_MouseLeave);
-            this.button6.MouseHover += new System.EventHandler(this.button6_MouseHover);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(52)))), ((int)(((byte)(76)))));
-            this.button4.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Image = global::Cogitel_QT.Properties.Resources.cancel__1_;
-            this.button4.Location = new System.Drawing.Point(923, 0);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(77, 40);
-            this.button4.TabIndex = 8;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            this.button4.MouseLeave += new System.EventHandler(this.button4_MouseLeave);
-            this.button4.MouseHover += new System.EventHandler(this.button4_MouseHover);
+            this.dataGridView1.AllowDrop = true;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlDark;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.CausesValidation = false;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(52)))), ((int)(((byte)(76)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(52)))), ((int)(((byte)(76)))));
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            this.dataGridView1.ColumnHeadersHeight = 50;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_MS,
+            this.ndelaNCDataGridViewTextBoxColumn,
+            this.datedelaréclamationDataGridViewTextBoxColumn,
+            this.stadededétectionDataGridViewTextBoxColumn,
+            this.quiadétectéDataGridViewTextBoxColumn,
+            this.fournisseurDataGridViewTextBoxColumn,
+            this.ndedocDataGridViewTextBoxColumn,
+            this.clientDataGridViewTextBoxColumn,
+            this.référencearticleDataGridViewTextBoxColumn,
+            this.articlesDataGridViewTextBoxColumn,
+            this.familleduproduitDataGridViewTextBoxColumn,
+            this.dysfonctionnementDéfautDataGridViewTextBoxColumn,
+            this.gravitéDataGridViewTextBoxColumn,
+            this.référenceMPDataGridViewTextBoxColumn,
+            this.identificationdelaMPNCDataGridViewTextBoxColumn,
+            this.ndebobineFÜTDataGridViewTextBoxColumn,
+            this.machinededétectionDataGridViewTextBoxColumn,
+            this.equipededétectionDataGridViewTextBoxColumn,
+            this.entréeMPDataGridViewTextBoxColumn,
+            this.décisiondutraitementDataGridViewTextBoxColumn,
+            this.commentairesDataGridViewTextBoxColumn,
+            this.nombredebobinesDataGridViewTextBoxColumn,
+            this.qtéNCdérogéesanstraitementkgDataGridViewTextBoxColumn,
+            this.qtéNCdérogéeavectraitementkgDataGridViewTextBoxColumn,
+            this.qtédéclasséekgDataGridViewTextBoxColumn,
+            this.qttérebutéekgDataGridViewTextBoxColumn,
+            this.qtéNCréclaméekgDataGridViewTextBoxColumn,
+            this.qtéPFrebutéesuitedérogationdutilisationDataGridViewTextBoxColumn,
+            this.valeurdutempsperduDataGridViewTextBoxColumn,
+            this.prixdachatDataGridViewTextBoxColumn,
+            this.prixdeventeDataGridViewTextBoxColumn,
+            this.valeurréelledelaréclamationDataGridViewTextBoxColumn,
+            this.quantitéconsomméekgDataGridViewTextBoxColumn,
+            this.quantitévenduekgDataGridViewTextBoxColumn,
+            this.datedenvoiedelaréclamationDataGridViewTextBoxColumn,
+            this.planactioncommuniquéOUINONDataGridViewTextBoxColumn,
+            this.valeurinitialeDTDataGridViewTextBoxColumn,
+            this.valeurfinaleDTDataGridViewTextBoxColumn,
+            this.montantenattenteDTDataGridViewTextBoxColumn,
+            this.refusfournisseurDTDataGridViewTextBoxColumn,
+            this.accordfournisseurDTDataGridViewTextBoxColumn,
+            this.notedecréditDTDataGridViewTextBoxColumn,
+            this.montantdelamatiérevendueDataGridViewTextBoxColumn,
+            this.valeurdelamatièreretournéefournisseurDataGridViewTextBoxColumn,
+            this.remboursementnetfournisseurDataGridViewTextBoxColumn,
+            this.statutDataGridViewTextBoxColumn,
+            this.actionfournisseurDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.mSBindingSource;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle18;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 82);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.IndianRed;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 70;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.ShowCellErrors = false;
+            this.dataGridView1.ShowCellToolTips = false;
+            this.dataGridView1.ShowEditingIcon = false;
+            this.dataGridView1.ShowRowErrors = false;
+            this.dataGridView1.Size = new System.Drawing.Size(1108, 491);
+            this.dataGridView1.TabIndex = 40;
+            this.dataGridView1.VirtualMode = true;
+            this.dataGridView1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dataGridView1_Scroll);
             // 
             // panel3
             // 
@@ -182,8 +239,50 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 40);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1000, 42);
-            this.panel3.TabIndex = 36;
+            this.panel3.Size = new System.Drawing.Size(1108, 42);
+            this.panel3.TabIndex = 39;
+            // 
+            // textBox14
+            // 
+            this.textBox14.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.textBox14.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.textBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(243)))));
+            this.textBox14.Dock = System.Windows.Forms.DockStyle.Left;
+            this.textBox14.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox14.Location = new System.Drawing.Point(0, 0);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(250, 38);
+            this.textBox14.TabIndex = 30;
+            this.textBox14.Enter += new System.EventHandler(this.textBox14_Enter);
+            this.textBox14.Leave += new System.EventHandler(this.textBox14_Leave);
+            // 
+            // panel1
+            // 
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(52)))), ((int)(((byte)(76)))));
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1108, 40);
+            this.panel1.TabIndex = 38;
+            this.panel1.TabStop = true;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label14.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(0, 0);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(354, 33);
+            this.label14.TabIndex = 11;
+            this.label14.Text = "ETAT DES RÉCLAMATIONS MS";
             // 
             // button10
             // 
@@ -220,7 +319,7 @@
             this.button8.Dock = System.Windows.Forms.DockStyle.Right;
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.Image = global::Cogitel_QT.Properties.Resources.excel__2_;
-            this.button8.Location = new System.Drawing.Point(910, 0);
+            this.button8.Location = new System.Drawing.Point(1018, 0);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(90, 42);
             this.button8.TabIndex = 38;
@@ -271,6 +370,8 @@
             this.button7.TabIndex = 32;
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button7.MouseLeave += new System.EventHandler(this.button7_MouseLeave);
+            this.button7.MouseHover += new System.EventHandler(this.button7_MouseHover);
             // 
             // button5
             // 
@@ -284,150 +385,67 @@
             this.button5.TabIndex = 31;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.MouseLeave += new System.EventHandler(this.button5_MouseLeave);
+            this.button5.MouseHover += new System.EventHandler(this.button5_MouseHover);
             // 
-            // textBox14
+            // button6
             // 
-            this.textBox14.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.textBox14.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(243)))));
-            this.textBox14.Dock = System.Windows.Forms.DockStyle.Left;
-            this.textBox14.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(0, 0);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(250, 38);
-            this.textBox14.TabIndex = 30;
-            this.textBox14.Enter += new System.EventHandler(this.textBox14_Enter);
-            this.textBox14.Leave += new System.EventHandler(this.textBox14_Leave);
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(52)))), ((int)(((byte)(76)))));
+            this.button6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Image = global::Cogitel_QT.Properties.Resources.minus_sign__1___1_;
+            this.button6.Location = new System.Drawing.Point(954, 0);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(77, 40);
+            this.button6.TabIndex = 10;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.MouseLeave += new System.EventHandler(this.button6_MouseLeave);
+            this.button6.MouseHover += new System.EventHandler(this.button6_MouseHover);
             // 
-            // dataGridView1
+            // button4
             // 
-            this.dataGridView1.AllowDrop = true;
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlDark;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.CausesValidation = false;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(52)))), ((int)(((byte)(76)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(52)))), ((int)(((byte)(76)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.ColumnHeadersHeight = 50;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id_ME,
-            this.ndelaNCDataGridViewTextBoxColumn,
-            this.datedelaréclamationDataGridViewTextBoxColumn,
-            this.stadededétectionDataGridViewTextBoxColumn,
-            this.quiadétectéDataGridViewTextBoxColumn,
-            this.fournisseurDataGridViewTextBoxColumn,
-            this.ndedocDataGridViewTextBoxColumn,
-            this.clientDataGridViewTextBoxColumn,
-            this.référencearticleDataGridViewTextBoxColumn,
-            this.articlesDataGridViewTextBoxColumn,
-            this.familleduproduitDataGridViewTextBoxColumn,
-            this.dysfonctionnementDéfautDataGridViewTextBoxColumn,
-            this.gravitéDataGridViewTextBoxColumn,
-            this.référenceMPDataGridViewTextBoxColumn,
-            this.identificationdelaMPNCDataGridViewTextBoxColumn,
-            this.ndebobineFÜTDataGridViewTextBoxColumn,
-            this.machinededétectionDataGridViewTextBoxColumn,
-            this.equipededétectionDataGridViewTextBoxColumn,
-            this.entréeMPDataGridViewTextBoxColumn,
-            this.décisiondutraitementDataGridViewTextBoxColumn,
-            this.commentairesDataGridViewTextBoxColumn,
-            this.nombredebobinesDataGridViewTextBoxColumn,
-            this.qtéNCdérogéesanstraitementkgDataGridViewTextBoxColumn,
-            this.qtéNCdérogéeavectraitementkgDataGridViewTextBoxColumn,
-            this.qtédéclasséekgDataGridViewTextBoxColumn,
-            this.qttérebutéekgDataGridViewTextBoxColumn,
-            this.qtéNCréclaméekgDataGridViewTextBoxColumn,
-            this.qtéPFrebutéesuitedérogationdutilisationDataGridViewTextBoxColumn,
-            this.valeurdutempsperduDataGridViewTextBoxColumn,
-            this.prixdachatDataGridViewTextBoxColumn,
-            this.prixdeventeDataGridViewTextBoxColumn,
-            this.valeurréelledelaréclamationDataGridViewTextBoxColumn,
-            this.quantitéconsomméekgDataGridViewTextBoxColumn,
-            this.quantitévenduekgDataGridViewTextBoxColumn,
-            this.datedenvoiedelaréclamationDataGridViewTextBoxColumn,
-            this.planactioncommuniquéOUINONDataGridViewTextBoxColumn,
-            this.valeurinitialeDTDataGridViewTextBoxColumn,
-            this.valeurfinaleDTDataGridViewTextBoxColumn,
-            this.montantenattenteDTDataGridViewTextBoxColumn,
-            this.refusfournisseurDTDataGridViewTextBoxColumn,
-            this.accordfournisseurDTDataGridViewTextBoxColumn,
-            this.notedecréditDTDataGridViewTextBoxColumn,
-            this.montantdelamatiérevendueDataGridViewTextBoxColumn,
-            this.valeurdelamatièreretournéefournisseurDataGridViewTextBoxColumn,
-            this.remboursementnetfournisseurDataGridViewTextBoxColumn,
-            this.statutDataGridViewTextBoxColumn,
-            this.actionfournisseurDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.mEBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 82);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.IndianRed;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 70;
-            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.ShowCellErrors = false;
-            this.dataGridView1.ShowCellToolTips = false;
-            this.dataGridView1.ShowEditingIcon = false;
-            this.dataGridView1.ShowRowErrors = false;
-            this.dataGridView1.Size = new System.Drawing.Size(1000, 593);
-            this.dataGridView1.TabIndex = 37;
-            this.dataGridView1.VirtualMode = true;
-            this.dataGridView1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dataGridView1_Scroll);
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(52)))), ((int)(((byte)(76)))));
+            this.button4.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Image = global::Cogitel_QT.Properties.Resources.cancel__1_;
+            this.button4.Location = new System.Drawing.Point(1031, 0);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(77, 40);
+            this.button4.TabIndex = 8;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.MouseLeave += new System.EventHandler(this.button4_MouseLeave);
+            this.button4.MouseHover += new System.EventHandler(this.button4_MouseHover);
             // 
-            // id_ME
+            // cogitelDataSet
             // 
-            this.id_ME.DataPropertyName = "id_ME";
-            this.id_ME.HeaderText = "id_ME";
-            this.id_ME.MinimumWidth = 6;
-            this.id_ME.Name = "id_ME";
-            this.id_ME.ReadOnly = true;
-            this.id_ME.Visible = false;
-            this.id_ME.Width = 84;
+            this.cogitelDataSet.DataSetName = "CogitelDataSet";
+            this.cogitelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // mSBindingSource
+            // 
+            this.mSBindingSource.DataMember = "MS";
+            this.mSBindingSource.DataSource = this.cogitelDataSet;
+            // 
+            // mSTableAdapter
+            // 
+            this.mSTableAdapter.ClearBeforeFill = true;
+            // 
+            // id_MS
+            // 
+            this.id_MS.DataPropertyName = "id_MS";
+            this.id_MS.HeaderText = "id_MS";
+            this.id_MS.MinimumWidth = 6;
+            this.id_MS.Name = "id_MS";
+            this.id_MS.ReadOnly = true;
+            this.id_MS.Visible = false;
+            this.id_MS.Width = 125;
             // 
             // ndelaNCDataGridViewTextBoxColumn
             // 
@@ -436,8 +454,7 @@
             this.ndelaNCDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.ndelaNCDataGridViewTextBoxColumn.Name = "ndelaNCDataGridViewTextBoxColumn";
             this.ndelaNCDataGridViewTextBoxColumn.ReadOnly = true;
-            this.ndelaNCDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.ndelaNCDataGridViewTextBoxColumn.Width = 130;
+            this.ndelaNCDataGridViewTextBoxColumn.Width = 125;
             // 
             // datedelaréclamationDataGridViewTextBoxColumn
             // 
@@ -446,8 +463,7 @@
             this.datedelaréclamationDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.datedelaréclamationDataGridViewTextBoxColumn.Name = "datedelaréclamationDataGridViewTextBoxColumn";
             this.datedelaréclamationDataGridViewTextBoxColumn.ReadOnly = true;
-            this.datedelaréclamationDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.datedelaréclamationDataGridViewTextBoxColumn.Width = 213;
+            this.datedelaréclamationDataGridViewTextBoxColumn.Width = 125;
             // 
             // stadededétectionDataGridViewTextBoxColumn
             // 
@@ -456,8 +472,7 @@
             this.stadededétectionDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.stadededétectionDataGridViewTextBoxColumn.Name = "stadededétectionDataGridViewTextBoxColumn";
             this.stadededétectionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.stadededétectionDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.stadededétectionDataGridViewTextBoxColumn.Width = 182;
+            this.stadededétectionDataGridViewTextBoxColumn.Width = 125;
             // 
             // quiadétectéDataGridViewTextBoxColumn
             // 
@@ -466,8 +481,7 @@
             this.quiadétectéDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.quiadétectéDataGridViewTextBoxColumn.Name = "quiadétectéDataGridViewTextBoxColumn";
             this.quiadétectéDataGridViewTextBoxColumn.ReadOnly = true;
-            this.quiadétectéDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.quiadétectéDataGridViewTextBoxColumn.Width = 143;
+            this.quiadétectéDataGridViewTextBoxColumn.Width = 125;
             // 
             // fournisseurDataGridViewTextBoxColumn
             // 
@@ -476,8 +490,7 @@
             this.fournisseurDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.fournisseurDataGridViewTextBoxColumn.Name = "fournisseurDataGridViewTextBoxColumn";
             this.fournisseurDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fournisseurDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.fournisseurDataGridViewTextBoxColumn.Width = 121;
+            this.fournisseurDataGridViewTextBoxColumn.Width = 125;
             // 
             // ndedocDataGridViewTextBoxColumn
             // 
@@ -486,8 +499,7 @@
             this.ndedocDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.ndedocDataGridViewTextBoxColumn.Name = "ndedocDataGridViewTextBoxColumn";
             this.ndedocDataGridViewTextBoxColumn.ReadOnly = true;
-            this.ndedocDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.ndedocDataGridViewTextBoxColumn.Width = 111;
+            this.ndedocDataGridViewTextBoxColumn.Width = 125;
             // 
             // clientDataGridViewTextBoxColumn
             // 
@@ -496,8 +508,7 @@
             this.clientDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.clientDataGridViewTextBoxColumn.Name = "clientDataGridViewTextBoxColumn";
             this.clientDataGridViewTextBoxColumn.ReadOnly = true;
-            this.clientDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.clientDataGridViewTextBoxColumn.Width = 78;
+            this.clientDataGridViewTextBoxColumn.Width = 125;
             // 
             // référencearticleDataGridViewTextBoxColumn
             // 
@@ -506,8 +517,7 @@
             this.référencearticleDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.référencearticleDataGridViewTextBoxColumn.Name = "référencearticleDataGridViewTextBoxColumn";
             this.référencearticleDataGridViewTextBoxColumn.ReadOnly = true;
-            this.référencearticleDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.référencearticleDataGridViewTextBoxColumn.Width = 163;
+            this.référencearticleDataGridViewTextBoxColumn.Width = 125;
             // 
             // articlesDataGridViewTextBoxColumn
             // 
@@ -516,8 +526,7 @@
             this.articlesDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.articlesDataGridViewTextBoxColumn.Name = "articlesDataGridViewTextBoxColumn";
             this.articlesDataGridViewTextBoxColumn.ReadOnly = true;
-            this.articlesDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.articlesDataGridViewTextBoxColumn.Width = 89;
+            this.articlesDataGridViewTextBoxColumn.Width = 125;
             // 
             // familleduproduitDataGridViewTextBoxColumn
             // 
@@ -526,8 +535,7 @@
             this.familleduproduitDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.familleduproduitDataGridViewTextBoxColumn.Name = "familleduproduitDataGridViewTextBoxColumn";
             this.familleduproduitDataGridViewTextBoxColumn.ReadOnly = true;
-            this.familleduproduitDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.familleduproduitDataGridViewTextBoxColumn.Width = 174;
+            this.familleduproduitDataGridViewTextBoxColumn.Width = 125;
             // 
             // dysfonctionnementDéfautDataGridViewTextBoxColumn
             // 
@@ -536,8 +544,7 @@
             this.dysfonctionnementDéfautDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dysfonctionnementDéfautDataGridViewTextBoxColumn.Name = "dysfonctionnementDéfautDataGridViewTextBoxColumn";
             this.dysfonctionnementDéfautDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dysfonctionnementDéfautDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dysfonctionnementDéfautDataGridViewTextBoxColumn.Width = 237;
+            this.dysfonctionnementDéfautDataGridViewTextBoxColumn.Width = 125;
             // 
             // gravitéDataGridViewTextBoxColumn
             // 
@@ -546,8 +553,7 @@
             this.gravitéDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.gravitéDataGridViewTextBoxColumn.Name = "gravitéDataGridViewTextBoxColumn";
             this.gravitéDataGridViewTextBoxColumn.ReadOnly = true;
-            this.gravitéDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.gravitéDataGridViewTextBoxColumn.Width = 90;
+            this.gravitéDataGridViewTextBoxColumn.Width = 125;
             // 
             // référenceMPDataGridViewTextBoxColumn
             // 
@@ -556,8 +562,7 @@
             this.référenceMPDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.référenceMPDataGridViewTextBoxColumn.Name = "référenceMPDataGridViewTextBoxColumn";
             this.référenceMPDataGridViewTextBoxColumn.ReadOnly = true;
-            this.référenceMPDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.référenceMPDataGridViewTextBoxColumn.Width = 147;
+            this.référenceMPDataGridViewTextBoxColumn.Width = 125;
             // 
             // identificationdelaMPNCDataGridViewTextBoxColumn
             // 
@@ -566,8 +571,7 @@
             this.identificationdelaMPNCDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.identificationdelaMPNCDataGridViewTextBoxColumn.Name = "identificationdelaMPNCDataGridViewTextBoxColumn";
             this.identificationdelaMPNCDataGridViewTextBoxColumn.ReadOnly = true;
-            this.identificationdelaMPNCDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.identificationdelaMPNCDataGridViewTextBoxColumn.Width = 244;
+            this.identificationdelaMPNCDataGridViewTextBoxColumn.Width = 125;
             // 
             // ndebobineFÜTDataGridViewTextBoxColumn
             // 
@@ -576,8 +580,7 @@
             this.ndebobineFÜTDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.ndebobineFÜTDataGridViewTextBoxColumn.Name = "ndebobineFÜTDataGridViewTextBoxColumn";
             this.ndebobineFÜTDataGridViewTextBoxColumn.ReadOnly = true;
-            this.ndebobineFÜTDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.ndebobineFÜTDataGridViewTextBoxColumn.Width = 174;
+            this.ndebobineFÜTDataGridViewTextBoxColumn.Width = 125;
             // 
             // machinededétectionDataGridViewTextBoxColumn
             // 
@@ -586,8 +589,7 @@
             this.machinededétectionDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.machinededétectionDataGridViewTextBoxColumn.Name = "machinededétectionDataGridViewTextBoxColumn";
             this.machinededétectionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.machinededétectionDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.machinededétectionDataGridViewTextBoxColumn.Width = 201;
+            this.machinededétectionDataGridViewTextBoxColumn.Width = 125;
             // 
             // equipededétectionDataGridViewTextBoxColumn
             // 
@@ -596,8 +598,7 @@
             this.equipededétectionDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.equipededétectionDataGridViewTextBoxColumn.Name = "equipededétectionDataGridViewTextBoxColumn";
             this.equipededétectionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.equipededétectionDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.equipededétectionDataGridViewTextBoxColumn.Width = 189;
+            this.equipededétectionDataGridViewTextBoxColumn.Width = 125;
             // 
             // entréeMPDataGridViewTextBoxColumn
             // 
@@ -606,8 +607,7 @@
             this.entréeMPDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.entréeMPDataGridViewTextBoxColumn.Name = "entréeMPDataGridViewTextBoxColumn";
             this.entréeMPDataGridViewTextBoxColumn.ReadOnly = true;
-            this.entréeMPDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.entréeMPDataGridViewTextBoxColumn.Width = 120;
+            this.entréeMPDataGridViewTextBoxColumn.Width = 125;
             // 
             // décisiondutraitementDataGridViewTextBoxColumn
             // 
@@ -616,8 +616,7 @@
             this.décisiondutraitementDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.décisiondutraitementDataGridViewTextBoxColumn.Name = "décisiondutraitementDataGridViewTextBoxColumn";
             this.décisiondutraitementDataGridViewTextBoxColumn.ReadOnly = true;
-            this.décisiondutraitementDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.décisiondutraitementDataGridViewTextBoxColumn.Width = 208;
+            this.décisiondutraitementDataGridViewTextBoxColumn.Width = 125;
             // 
             // commentairesDataGridViewTextBoxColumn
             // 
@@ -626,8 +625,7 @@
             this.commentairesDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.commentairesDataGridViewTextBoxColumn.Name = "commentairesDataGridViewTextBoxColumn";
             this.commentairesDataGridViewTextBoxColumn.ReadOnly = true;
-            this.commentairesDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.commentairesDataGridViewTextBoxColumn.Width = 145;
+            this.commentairesDataGridViewTextBoxColumn.Width = 125;
             // 
             // nombredebobinesDataGridViewTextBoxColumn
             // 
@@ -636,8 +634,7 @@
             this.nombredebobinesDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nombredebobinesDataGridViewTextBoxColumn.Name = "nombredebobinesDataGridViewTextBoxColumn";
             this.nombredebobinesDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombredebobinesDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.nombredebobinesDataGridViewTextBoxColumn.Width = 188;
+            this.nombredebobinesDataGridViewTextBoxColumn.Width = 125;
             // 
             // qtéNCdérogéesanstraitementkgDataGridViewTextBoxColumn
             // 
@@ -646,8 +643,7 @@
             this.qtéNCdérogéesanstraitementkgDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.qtéNCdérogéesanstraitementkgDataGridViewTextBoxColumn.Name = "qtéNCdérogéesanstraitementkgDataGridViewTextBoxColumn";
             this.qtéNCdérogéesanstraitementkgDataGridViewTextBoxColumn.ReadOnly = true;
-            this.qtéNCdérogéesanstraitementkgDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.qtéNCdérogéesanstraitementkgDataGridViewTextBoxColumn.Width = 317;
+            this.qtéNCdérogéesanstraitementkgDataGridViewTextBoxColumn.Width = 125;
             // 
             // qtéNCdérogéeavectraitementkgDataGridViewTextBoxColumn
             // 
@@ -656,8 +652,7 @@
             this.qtéNCdérogéeavectraitementkgDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.qtéNCdérogéeavectraitementkgDataGridViewTextBoxColumn.Name = "qtéNCdérogéeavectraitementkgDataGridViewTextBoxColumn";
             this.qtéNCdérogéeavectraitementkgDataGridViewTextBoxColumn.ReadOnly = true;
-            this.qtéNCdérogéeavectraitementkgDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.qtéNCdérogéeavectraitementkgDataGridViewTextBoxColumn.Width = 318;
+            this.qtéNCdérogéeavectraitementkgDataGridViewTextBoxColumn.Width = 125;
             // 
             // qtédéclasséekgDataGridViewTextBoxColumn
             // 
@@ -666,8 +661,7 @@
             this.qtédéclasséekgDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.qtédéclasséekgDataGridViewTextBoxColumn.Name = "qtédéclasséekgDataGridViewTextBoxColumn";
             this.qtédéclasséekgDataGridViewTextBoxColumn.ReadOnly = true;
-            this.qtédéclasséekgDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.qtédéclasséekgDataGridViewTextBoxColumn.Width = 171;
+            this.qtédéclasséekgDataGridViewTextBoxColumn.Width = 125;
             // 
             // qttérebutéekgDataGridViewTextBoxColumn
             // 
@@ -676,8 +670,7 @@
             this.qttérebutéekgDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.qttérebutéekgDataGridViewTextBoxColumn.Name = "qttérebutéekgDataGridViewTextBoxColumn";
             this.qttérebutéekgDataGridViewTextBoxColumn.ReadOnly = true;
-            this.qttérebutéekgDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.qttérebutéekgDataGridViewTextBoxColumn.Width = 159;
+            this.qttérebutéekgDataGridViewTextBoxColumn.Width = 125;
             // 
             // qtéNCréclaméekgDataGridViewTextBoxColumn
             // 
@@ -686,8 +679,7 @@
             this.qtéNCréclaméekgDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.qtéNCréclaméekgDataGridViewTextBoxColumn.Name = "qtéNCréclaméekgDataGridViewTextBoxColumn";
             this.qtéNCréclaméekgDataGridViewTextBoxColumn.ReadOnly = true;
-            this.qtéNCréclaméekgDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.qtéNCréclaméekgDataGridViewTextBoxColumn.Width = 199;
+            this.qtéNCréclaméekgDataGridViewTextBoxColumn.Width = 125;
             // 
             // qtéPFrebutéesuitedérogationdutilisationDataGridViewTextBoxColumn
             // 
@@ -696,8 +688,7 @@
             this.qtéPFrebutéesuitedérogationdutilisationDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.qtéPFrebutéesuitedérogationdutilisationDataGridViewTextBoxColumn.Name = "qtéPFrebutéesuitedérogationdutilisationDataGridViewTextBoxColumn";
             this.qtéPFrebutéesuitedérogationdutilisationDataGridViewTextBoxColumn.ReadOnly = true;
-            this.qtéPFrebutéesuitedérogationdutilisationDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.qtéPFrebutéesuitedérogationdutilisationDataGridViewTextBoxColumn.Width = 370;
+            this.qtéPFrebutéesuitedérogationdutilisationDataGridViewTextBoxColumn.Width = 125;
             // 
             // valeurdutempsperduDataGridViewTextBoxColumn
             // 
@@ -706,8 +697,7 @@
             this.valeurdutempsperduDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.valeurdutempsperduDataGridViewTextBoxColumn.Name = "valeurdutempsperduDataGridViewTextBoxColumn";
             this.valeurdutempsperduDataGridViewTextBoxColumn.ReadOnly = true;
-            this.valeurdutempsperduDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.valeurdutempsperduDataGridViewTextBoxColumn.Width = 215;
+            this.valeurdutempsperduDataGridViewTextBoxColumn.Width = 125;
             // 
             // prixdachatDataGridViewTextBoxColumn
             // 
@@ -716,8 +706,7 @@
             this.prixdachatDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.prixdachatDataGridViewTextBoxColumn.Name = "prixdachatDataGridViewTextBoxColumn";
             this.prixdachatDataGridViewTextBoxColumn.ReadOnly = true;
-            this.prixdachatDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.prixdachatDataGridViewTextBoxColumn.Width = 122;
+            this.prixdachatDataGridViewTextBoxColumn.Width = 125;
             // 
             // prixdeventeDataGridViewTextBoxColumn
             // 
@@ -726,8 +715,7 @@
             this.prixdeventeDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.prixdeventeDataGridViewTextBoxColumn.Name = "prixdeventeDataGridViewTextBoxColumn";
             this.prixdeventeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.prixdeventeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.prixdeventeDataGridViewTextBoxColumn.Width = 141;
+            this.prixdeventeDataGridViewTextBoxColumn.Width = 125;
             // 
             // valeurréelledelaréclamationDataGridViewTextBoxColumn
             // 
@@ -736,8 +724,7 @@
             this.valeurréelledelaréclamationDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.valeurréelledelaréclamationDataGridViewTextBoxColumn.Name = "valeurréelledelaréclamationDataGridViewTextBoxColumn";
             this.valeurréelledelaréclamationDataGridViewTextBoxColumn.ReadOnly = true;
-            this.valeurréelledelaréclamationDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.valeurréelledelaréclamationDataGridViewTextBoxColumn.Width = 271;
+            this.valeurréelledelaréclamationDataGridViewTextBoxColumn.Width = 125;
             // 
             // quantitéconsomméekgDataGridViewTextBoxColumn
             // 
@@ -746,8 +733,7 @@
             this.quantitéconsomméekgDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.quantitéconsomméekgDataGridViewTextBoxColumn.Name = "quantitéconsomméekgDataGridViewTextBoxColumn";
             this.quantitéconsomméekgDataGridViewTextBoxColumn.ReadOnly = true;
-            this.quantitéconsomméekgDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.quantitéconsomméekgDataGridViewTextBoxColumn.Width = 225;
+            this.quantitéconsomméekgDataGridViewTextBoxColumn.Width = 125;
             // 
             // quantitévenduekgDataGridViewTextBoxColumn
             // 
@@ -756,8 +742,7 @@
             this.quantitévenduekgDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.quantitévenduekgDataGridViewTextBoxColumn.Name = "quantitévenduekgDataGridViewTextBoxColumn";
             this.quantitévenduekgDataGridViewTextBoxColumn.ReadOnly = true;
-            this.quantitévenduekgDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.quantitévenduekgDataGridViewTextBoxColumn.Width = 188;
+            this.quantitévenduekgDataGridViewTextBoxColumn.Width = 125;
             // 
             // datedenvoiedelaréclamationDataGridViewTextBoxColumn
             // 
@@ -766,8 +751,7 @@
             this.datedenvoiedelaréclamationDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.datedenvoiedelaréclamationDataGridViewTextBoxColumn.Name = "datedenvoiedelaréclamationDataGridViewTextBoxColumn";
             this.datedenvoiedelaréclamationDataGridViewTextBoxColumn.ReadOnly = true;
-            this.datedenvoiedelaréclamationDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.datedenvoiedelaréclamationDataGridViewTextBoxColumn.Width = 279;
+            this.datedenvoiedelaréclamationDataGridViewTextBoxColumn.Width = 125;
             // 
             // planactioncommuniquéOUINONDataGridViewTextBoxColumn
             // 
@@ -776,8 +760,7 @@
             this.planactioncommuniquéOUINONDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.planactioncommuniquéOUINONDataGridViewTextBoxColumn.Name = "planactioncommuniquéOUINONDataGridViewTextBoxColumn";
             this.planactioncommuniquéOUINONDataGridViewTextBoxColumn.ReadOnly = true;
-            this.planactioncommuniquéOUINONDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.planactioncommuniquéOUINONDataGridViewTextBoxColumn.Width = 310;
+            this.planactioncommuniquéOUINONDataGridViewTextBoxColumn.Width = 125;
             // 
             // valeurinitialeDTDataGridViewTextBoxColumn
             // 
@@ -786,8 +769,7 @@
             this.valeurinitialeDTDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.valeurinitialeDTDataGridViewTextBoxColumn.Name = "valeurinitialeDTDataGridViewTextBoxColumn";
             this.valeurinitialeDTDataGridViewTextBoxColumn.ReadOnly = true;
-            this.valeurinitialeDTDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.valeurinitialeDTDataGridViewTextBoxColumn.Width = 167;
+            this.valeurinitialeDTDataGridViewTextBoxColumn.Width = 125;
             // 
             // valeurfinaleDTDataGridViewTextBoxColumn
             // 
@@ -796,8 +778,7 @@
             this.valeurfinaleDTDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.valeurfinaleDTDataGridViewTextBoxColumn.Name = "valeurfinaleDTDataGridViewTextBoxColumn";
             this.valeurfinaleDTDataGridViewTextBoxColumn.ReadOnly = true;
-            this.valeurfinaleDTDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.valeurfinaleDTDataGridViewTextBoxColumn.Width = 161;
+            this.valeurfinaleDTDataGridViewTextBoxColumn.Width = 125;
             // 
             // montantenattenteDTDataGridViewTextBoxColumn
             // 
@@ -806,8 +787,7 @@
             this.montantenattenteDTDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.montantenattenteDTDataGridViewTextBoxColumn.Name = "montantenattenteDTDataGridViewTextBoxColumn";
             this.montantenattenteDTDataGridViewTextBoxColumn.ReadOnly = true;
-            this.montantenattenteDTDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.montantenattenteDTDataGridViewTextBoxColumn.Width = 216;
+            this.montantenattenteDTDataGridViewTextBoxColumn.Width = 125;
             // 
             // refusfournisseurDTDataGridViewTextBoxColumn
             // 
@@ -816,8 +796,7 @@
             this.refusfournisseurDTDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.refusfournisseurDTDataGridViewTextBoxColumn.Name = "refusfournisseurDTDataGridViewTextBoxColumn";
             this.refusfournisseurDTDataGridViewTextBoxColumn.ReadOnly = true;
-            this.refusfournisseurDTDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.refusfournisseurDTDataGridViewTextBoxColumn.Width = 199;
+            this.refusfournisseurDTDataGridViewTextBoxColumn.Width = 125;
             // 
             // accordfournisseurDTDataGridViewTextBoxColumn
             // 
@@ -826,8 +805,7 @@
             this.accordfournisseurDTDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.accordfournisseurDTDataGridViewTextBoxColumn.Name = "accordfournisseurDTDataGridViewTextBoxColumn";
             this.accordfournisseurDTDataGridViewTextBoxColumn.ReadOnly = true;
-            this.accordfournisseurDTDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.accordfournisseurDTDataGridViewTextBoxColumn.Width = 206;
+            this.accordfournisseurDTDataGridViewTextBoxColumn.Width = 125;
             // 
             // notedecréditDTDataGridViewTextBoxColumn
             // 
@@ -836,8 +814,7 @@
             this.notedecréditDTDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.notedecréditDTDataGridViewTextBoxColumn.Name = "notedecréditDTDataGridViewTextBoxColumn";
             this.notedecréditDTDataGridViewTextBoxColumn.ReadOnly = true;
-            this.notedecréditDTDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.notedecréditDTDataGridViewTextBoxColumn.Width = 178;
+            this.notedecréditDTDataGridViewTextBoxColumn.Width = 125;
             // 
             // montantdelamatiérevendueDataGridViewTextBoxColumn
             // 
@@ -846,8 +823,7 @@
             this.montantdelamatiérevendueDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.montantdelamatiérevendueDataGridViewTextBoxColumn.Name = "montantdelamatiérevendueDataGridViewTextBoxColumn";
             this.montantdelamatiérevendueDataGridViewTextBoxColumn.ReadOnly = true;
-            this.montantdelamatiérevendueDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.montantdelamatiérevendueDataGridViewTextBoxColumn.Width = 273;
+            this.montantdelamatiérevendueDataGridViewTextBoxColumn.Width = 125;
             // 
             // valeurdelamatièreretournéefournisseurDataGridViewTextBoxColumn
             // 
@@ -856,8 +832,7 @@
             this.valeurdelamatièreretournéefournisseurDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.valeurdelamatièreretournéefournisseurDataGridViewTextBoxColumn.Name = "valeurdelamatièreretournéefournisseurDataGridViewTextBoxColumn";
             this.valeurdelamatièreretournéefournisseurDataGridViewTextBoxColumn.ReadOnly = true;
-            this.valeurdelamatièreretournéefournisseurDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.valeurdelamatièreretournéefournisseurDataGridViewTextBoxColumn.Width = 361;
+            this.valeurdelamatièreretournéefournisseurDataGridViewTextBoxColumn.Width = 125;
             // 
             // remboursementnetfournisseurDataGridViewTextBoxColumn
             // 
@@ -866,8 +841,7 @@
             this.remboursementnetfournisseurDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.remboursementnetfournisseurDataGridViewTextBoxColumn.Name = "remboursementnetfournisseurDataGridViewTextBoxColumn";
             this.remboursementnetfournisseurDataGridViewTextBoxColumn.ReadOnly = true;
-            this.remboursementnetfournisseurDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.remboursementnetfournisseurDataGridViewTextBoxColumn.Width = 280;
+            this.remboursementnetfournisseurDataGridViewTextBoxColumn.Width = 125;
             // 
             // statutDataGridViewTextBoxColumn
             // 
@@ -876,8 +850,7 @@
             this.statutDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.statutDataGridViewTextBoxColumn.Name = "statutDataGridViewTextBoxColumn";
             this.statutDataGridViewTextBoxColumn.ReadOnly = true;
-            this.statutDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.statutDataGridViewTextBoxColumn.Width = 81;
+            this.statutDataGridViewTextBoxColumn.Width = 125;
             // 
             // actionfournisseurDataGridViewTextBoxColumn
             // 
@@ -886,58 +859,38 @@
             this.actionfournisseurDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.actionfournisseurDataGridViewTextBoxColumn.Name = "actionfournisseurDataGridViewTextBoxColumn";
             this.actionfournisseurDataGridViewTextBoxColumn.ReadOnly = true;
-            this.actionfournisseurDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.actionfournisseurDataGridViewTextBoxColumn.Width = 170;
+            this.actionfournisseurDataGridViewTextBoxColumn.Width = 125;
             // 
-            // mEBindingSource
+            // RFMS
             // 
-            this.mEBindingSource.DataMember = "ME";
-            this.mEBindingSource.DataSource = this.cogitelDataSet;
-            // 
-            // cogitelDataSet
-            // 
-            this.cogitelDataSet.DataSetName = "CogitelDataSet";
-            this.cogitelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // mETableAdapter
-            // 
-            this.mETableAdapter.ClearBeforeFill = true;
-            // 
-            // RFMR
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 675);
+            this.ClientSize = new System.Drawing.Size(1108, 573);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
-            this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "RFMR";
-            this.Text = "RFMR";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RFMR_FormClosing);
-            this.Load += new System.EventHandler(this.RFMR_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RFMR_KeyDown);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Name = "RFMS";
+            this.Text = "RFMS";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RFMS_FormClosing);
+            this.Load += new System.EventHandler(this.RFMS_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mEBindingSource)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cogitelDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mSBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button2;
@@ -945,11 +898,14 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button4;
         private CogitelDataSet cogitelDataSet;
-        private System.Windows.Forms.BindingSource mEBindingSource;
-        private CogitelDataSetTableAdapters.METableAdapter mETableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_ME;
+        private System.Windows.Forms.BindingSource mSBindingSource;
+        private CogitelDataSetTableAdapters.MSTableAdapter mSTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_MS;
         private System.Windows.Forms.DataGridViewTextBoxColumn ndelaNCDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datedelaréclamationDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn stadededétectionDataGridViewTextBoxColumn;
@@ -996,6 +952,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn remboursementnetfournisseurDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statutDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn actionfournisseurDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button button10;
     }
 }
