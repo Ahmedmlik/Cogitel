@@ -185,6 +185,12 @@
     <Compile Include="expoexcel.Designer.cs">
       <DependentUpon>expoexcel.cs</DependentUpon>
     </Compile>
+    <Compile Include="exporexcelME.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="exporexcelME.Designer.cs">
+      <DependentUpon>exporexcelME.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -264,6 +270,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="expoexcel.resx">
       <DependentUpon>expoexcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="exporexcelME.resx">
+      <DependentUpon>exporexcelME.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

@@ -367,72 +367,8 @@ namespace Cogitel_QT
 
         private void button8_Click(object sender, EventArgs e)
         {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Filter = "Fichiers Excel (*.xlsx)|*.xlsx|Tous les fichiers (*.*)|*.*";
-            saveFileDialog.Title = "Enregistrer le fichier Excel";
-
-            // Afficher la boîte de dialogue et récupérer le résultat
-            DialogResult saveResult = saveFileDialog.ShowDialog();
-
-            // Vérifier si l'utilisateur a sélectionné un emplacement pour enregistrer le fichier
-            if (saveResult == DialogResult.OK)
-            {
-                // Récupérer le chemin complet du fichier sélectionné
-                string filePath = saveFileDialog.FileName;
-
-                // Connexion à la base de données
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    connection.Open();
-                    Console.WriteLine("Connexion établie avec succès.");
-
-                    // Récupération des données de la table
-                    string sqlQuery = "SELECT * FROM ME ORDER BY id_ME ASC";
-                    using (SqlCommand command = new SqlCommand(sqlQuery, connection))
-                    {
-                        SqlDataAdapter adapter = new SqlDataAdapter(command);
-                        DataTable table = new DataTable();
-                        adapter.Fill(table);
-
-
-                        // Création du document Excel avec ClosedXML
-                        var workbook = new XLWorkbook();
-                        var worksheet = workbook.Worksheets.Add("ME");
-
-                        // Ajout des en-têtes
-                        for (int i = 0; i < table.Columns.Count; i++)
-                        {
-                            worksheet.Cell(1, i + 1).Value = table.Columns[i].ColumnName;
-                        }
-
-                        // Ajout des données
-                        for (int row = 0; row < table.Rows.Count; row++)
-                        {
-                            for (int col = 0; col < table.Columns.Count; col++)
-                            {
-                                // Check if the value can be parsed as a number
-                                if (double.TryParse(table.Rows[row][col].ToString(), out double numValue))
-                                {
-                                    // Store the value as a number
-                                    worksheet.Cell(row + 2, col + 1).SetValue(numValue);
-                                }
-                                else
-                                {
-                                    string value = table.Rows[row][col].ToString().Replace(Environment.NewLine, " ");
-
-                                    // Write the value to the cell
-                                    worksheet.Cell(row + 2, col + 1).Value = value;
-                                }
-                            }
-                        }
-
-                        // Enregistrement du document Excel
-                        workbook.SaveAs(filePath);
-                        MessageBox.Show("Le fichier Excel a été enregistré avec succès !", "Succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    }
-                }
-            }
+            exporexcelME exporexcelME = new exporexcelME();
+            exporexcelME.Show();
         }
         private void button8_MouseHover(object sender, EventArgs e)
         {
@@ -506,111 +442,6 @@ namespace Cogitel_QT
             this.Cursor = Cursors.Arrow;
         }
 
-        private void button9_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-
-            // Configurer la boîte de dialogue
-            openFileDialog.Filter = "Fichiers Excel (*.xlsx)|*.xlsx|Tous les fichiers (*.*)|*.*";
-            openFileDialog.Title = "Sélectionner un fichier Excel existant";
-
-            // Afficher la boîte de dialogue et récupérer le résultat
-            DialogResult openResult = openFileDialog.ShowDialog();
-
-            // Vérifier si l'utilisateur a sélectionné un fichier
-            if (openResult == DialogResult.OK)
-            {
-                // Récupérer le chemin complet du fichier sélectionné
-                string filePath = openFileDialog.FileName;
-
-                try
-                {
-                    // Ouvrir le fichier Excel existant avec ClosedXML
-                    var workbook = new XLWorkbook(filePath);
-                    var worksheet = workbook.Worksheet("NCE");
-
-
-                    // Connexion à la base de données
-                    using (SqlConnection connection = new SqlConnection(connectionString))
-                    {
-                        connection.Open();
-                        Console.WriteLine("Connexion établie avec succès.");
-
-                        // Récupération des données de la table
-                        string sqlQuery = "SELECT * FROM ME ORDER BY id_ME ASC";
-                        using (SqlCommand command = new SqlCommand(sqlQuery, connection))
-                        {
-                            SqlDataAdapter adapter = new SqlDataAdapter(command);
-                            DataTable table = new DataTable();
-                            adapter.Fill(table);
-
-                            // Trouver le dernier numéro de ligne utilisé dans la feuille de calcul
-                            int lastUsedRow = worksheet.LastRowUsed().RowNumber();
-
-                            // Créer une liste pour stocker les valeurs de la colonne "id_NCE" déjà ajoutées
-                            List<int> existingIds = new List<int>();
-                            for (int i = 2; i <= lastUsedRow; i++) // commencer à partir de la deuxième ligne
-                            {
-                                int id;
-                                if (int.TryParse(worksheet.Cell(i, 1).Value.ToString(), out id))
-                                {
-                                    existingIds.Add(id);
-                                }
-                            }
-
-                            // Ajout des données à partir de la dernière ligne utilisée
-                            int newRow = lastUsedRow + 1;
-                            foreach (DataRow row in table.Rows)
-                            {
-                                int id = int.Parse(row["id_ME"].ToString());
-                                if (!existingIds.Contains(id))
-                                {
-                                    // Ajouter la ligne si l'id n'est pas déjà présent
-                                    for (int col = 0; col < table.Columns.Count; col++)
-                                    {
-                                        // Check if the value can be parsed as a number
-                                        if (double.TryParse(row[col].ToString(), out double numValue))
-                                        {
-                                            // Store the value as a number
-                                            worksheet.Cell(newRow, col + 1).SetValue(numValue);
-                                        }
-                                        else
-                                        {
-                                            // Store the value as a string
-                                            worksheet.Cell(newRow, col + 1).Value = row[col].ToString();
-                                        }
-                                    }
-                                    newRow++;
-                                }
-                            }
-
-                            // Enregistrer les modifications dans le fichier Excel
-                            workbook.SaveAs(filePath);
-
-                        }
-                        MessageBox.Show("Les nouvelles lignes ont été enregistrées avec succès !", "Succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-                catch (IOException)
-                {
-                    // Afficher un message d'erreur si le fichier est déjà ouvert dans une autre application
-                    MessageBox.Show("Le fichier est déjà ouvert dans une autre application.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                }
-            }
-        }
-        private void button9_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip toolTip = new System.Windows.Forms.ToolTip();
-            toolTip.SetToolTip(this.button9, "Exporte les nouvelles lignes vers un fichier Excel");
-            this.Cursor = Cursors.Hand;
-        }
-
-        private void button9_MouseLeave(object sender, EventArgs e)
-        {
-            this.Cursor = Cursors.Arrow;
-        }
-
         private void button6_MouseHover(object sender, EventArgs e)
         {
             this.Cursor = Cursors.Hand;
@@ -637,6 +468,84 @@ namespace Cogitel_QT
             {
                 // Simule un clic sur le bouton "Supprimer"
                 button3.PerformClick();
+            }
+        }
+        private MRFMR formInstance2 = null;
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (formInstance2 == null)
+            {
+                formInstance2 = new MRFMR(this);
+                formInstance2.FormClosed += (s, args) => formInstance2 = null;
+            }
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                int selectedId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["id_ME"].Value);
+                formInstance2.SelectedId = selectedId;
+                cogitel mainForm = (cogitel)this.MdiParent;
+
+                // Create a new instance of the form to open
+
+                // Set the MdiParent property to the main form
+                formInstance2.SetButtonVisible1(false);
+                formInstance2.MdiParent = mainForm;
+                formInstance2.Dock = DockStyle.Fill;
+                formInstance2.BringToFront();
+                formInstance2.WindowState = FormWindowState.Normal;
+                for (int i = 1; i <= 46; i++)
+                {
+                    System.Windows.Forms.Control ctrl = formInstance2.Controls.Find("textBox" + i.ToString(), true).FirstOrDefault();
+                    if (ctrl is TextBox)
+                    {
+                        ((TextBox)ctrl).Multiline = true;
+                        ((TextBox)ctrl).Size = new System.Drawing.Size(214, 100);
+                        ((TextBox)ctrl).ReadOnly = true;
+                    }
+                }
+                formInstance2.Show();
+                // Show the new form
+
+
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+
+                // Vérifier si le formulaire ERCAMS a été créé et initialisé
+                if (formInstance2 != null && formInstance2.IsHandleCreated)
+                {
+                    // Récupérer les valeurs de chaque cellule de la ligne sélectionnée et les affecter aux textboxes dans Form2
+                    for (int i = 1; i < 46; i++)
+                    {
+                        System.Windows.Forms.Control ctrl = formInstance2.Controls.Find("textBox" + i, true).FirstOrDefault();
+                        if (ctrl is TextBox)
+                        {
+                            if (selectedRow.Cells[i].Value != null)
+                            {
+                                if (float.TryParse(selectedRow.Cells[i].Value.ToString(), out float floatValue))
+                                {
+                                    // La valeur est un nombre à virgule flottante, affectez-la au TextBox
+                                    ((TextBox)ctrl).Text = floatValue.ToString();
+                                }
+                                else
+                                {
+                                    // La valeur n'est pas un nombre à virgule flottante, affectez-la au TextBox après la conversion de la date
+                                    ((TextBox)ctrl).Text = selectedRow.Cells[i].Value.ToString().Replace("\n", Environment.NewLine);
+
+                                    if (DateTime.TryParse(ctrl.Text, out DateTime date))
+                                    {
+                                        ctrl.Text = date.ToString("dd/MM/yyyy");
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                // La valeur est null, affectez une chaîne vide au TextBox
+                                ((TextBox)ctrl).Text = string.Empty;
+                            }
+                        }
+                    }
+                }
+
+
+
             }
         }
     }

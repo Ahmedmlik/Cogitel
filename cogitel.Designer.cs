@@ -49,6 +49,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.buttonutili = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button18 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.max = new System.Windows.Forms.Button();
@@ -57,7 +58,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.loginTableAdapter1 = new Cogitel_QT.CogitelDataSetTableAdapters.LoginTableAdapter();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.button18 = new System.Windows.Forms.Button();
             this.panelslidemenu.SuspendLayout();
             this.panelRF.SuspendLayout();
             this.panelutilisateurmenu.SuspendLayout();
@@ -116,6 +116,7 @@
             this.button13.FlatAppearance.BorderSize = 0;
             this.button13.Name = "button13";
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             this.button13.MouseLeave += new System.EventHandler(this.button13_MouseLeave);
             this.button13.MouseHover += new System.EventHandler(this.button13_MouseHover);
             // 
@@ -266,6 +267,15 @@
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
+            // button18
+            // 
+            resources.ApplyResources(this.button18, "button18");
+            this.button18.FlatAppearance.BorderSize = 0;
+            this.button18.Image = global::Cogitel_QT.Properties.Resources.bell__1_;
+            this.button18.Name = "button18";
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
+            // 
             // button17
             // 
             resources.ApplyResources(this.button17, "button17");
@@ -340,15 +350,6 @@
             // 
             resources.ApplyResources(this.notifyIcon1, "notifyIcon1");
             this.notifyIcon1.BalloonTipClicked += new System.EventHandler(this.notifyIcon1_BalloonTipClicked);
-            // 
-            // button18
-            // 
-            resources.ApplyResources(this.button18, "button18");
-            this.button18.FlatAppearance.BorderSize = 0;
-            this.button18.Image = global::Cogitel_QT.Properties.Resources.bell__1_;
-            this.button18.Name = "button18";
-            this.button18.UseVisualStyleBackColor = true;
-            this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
             // cogitel
             // 
