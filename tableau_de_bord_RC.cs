@@ -348,36 +348,62 @@ namespace Cogitel_QT
             chart4.Series.Add(series);
 
 
-            double delaiReponseMoyen = 0;
-            string query3 = "SELECT AVG(Délais_de_réponse) AS DelaiReponseMoyen " +
-                             "FROM NCE";
+            double tempsReponseTotal = 0;
+            int nombreReclamations1 = 0;
+
+            string query10 = "SELECT Date_de_réclamtion, Date_réponse_client FROM NCE";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                using (SqlCommand command = new SqlCommand(query3, connection))
+                using (SqlCommand command = new SqlCommand(query10, connection))
                 {
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        if (reader.Read() && reader["DelaiReponseMoyen"] != DBNull.Value)
+                        while (reader.Read())
                         {
-                            delaiReponseMoyen = Convert.ToDouble(reader["DelaiReponseMoyen"]);
+                            if (!Convert.IsDBNull(reader["Date_de_réclamtion"]) && !Convert.IsDBNull(reader["Date_réponse_client"]))
+                            {
+                                DateTime dateReclamation = Convert.ToDateTime(reader["Date_de_réclamtion"]);
+                                DateTime dateReponse = Convert.ToDateTime(reader["Date_réponse_client"]);
+
+                                // Calculer le temps de réponse en excluant les samedis et dimanches
+                                int joursOuvrables = 0;
+                                DateTime dateTemp = dateReclamation.AddDays(1); // Ignorer la date de réclamation
+
+                                while (dateTemp <= dateReponse)
+                                {
+                                    if (dateTemp.DayOfWeek != DayOfWeek.Saturday && dateTemp.DayOfWeek != DayOfWeek.Sunday)
+                                    {
+                                        joursOuvrables++;
+                                    }
+                                    dateTemp = dateTemp.AddDays(1);
+                                }
+
+                                // Ajouter le temps de réponse en jours ouvrables au total
+                                tempsReponseTotal += joursOuvrables;
+                                nombreReclamations1++;
+                            }
                         }
                     }
                 }
                 connection.Close();
             }
-            string descriptionDelaiReponseMoyen = string.Empty;
-            if (delaiReponseMoyen > 0)
+
+            double tempsReponseMoyen = tempsReponseTotal / nombreReclamations1;
+
+            string descriptionTempsReponseMoyen = string.Empty;
+            if (nombreReclamations1 > 0)
             {
-                descriptionDelaiReponseMoyen = string.Format("Le délai de réponse moyen = {0} jours.", delaiReponseMoyen);
+                descriptionTempsReponseMoyen = string.Format("Le temps de réponse moyen = {0:F2} jours ouvrables.", tempsReponseMoyen);
             }
             else
             {
-                descriptionDelaiReponseMoyen = "Aucune donnée de délai de réponse moyen disponible.";
+                descriptionTempsReponseMoyen = "Aucune donnée de temps de réponse moyen disponible.";
             }
 
-            // Mettre la description du délai de réponse moyen dans le Label
-            label1.Text = descriptionDelaiReponseMoyen;
+            // Mettre la description du temps de réponse moyen dans le Label
+            label1.Text = descriptionTempsReponseMoyen;
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -483,13 +509,13 @@ namespace Cogitel_QT
             {
                 // Calculez le pourcentage du nombre de réclamations par rapport au total
                 double pourcentage = (defautClient.NombreReclamations / (double)totalReclamations) * 100;
-                chart2.Series[0].Points.AddXY(defautClient.Defaut, pourcentage);
+                chart2.Series[0].Points.AddXY(defautClient.Defaut, defautClient.NombreReclamations);
                 chart2.Series[0].Points.Last().Label = $"{pourcentage:F2}%";
             }
 
             // Définir les titres des axes du graphique
             chart2.ChartAreas[0].AxisX.Title = "Défaut";
-            chart2.ChartAreas[0].AxisY.Title = "N° R";
+            chart2.ChartAreas[0].AxisY.Title = "Nombre de réclamations";
 
             // Redessiner le graphique
             chart2.Refresh();
