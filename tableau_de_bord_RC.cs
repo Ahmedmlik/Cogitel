@@ -72,8 +72,8 @@ namespace Cogitel_QT
                 PropertyInfo pi = chartType.GetProperty("DoubleBuffered", BindingFlags.Instance | BindingFlags.NonPublic);
                 pi.SetValue(chart3, true, null);
             }
-        
-          
+
+
         }
         public class ClientReclamations
         {
@@ -90,18 +90,42 @@ namespace Cogitel_QT
         {
             public string Defaut { get; set; }
             public int NombreReclamations { get; set; }
-            
+
         }
 
 
         private void tableau_de_bord_RC_Load(object sender, EventArgs e)
         {
+            string query4 = "SELECT DISTINCT Client FROM NCE";
 
-           
+            // Établissez la connexion à la base de données
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                // Exécutez la requête SQL
+                using (SqlCommand command = new SqlCommand(query4, connection))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        // Parcourez les résultats de la requête
+                        while (reader.Read())
+                        {
+                            // Ajoutez le client au ComboBox
+                            comboBox1.Items.Add(reader["Client"].ToString());
+                        }
+                    }
+                }
+
+                connection.Close();
+            }
+
+
+
 
             // Créer la requête SQL pour extraire les noms de clients distincts et compter le nombre de réclamations de non-conformité pour chaque nom de client
             string query = "SELECT DISTINCT Client, COUNT(*) AS NombreReclamations " +
-                            "FROM NCE " + 
+                            "FROM NCE " +
                             "GROUP BY Client";
 
             // Créer une liste pour stocker les résultats
@@ -247,7 +271,7 @@ namespace Cogitel_QT
             dataGridView2.Columns[0].Width = 100;
             dataGridView2.Columns[1].Width = 50;
             dataGridView2.Columns[2].Width = 150;
-         
+
 
             // Parcourir les résultats et ajouter les données au graphique
             foreach (AnneeReclamations anneesReclamation in anneesReclamations)
@@ -310,8 +334,8 @@ namespace Cogitel_QT
             dataGridView3.Columns[1].HeaderText = "N° R"; // Nom de colonne 2
             dataGridView3.Columns[0].Width = 100;
             dataGridView3.Columns[1].Width = 100;
-            chart2.ChartAreas[0].AxisX.Title = "Défaut"; // Définir le titre de l'axe X
-            chart2.ChartAreas[0].AxisY.Title = "N° R";
+            chart4.ChartAreas[0].AxisX.Title = "Défaut"; // Définir le titre de l'axe X
+            chart4.ChartAreas[0].AxisY.Title = "N° R";
             System.Windows.Forms.DataVisualization.Charting.Series series = new System.Windows.Forms.DataVisualization.Charting.Series();
             series.ChartType = SeriesChartType.Pie;
             series.Name = "Réclamations par défaut";
@@ -321,7 +345,7 @@ namespace Cogitel_QT
             series.Points.DataBind(defautReclamations, "Defaut", "NombreReclamations", "");
 
             // Ajouter la série au graphique
-            chart2.Series.Add(series);
+            chart4.Series.Add(series);
 
 
             double delaiReponseMoyen = 0;
@@ -384,6 +408,91 @@ namespace Cogitel_QT
         private void button6_MouseLeave(object sender, EventArgs e)
         {
             this.Cursor = Cursors.Arrow;
+        }
+        public class DefautClient
+        {
+            public string Client { get; set; }
+            public string Defaut { get; set; }
+            public int NombreReclamations { get; set; }
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.Text.Trim() == "")
+            {
+                MessageBox.Show("Veuillez sélectionner un client.");
+                return;
+            }
+
+            // Obtenez le client sélectionné dans le ComboBox
+            string selectedClient = comboBox1.SelectedItem.ToString();
+
+            // Exécutez la requête pour récupérer les types de défauts et le nombre de réclamations associés à ce client
+            string query = "SELECT Défaut, COUNT(*) AS NombreReclamations " +
+                           "FROM NCE " +
+                           "WHERE Client = @Client " +
+                           "GROUP BY Défaut";
+
+            // Créez une liste pour stocker les résultats
+            List<DefautClient> defautClients = new List<DefautClient>();
+
+            // Établissez la connexion à la base de données
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                // Exécutez la requête SQL
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Client", selectedClient);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        // Parcourez les résultats de la requête
+                        while (reader.Read())
+                        {
+                            // Extrayez les valeurs du résultat de la requête
+                            string defaut = Convert.ToString(reader["Défaut"]);
+                            int nombreReclamations = Convert.ToInt32(reader["NombreReclamations"]);
+
+                            // Créez un objet DefautClient pour stocker les valeurs extraites
+                            DefautClient defautClient = new DefautClient
+                            {
+                                Client = selectedClient,
+                                Defaut = defaut,
+                                NombreReclamations = nombreReclamations
+                            };
+
+                            // Ajoutez l'objet DefautClient à la liste des résultats
+                            defautClients.Add(defautClient);
+                        }
+                    }
+                }
+
+                connection.Close();
+            }
+
+            // Triez les résultats par nombre de réclamations (du plus grand au plus petit)
+            defautClients = defautClients.OrderByDescending(x => x.NombreReclamations).ToList();
+
+            // Effacez les points existants dans la série du graphique
+            chart2.Series[0].Points.Clear();
+
+            int totalReclamations = defautClients.Sum(x => x.NombreReclamations);
+
+            foreach (DefautClient defautClient in defautClients)
+            {
+                // Calculez le pourcentage du nombre de réclamations par rapport au total
+                double pourcentage = (defautClient.NombreReclamations / (double)totalReclamations) * 100;
+                chart2.Series[0].Points.AddXY(defautClient.Defaut, pourcentage);
+                chart2.Series[0].Points.Last().Label = $"{pourcentage:F2}%";
+            }
+
+            // Définir les titres des axes du graphique
+            chart2.ChartAreas[0].AxisX.Title = "Défaut";
+            chart2.ChartAreas[0].AxisY.Title = "N° R";
+
+            // Redessiner le graphique
+            chart2.Refresh();
         }
     }
 }
