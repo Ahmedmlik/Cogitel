@@ -119,7 +119,7 @@ namespace Cogitel_QT
 
                 connection.Close();
             }
-
+           
 
 
 
@@ -519,6 +519,17 @@ namespace Cogitel_QT
 
             // Redessiner le graphique
             chart2.Refresh();
+        }
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip toolTip = new System.Windows.Forms.ToolTip();
+            toolTip.SetToolTip(this.button1, "Valider");
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
         }
     }
 }

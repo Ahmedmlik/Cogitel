@@ -47,7 +47,7 @@ namespace Cogitel_QT
                     string sqlQuery = "SELECT * FROM NCE WHERE 1=1 ";
 
                     // Ajout des conditions de filtrage
-                    if (!string.IsNullOrEmpty(selectedValue1) && string.IsNullOrEmpty(selectedValue2))
+                    if (selectedValue1 != "TOUT" && selectedValue2 == "TOUT")
                     {
                         // Filtre par année
                         if (int.TryParse(selectedValue1, out int year))
@@ -55,13 +55,15 @@ namespace Cogitel_QT
                             sqlQuery += $"AND YEAR(Date_de_réclamtion) = {year} ";
                         }
                     }
-                    else if (string.IsNullOrEmpty(selectedValue1) && !string.IsNullOrEmpty(selectedValue2))
+                    else if (selectedValue1 == "TOUT" && selectedValue2 != "TOUT")
                     {
+                        
                         // Filtre par client
                         sqlQuery += $"AND Client = '{selectedValue2}' ";
                     }
-                    else if (!string.IsNullOrEmpty(selectedValue1) && !string.IsNullOrEmpty(selectedValue2))
+                    else if (selectedValue1 != "TOUT" && selectedValue2 != "TOUT")
                     {
+                        
                         // Filtre par année et client
                         if (int.TryParse(selectedValue1, out int year))
                         {
@@ -158,7 +160,7 @@ namespace Cogitel_QT
                         string sqlQuery = "SELECT * FROM NCE WHERE 1=1 ";
 
                         // Ajout des conditions de filtrage
-                        if (!string.IsNullOrEmpty(selectedValue1) && string.IsNullOrEmpty(selectedValue2))
+                        if (selectedValue1 != "TOUT" && selectedValue2 == "TOUT")
                         {
                             // Filtre par année
                             if (int.TryParse(selectedValue1, out int year))
@@ -166,13 +168,15 @@ namespace Cogitel_QT
                                 sqlQuery += $"AND YEAR(Date_de_réclamtion) = {year} ";
                             }
                         }
-                        else if (string.IsNullOrEmpty(selectedValue1) && !string.IsNullOrEmpty(selectedValue2))
+                        else if (selectedValue1 == "TOUT" && selectedValue2 != "TOUT")
                         {
+
                             // Filtre par client
                             sqlQuery += $"AND Client = '{selectedValue2}' ";
                         }
-                        else if (!string.IsNullOrEmpty(selectedValue1) && !string.IsNullOrEmpty(selectedValue2))
+                        else if (selectedValue1 != "TOUT" && selectedValue2 != "TOUT")
                         {
+
                             // Filtre par année et client
                             if (int.TryParse(selectedValue1, out int year))
                             {
@@ -262,17 +266,26 @@ namespace Cogitel_QT
                     DataRow emptyRow = tableYears.NewRow();
 
                     // Set the value of the "year" column to DBNull.Value
-                    emptyRow["year"] = DBNull.Value;
+                    DataTable modifiedTableYears = new DataTable();
+                    modifiedTableYears.Columns.Add("year", typeof(string));
 
-                    // Add the empty row to the DataTable
-                    tableYears.Rows.InsertAt(emptyRow, 0);
+                    // Add the "TOUT" value as the first row
+                    modifiedTableYears.Rows.Add("TOUT");
+
+                    // Copy the remaining rows from the original table to the modified table
+                    foreach (DataRow row in tableYears.Rows)
+                    {
+                        modifiedTableYears.ImportRow(row);
+                    }
 
                     // Bind the results to the ComboBox
-                    comboBox1.DataSource = tableYears;
+                    comboBox1.DataSource = modifiedTableYears;
                     comboBox1.DisplayMember = "year";
                     comboBox1.ValueMember = "year";
-                    comboBox1.SelectedIndex = 0;
-                   
+
+                    // Set the default value to "TOUT"
+                    comboBox1.SelectedValue = "TOUT";
+
 
                 }
                 string sqlQueryClient = "SELECT DISTINCT Client as Client FROM NCE";
@@ -284,7 +297,9 @@ namespace Cogitel_QT
                     // Add an empty row to the DataTable
                     DataRow emptyRow = tableclient.NewRow();
                     emptyRow["Client"] = "";
-                    tableclient.Rows.InsertAt(emptyRow, 0);
+                    DataRow newRow = tableclient.NewRow();
+                    newRow[0] = "TOUT"; // Supposant que la colonne appropriée est la première colonne (indice 0)
+                    tableclient.Rows.InsertAt(newRow, 0);
 
                     // Bind the results to the ComboBox
                     comboBox2.DataSource = tableclient;
