@@ -108,6 +108,7 @@ namespace Cogitel_QT
                 {
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
+                        comboBox1.Items.Add("Veuillez sélectionner un client");
                         // Parcourez les résultats de la requête
                         while (reader.Read())
                         {
@@ -118,6 +119,7 @@ namespace Cogitel_QT
                 }
 
                 connection.Close();
+                comboBox1.SelectedIndex = 0;
             }
            
 
@@ -443,7 +445,7 @@ namespace Cogitel_QT
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            if (comboBox1.Text.Trim() == "")
+            if (comboBox1.Text == "Veuillez sélectionner un client")
             {
                 MessageBox.Show("Veuillez sélectionner un client.");
                 return;
