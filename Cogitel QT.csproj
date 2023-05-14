@@ -425,6 +425,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="21_gbd_sust_cogitel_r_8_5_res_586x371 %283%29.ico" />
+    <None Include="Resources\dashboard-removebg-preview %281%29.png" />
+    <None Include="Resources\knowledge-removebg-preview %281%29.png" />
+    <None Include="Resources\utilisateur.png" />
+    <None Include="Resources\550980-utilisateur-icone-vecteur-gratuit-vectoriel.jpg" />
     <None Include="Resources\bell %281%29.png" />
     <None Include="Resources\exit %281%29.png" />
     <None Include="Resources\téléchargement-removebg-preview.png" />

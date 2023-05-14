@@ -681,6 +681,15 @@ namespace Cogitel_QT
             formInstance10.BringToFront();
             panelslidemenu.Hide();
         }
+        private void button18_MouseHover(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void button18_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
+        }
     }
 
 }

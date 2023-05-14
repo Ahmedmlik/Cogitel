@@ -83,28 +83,36 @@
             // 
             // button16
             // 
+            this.button16.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.button16, "button16");
             this.button16.FlatAppearance.BorderSize = 0;
+            this.button16.ForeColor = System.Drawing.Color.Black;
+            this.button16.Image = global::Cogitel_QT.Properties.Resources.dashboard_removebg_preview__1_;
             this.button16.Name = "button16";
-            this.button16.UseVisualStyleBackColor = true;
+            this.button16.UseVisualStyleBackColor = false;
             // 
             // button15
             // 
+            this.button15.BackColor = System.Drawing.Color.DimGray;
             resources.ApplyResources(this.button15, "button15");
             this.button15.FlatAppearance.BorderSize = 0;
+            this.button15.Image = global::Cogitel_QT.Properties.Resources.knowledge_removebg_preview__1_;
             this.button15.Name = "button15";
-            this.button15.UseVisualStyleBackColor = true;
+            this.button15.UseVisualStyleBackColor = false;
             // 
             // button14
             // 
+            this.button14.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.button14, "button14");
             this.button14.FlatAppearance.BorderSize = 0;
+            this.button14.ForeColor = System.Drawing.Color.Black;
+            this.button14.Image = global::Cogitel_QT.Properties.Resources.dashboard_removebg_preview__1_;
             this.button14.Name = "button14";
-            this.button14.UseVisualStyleBackColor = true;
+            this.button14.UseVisualStyleBackColor = false;
             // 
             // panelRF
             // 
-            this.panelRF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(124)))), ((int)(((byte)(146)))));
+            this.panelRF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
             this.panelRF.Controls.Add(this.button13);
             this.panelRF.Controls.Add(this.button12);
             resources.ApplyResources(this.panelRF, "panelRF");
@@ -112,58 +120,67 @@
             // 
             // button13
             // 
+            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
             resources.ApplyResources(this.button13, "button13");
             this.button13.FlatAppearance.BorderSize = 0;
             this.button13.Name = "button13";
-            this.button13.UseVisualStyleBackColor = true;
+            this.button13.UseVisualStyleBackColor = false;
             this.button13.Click += new System.EventHandler(this.button13_Click);
             this.button13.MouseLeave += new System.EventHandler(this.button13_MouseLeave);
             this.button13.MouseHover += new System.EventHandler(this.button13_MouseHover);
             // 
             // button12
             // 
+            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
             resources.ApplyResources(this.button12, "button12");
             this.button12.FlatAppearance.BorderSize = 0;
             this.button12.Name = "button12";
-            this.button12.UseVisualStyleBackColor = true;
+            this.button12.UseVisualStyleBackColor = false;
             this.button12.Click += new System.EventHandler(this.button12_Click);
             this.button12.MouseLeave += new System.EventHandler(this.button12_MouseLeave);
             this.button12.MouseHover += new System.EventHandler(this.button12_MouseHover);
             // 
             // button11
             // 
+            this.button11.BackColor = System.Drawing.Color.DimGray;
             resources.ApplyResources(this.button11, "button11");
             this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.Image = global::Cogitel_QT.Properties.Resources.knowledge_removebg_preview__1_;
             this.button11.Name = "button11";
-            this.button11.UseVisualStyleBackColor = true;
+            this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             this.button11.MouseLeave += new System.EventHandler(this.button11_MouseLeave);
             this.button11.MouseHover += new System.EventHandler(this.button11_MouseHover);
             // 
             // button9
             // 
+            this.button9.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.button9, "button9");
             this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.ForeColor = System.Drawing.Color.Black;
+            this.button9.Image = global::Cogitel_QT.Properties.Resources.dashboard_removebg_preview__1_;
             this.button9.Name = "button9";
-            this.button9.UseVisualStyleBackColor = true;
+            this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             this.button9.MouseLeave += new System.EventHandler(this.button9_MouseLeave);
             this.button9.MouseHover += new System.EventHandler(this.button9_MouseHover);
             // 
             // Erc
             // 
+            this.Erc.BackColor = System.Drawing.Color.DimGray;
             resources.ApplyResources(this.Erc, "Erc");
             this.Erc.FlatAppearance.BorderSize = 0;
             this.Erc.ForeColor = System.Drawing.Color.White;
+            this.Erc.Image = global::Cogitel_QT.Properties.Resources.knowledge_removebg_preview__1_;
             this.Erc.Name = "Erc";
-            this.Erc.UseVisualStyleBackColor = true;
+            this.Erc.UseVisualStyleBackColor = false;
             this.Erc.Click += new System.EventHandler(this.Erc_Click);
             this.Erc.MouseLeave += new System.EventHandler(this.Erc_MouseLeave);
             this.Erc.MouseHover += new System.EventHandler(this.Erc_MouseHover);
             // 
             // panelutilisateurmenu
             // 
-            this.panelutilisateurmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(124)))), ((int)(((byte)(146)))));
+            this.panelutilisateurmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
             this.panelutilisateurmenu.Controls.Add(this.button10);
             this.panelutilisateurmenu.Controls.Add(this.button8);
             this.panelutilisateurmenu.Controls.Add(this.button7);
@@ -175,17 +192,18 @@
             // 
             // button10
             // 
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
             resources.ApplyResources(this.button10, "button10");
             this.button10.FlatAppearance.BorderSize = 0;
             this.button10.Name = "button10";
-            this.button10.UseVisualStyleBackColor = true;
+            this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             this.button10.MouseLeave += new System.EventHandler(this.button10_MouseLeave);
             this.button10.MouseHover += new System.EventHandler(this.button10_MouseHover);
             // 
             // button8
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(124)))), ((int)(((byte)(146)))));
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
             resources.ApplyResources(this.button8, "button8");
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.Name = "button8";
@@ -196,17 +214,18 @@
             // 
             // button7
             // 
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
             resources.ApplyResources(this.button7, "button7");
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.Name = "button7";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             this.button7.MouseLeave += new System.EventHandler(this.button7_MouseLeave);
             this.button7.MouseHover += new System.EventHandler(this.button7_MouseHover);
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(124)))), ((int)(((byte)(146)))));
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
             resources.ApplyResources(this.button6, "button6");
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.Name = "button6";
@@ -218,7 +237,7 @@
             // button4
             // 
             resources.ApplyResources(this.button4, "button4");
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(124)))), ((int)(((byte)(146)))));
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
             this.button4.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.ForeColor = System.Drawing.Color.White;
@@ -230,7 +249,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(124)))), ((int)(((byte)(146)))));
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
             resources.ApplyResources(this.button2, "button2");
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.ForeColor = System.Drawing.Color.White;
@@ -242,11 +261,13 @@
             // 
             // buttonutili
             // 
+            this.buttonutili.BackColor = System.Drawing.Color.DimGray;
             resources.ApplyResources(this.buttonutili, "buttonutili");
             this.buttonutili.FlatAppearance.BorderSize = 0;
             this.buttonutili.ForeColor = System.Drawing.Color.White;
+            this.buttonutili.Image = global::Cogitel_QT.Properties.Resources.utilisateur;
             this.buttonutili.Name = "buttonutili";
-            this.buttonutili.UseVisualStyleBackColor = true;
+            this.buttonutili.UseVisualStyleBackColor = false;
             this.buttonutili.Click += new System.EventHandler(this.buttonutili_Click);
             this.buttonutili.MouseLeave += new System.EventHandler(this.buttonutili_MouseLeave);
             this.buttonutili.MouseHover += new System.EventHandler(this.buttonutili_MouseHover);
@@ -275,6 +296,8 @@
             this.button18.Name = "button18";
             this.button18.UseVisualStyleBackColor = true;
             this.button18.Click += new System.EventHandler(this.button18_Click);
+            this.button18.MouseLeave += new System.EventHandler(this.button18_MouseLeave);
+            this.button18.MouseHover += new System.EventHandler(this.button18_MouseHover);
             // 
             // button17
             // 
@@ -379,7 +402,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button buttonutili;
         private System.Windows.Forms.Panel panelutilisateurmenu;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
@@ -407,5 +429,6 @@
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button buttonutili;
     }
 }
