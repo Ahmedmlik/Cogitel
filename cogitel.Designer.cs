@@ -58,6 +58,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.loginTableAdapter1 = new Cogitel_QT.CogitelDataSetTableAdapters.LoginTableAdapter();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panelslidemenu.SuspendLayout();
             this.panelRF.SuspendLayout();
             this.panelutilisateurmenu.SuspendLayout();
@@ -67,7 +68,7 @@
             // panelslidemenu
             // 
             this.panelslidemenu.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuPopup;
-            this.panelslidemenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
+            this.panelslidemenu.BackColor = System.Drawing.Color.Silver;
             this.panelslidemenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelslidemenu.Controls.Add(this.button16);
             this.panelslidemenu.Controls.Add(this.button15);
@@ -112,7 +113,7 @@
             // 
             // panelRF
             // 
-            this.panelRF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
+            this.panelRF.BackColor = System.Drawing.Color.Silver;
             this.panelRF.Controls.Add(this.button13);
             this.panelRF.Controls.Add(this.button12);
             resources.ApplyResources(this.panelRF, "panelRF");
@@ -120,9 +121,10 @@
             // 
             // button13
             // 
-            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
+            this.button13.BackColor = System.Drawing.Color.Silver;
             resources.ApplyResources(this.button13, "button13");
             this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.ForeColor = System.Drawing.Color.Black;
             this.button13.Name = "button13";
             this.button13.UseVisualStyleBackColor = false;
             this.button13.Click += new System.EventHandler(this.button13_Click);
@@ -131,9 +133,10 @@
             // 
             // button12
             // 
-            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
+            this.button12.BackColor = System.Drawing.Color.Silver;
             resources.ApplyResources(this.button12, "button12");
             this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.ForeColor = System.Drawing.Color.Black;
             this.button12.Name = "button12";
             this.button12.UseVisualStyleBackColor = false;
             this.button12.Click += new System.EventHandler(this.button12_Click);
@@ -180,7 +183,7 @@
             // 
             // panelutilisateurmenu
             // 
-            this.panelutilisateurmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
+            this.panelutilisateurmenu.BackColor = System.Drawing.Color.Silver;
             this.panelutilisateurmenu.Controls.Add(this.button10);
             this.panelutilisateurmenu.Controls.Add(this.button8);
             this.panelutilisateurmenu.Controls.Add(this.button7);
@@ -192,9 +195,10 @@
             // 
             // button10
             // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
+            this.button10.BackColor = System.Drawing.Color.Silver;
             resources.ApplyResources(this.button10, "button10");
             this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.ForeColor = System.Drawing.Color.Black;
             this.button10.Name = "button10";
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
@@ -203,9 +207,10 @@
             // 
             // button8
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
+            this.button8.BackColor = System.Drawing.Color.Silver;
             resources.ApplyResources(this.button8, "button8");
             this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.ForeColor = System.Drawing.Color.Black;
             this.button8.Name = "button8";
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
@@ -214,9 +219,10 @@
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
+            this.button7.BackColor = System.Drawing.Color.Silver;
             resources.ApplyResources(this.button7, "button7");
             this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.ForeColor = System.Drawing.Color.Black;
             this.button7.Name = "button7";
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
@@ -225,9 +231,10 @@
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
+            this.button6.BackColor = System.Drawing.Color.Silver;
             resources.ApplyResources(this.button6, "button6");
             this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.ForeColor = System.Drawing.Color.Black;
             this.button6.Name = "button6";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -237,10 +244,10 @@
             // button4
             // 
             resources.ApplyResources(this.button4, "button4");
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
+            this.button4.BackColor = System.Drawing.Color.Silver;
             this.button4.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.ForeColor = System.Drawing.Color.Black;
             this.button4.Name = "button4";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -249,10 +256,10 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
+            this.button2.BackColor = System.Drawing.Color.Silver;
             resources.ApplyResources(this.button2, "button2");
             this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Name = "button2";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -374,12 +381,19 @@
             resources.ApplyResources(this.notifyIcon1, "notifyIcon1");
             this.notifyIcon1.BalloonTipClicked += new System.EventHandler(this.notifyIcon1_BalloonTipClicked);
             // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Name = "panel2";
+            // 
             // cogitel
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             resources.ApplyResources(this, "$this");
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::Cogitel_QT.Properties.Resources.téléchargement_removebg_preview;
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelslidemenu);
@@ -430,5 +444,6 @@
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button buttonutili;
+        private System.Windows.Forms.Panel panel2;
     }
 }

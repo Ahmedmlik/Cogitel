@@ -12,6 +12,7 @@ namespace Cogitel_QT
 {
     public partial class cogitel : Form
     {
+
         string connectionString = ConfigurationManager.ConnectionStrings["MaConnexion"].ConnectionString;
         public static cogitel Instance;
         public cogitel()
@@ -75,8 +76,8 @@ namespace Cogitel_QT
                 panelRF.Visible = false;
 
             }
-             
-            
+
+
         }
         private void hidepanelRF()
         {
@@ -145,12 +146,13 @@ namespace Cogitel_QT
         }
         private modifiermotdepasse formInstance1 = null;
         private void button2_Click(object sender, EventArgs e)
-        {if (formInstance1 == null)
+        {
+            if (formInstance1 == null)
             {
                 formInstance1 = new modifiermotdepasse();
                 formInstance1.FormClosed += (s, args) => formInstance1 = null;
             }
-          
+
             formInstance1.MdiParent = this;
             formInstance1.Dock = DockStyle.Fill;
             formInstance1.Show();
@@ -164,7 +166,7 @@ namespace Cogitel_QT
         private Erc formInstance5 = null;
         private void Erc_Click(object sender, EventArgs e)
         {
-            
+
             hidepanelutilisateurmenu();
             if (formInstance5 == null)
             {
@@ -174,9 +176,10 @@ namespace Cogitel_QT
             formInstance5.MdiParent = this;
             formInstance5.Dock = DockStyle.Fill;
             formInstance5.WindowState = FormWindowState.Normal;
+            formInstance5.FormBorderStyle = FormBorderStyle.None;
             formInstance5.Show();
             formInstance5.BringToFront();
-           
+
             panelslidemenu.Hide();
 
 
@@ -187,6 +190,7 @@ namespace Cogitel_QT
         private void cogitel_Load(object sender, EventArgs e)
         {
             AfficherNotificationNonConformitesSansReponse();
+
         }
         private N__des_conds_et_des_aides_Conds formInstance = null;
         private void button4_Click(object sender, EventArgs e)
@@ -207,7 +211,7 @@ namespace Cogitel_QT
             formInstance.Show();
             formInstance.BringToFront();
             panelslidemenu.Hide();
-            
+
         }
 
         public void ShowOrHidePanel(bool show)
@@ -277,7 +281,7 @@ namespace Cogitel_QT
         {
             this.WindowState = FormWindowState.Minimized;
         }
- 
+
         private Thèmes formInstance2 = null;
         private void button6_Click(object sender, EventArgs e)
         {
@@ -560,7 +564,7 @@ namespace Cogitel_QT
         }
         private void AfficherNotificationNonConformitesSansReponse()
         {
-            
+
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -576,7 +580,7 @@ namespace Cogitel_QT
                     {
                         nonConformities.Add(client + " / " + nonConformity);
                     }
-                   
+
                 }
                 // Fermeture de la connexion à la base de données
                 reader.Close();
@@ -618,7 +622,7 @@ namespace Cogitel_QT
             DialogResult result = MessageBox.Show("Êtes-vous sûr de vouloir vous déconnecter ?", "Déconnexion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-             
+
                 Close();
 
                 // Redémarrer l'application
@@ -690,6 +694,6 @@ namespace Cogitel_QT
         {
             this.Cursor = Cursors.Arrow;
         }
-    }
 
+    }
 }

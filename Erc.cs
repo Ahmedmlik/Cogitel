@@ -8,6 +8,8 @@ using ClosedXML.Excel;
 using System.IO;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Drawing; // Ajoutez cette directive
+
 
 
 
@@ -23,7 +25,7 @@ namespace Cogitel_QT
         public Erc()
         {
             InitializeComponent();
-            
+
             connection = new SqlConnection(connectionString);
             this.FormClosing += new FormClosingEventHandler(Erc_FormClosing);
             if (!System.Windows.Forms.SystemInformation.TerminalServerSession)
@@ -49,8 +51,8 @@ namespace Cogitel_QT
 
         private void Erc_Load(object sender, System.EventArgs e)
         {
-           
-          
+
+
             textBox14.Text = "Rechercher...";
             textBox14.ForeColor = System.Drawing.Color.Black;
             LoadData();
@@ -103,7 +105,9 @@ namespace Cogitel_QT
         private void button6_Click(object sender, System.EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+
         }
+
 
         private void button4_Click(object sender, System.EventArgs e)
         {
@@ -555,5 +559,7 @@ namespace Cogitel_QT
         {
             this.Cursor = Cursors.Arrow;
         }
+
+
     }
 }

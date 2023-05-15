@@ -88,7 +88,7 @@
             // 
             // buttonlogin
             // 
-            this.buttonlogin.BackColor = System.Drawing.Color.LightSlateGray;
+            this.buttonlogin.BackColor = System.Drawing.Color.DarkGreen;
             this.buttonlogin.FlatAppearance.BorderSize = 0;
             this.buttonlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonlogin.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -124,7 +124,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(52)))), ((int)(((byte)(76)))));
+            this.panel1.BackColor = System.Drawing.Color.DarkGreen;
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Location = new System.Drawing.Point(-12, -7);
             this.panel1.Name = "panel1";
