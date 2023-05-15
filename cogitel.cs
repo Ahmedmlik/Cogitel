@@ -18,6 +18,7 @@ namespace Cogitel_QT
         public cogitel()
         {
             InitializeComponent();
+            timer1.Start();
             customizeDesing();
             customizeDesing1();
             Instance = this;
@@ -84,7 +85,7 @@ namespace Cogitel_QT
             if (panelutilisateurmenu.Visible == true)
             {
                 panelRF.Visible = false;
-                panelutilisateurmenu.Visible = false;
+              
             }
 
 
@@ -135,10 +136,7 @@ namespace Cogitel_QT
             showpanelutilisateurmenu(panelutilisateurmenu);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -678,5 +676,12 @@ namespace Cogitel_QT
             this.Cursor = Cursors.Arrow;
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime currentTime = DateTime.Now;
+            label3.Text = currentTime.ToString("HH:mm:ss");
+            label1.Text = currentTime.ToString("dddd");
+            label2.Text = currentTime.ToString("dd/MM/yyyy");
+        }
     }
 }

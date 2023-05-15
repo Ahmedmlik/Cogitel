@@ -425,6 +425,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="21_gbd_sust_cogitel_r_8_5_res_586x371 %283%29.ico" />
+    <None Include="Resources\work %282%29.png" />
+    <None Include="Resources\work %281%29.png" />
     <None Include="Resources\tick-mark %281%291.png" />
     <None Include="Resources\dashboard-removebg-preview %281%29.png" />
     <None Include="Resources\knowledge-removebg-preview %281%29.png" />

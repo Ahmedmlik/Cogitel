@@ -55,14 +55,19 @@
             this.max = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.loginTableAdapter1 = new Cogitel_QT.CogitelDataSetTableAdapters.LoginTableAdapter();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelslidemenu.SuspendLayout();
             this.panelRF.SuspendLayout();
             this.panelutilisateurmenu.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelslidemenu
@@ -365,13 +370,6 @@
             this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
             this.button1.MouseHover += new System.EventHandler(this.button1_MouseHover);
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.panel3, "panel3");
-            this.panel3.Name = "panel3";
-            // 
             // loginTableAdapter1
             // 
             this.loginTableAdapter1.ClearBeforeFill = true;
@@ -385,7 +383,42 @@
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.ForeColor = System.Drawing.Color.White;
             this.panel2.Name = "panel2";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.label1);
+            resources.ApplyResources(this.panel3, "panel3");
+            this.panel3.ForeColor = System.Drawing.Color.DarkGray;
+            this.panel3.Name = "panel3";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Name = "label3";
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Name = "label2";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Name = "label1";
             // 
             // cogitel
             // 
@@ -393,8 +426,8 @@
             resources.ApplyResources(this, "$this");
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::Cogitel_QT.Properties.Resources.téléchargement_removebg_preview;
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelslidemenu);
             this.DoubleBuffered = true;
@@ -411,6 +444,8 @@
             this.panelutilisateurmenu.ResumeLayout(false);
             this.panelutilisateurmenu.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -425,7 +460,6 @@
         public System.Windows.Forms.Panel panelslidemenu;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button max;
         private System.Windows.Forms.Button button6;
@@ -445,5 +479,10 @@
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button buttonutili;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

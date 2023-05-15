@@ -4,11 +4,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data;
 using System.Linq;
-using ClosedXML.Excel;
-using System.IO;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Drawing; // Ajoutez cette directive
 
 
 
@@ -27,7 +23,6 @@ namespace Cogitel_QT
             InitializeComponent();
 
             connection = new SqlConnection(connectionString);
-            this.FormClosing += new FormClosingEventHandler(Erc_FormClosing);
             if (!System.Windows.Forms.SystemInformation.TerminalServerSession)
             {
                 Type dgvType = dataGridView1.GetType();
