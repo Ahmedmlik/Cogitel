@@ -157,7 +157,6 @@ namespace Cogitel_QT
             formInstance1.Dock = DockStyle.Fill;
             formInstance1.Show();
             formInstance1.BringToFront();
-            hidepanelutilisateurmenu();
         }
 
 
@@ -167,7 +166,6 @@ namespace Cogitel_QT
         private void Erc_Click(object sender, EventArgs e)
         {
 
-            hidepanelutilisateurmenu();
             if (formInstance5 == null)
             {
                 formInstance5 = new Erc();
@@ -180,7 +178,6 @@ namespace Cogitel_QT
             formInstance5.Show();
             formInstance5.BringToFront();
 
-            panelslidemenu.Hide();
 
 
 
@@ -195,7 +192,7 @@ namespace Cogitel_QT
         private N__des_conds_et_des_aides_Conds formInstance = null;
         private void button4_Click(object sender, EventArgs e)
         {
-            hidepanelutilisateurmenu();
+           
             if (formInstance == null)
             {
                 formInstance = new N__des_conds_et_des_aides_Conds();
@@ -210,7 +207,6 @@ namespace Cogitel_QT
             formInstance.WindowState = FormWindowState.Normal;
             formInstance.Show();
             formInstance.BringToFront();
-            panelslidemenu.Hide();
 
         }
 
@@ -285,7 +281,6 @@ namespace Cogitel_QT
         private Thèmes formInstance2 = null;
         private void button6_Click(object sender, EventArgs e)
         {
-            hidepanelutilisateurmenu();
             if (formInstance2 == null)
             {
                 formInstance2 = new Thèmes();
@@ -296,12 +291,10 @@ namespace Cogitel_QT
             formInstance2.WindowState = FormWindowState.Normal;
             formInstance2.Show();
             formInstance2.BringToFront();
-            panelslidemenu.Hide();
         }
         private docpf formInstance3 = null;
         private void button7_Click(object sender, EventArgs e)
         {
-            hidepanelutilisateurmenu();
             if (formInstance3 == null)
             {
                 formInstance3 = new docpf();
@@ -312,7 +305,6 @@ namespace Cogitel_QT
             formInstance3.WindowState = FormWindowState.Normal;
             formInstance3.Show();
             formInstance3.BringToFront();
-            panelslidemenu.Hide();
         }
 
         private void cogitel_SizeChanged(object sender, EventArgs e)
@@ -329,7 +321,6 @@ namespace Cogitel_QT
         private PrixPF formInstance4 = null;
         private void button8_Click(object sender, EventArgs e)
         {
-            hidepanelutilisateurmenu();
             if (formInstance4 == null)
             {
                 formInstance4 = new PrixPF();
@@ -340,7 +331,6 @@ namespace Cogitel_QT
             formInstance4.WindowState = FormWindowState.Normal;
             formInstance4.Show();
             formInstance4.BringToFront();
-            panelslidemenu.Hide();
         }
         public void SetButtonVisible(bool isVisible)
         {
@@ -351,7 +341,6 @@ namespace Cogitel_QT
         private tableau_de_bord_RC formInstance6 = null;
         private void button9_Click(object sender, EventArgs e)
         {
-            hidepanelutilisateurmenu();
             if (formInstance6 == null)
             {
                 formInstance6 = new tableau_de_bord_RC();
@@ -362,12 +351,11 @@ namespace Cogitel_QT
             formInstance6.WindowState = FormWindowState.Normal;
             formInstance6.Show();
             formInstance6.BringToFront();
-            panelslidemenu.Hide();
+            
         }
         private prix_lot formInstance7 = null;
         private void button10_Click(object sender, EventArgs e)
         {
-            hidepanelutilisateurmenu();
             if (formInstance7 == null)
             {
                 formInstance7 = new prix_lot();
@@ -378,7 +366,7 @@ namespace Cogitel_QT
             formInstance7.WindowState = FormWindowState.Normal;
             formInstance7.Show();
             formInstance7.BringToFront();
-            panelslidemenu.Hide();
+            
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -388,8 +376,6 @@ namespace Cogitel_QT
         private RFMR formInstance8 = null;
         private void button12_Click(object sender, EventArgs e)
         {
-            hidepanelutilisateurmenu();
-            hidepanelRF();
             if (formInstance8 == null)
             {
                 formInstance8 = new RFMR();
@@ -400,7 +386,6 @@ namespace Cogitel_QT
             formInstance8.WindowState = FormWindowState.Normal;
             formInstance8.Show();
             formInstance8.BringToFront();
-            panelslidemenu.Hide();
         }
 
         private void button1_MouseHover(object sender, EventArgs e)
@@ -671,8 +656,7 @@ namespace Cogitel_QT
 
         private void button13_Click(object sender, EventArgs e)
         {
-            hidepanelutilisateurmenu();
-            hidepanelRF();
+            
             if (formInstance10 == null)
             {
                 formInstance10 = new RFMS();
@@ -683,7 +667,6 @@ namespace Cogitel_QT
             formInstance10.WindowState = FormWindowState.Normal;
             formInstance10.Show();
             formInstance10.BringToFront();
-            panelslidemenu.Hide();
         }
         private void button18_MouseHover(object sender, EventArgs e)
         {
