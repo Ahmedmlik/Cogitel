@@ -48,7 +48,7 @@
             this.textap.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textap.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textap.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textap.Location = new System.Drawing.Point(128, 142);
+            this.textap.Location = new System.Drawing.Point(128, 117);
             this.textap.Margin = new System.Windows.Forms.Padding(4);
             this.textap.Name = "textap";
             this.textap.Size = new System.Drawing.Size(416, 25);
@@ -67,7 +67,7 @@
             this.Valider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Valider.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Valider.ForeColor = System.Drawing.Color.White;
-            this.Valider.Location = new System.Drawing.Point(128, 302);
+            this.Valider.Location = new System.Drawing.Point(128, 252);
             this.Valider.Margin = new System.Windows.Forms.Padding(4);
             this.Valider.Name = "Valider";
             this.Valider.Size = new System.Drawing.Size(148, 35);
@@ -86,7 +86,7 @@
             this.Annuler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Annuler.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Annuler.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.Annuler.Location = new System.Drawing.Point(396, 302);
+            this.Annuler.Location = new System.Drawing.Point(396, 252);
             this.Annuler.Margin = new System.Windows.Forms.Padding(4);
             this.Annuler.Name = "Annuler";
             this.Annuler.Size = new System.Drawing.Size(148, 35);
@@ -102,7 +102,7 @@
             this.textnu.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textnu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textnu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textnu.Location = new System.Drawing.Point(128, 109);
+            this.textnu.Location = new System.Drawing.Point(128, 84);
             this.textnu.Margin = new System.Windows.Forms.Padding(4);
             this.textnu.Name = "textnu";
             this.textnu.Size = new System.Drawing.Size(416, 25);
@@ -118,7 +118,7 @@
             this.textnp.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textnp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textnp.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textnp.Location = new System.Drawing.Point(128, 217);
+            this.textnp.Location = new System.Drawing.Point(128, 192);
             this.textnp.Margin = new System.Windows.Forms.Padding(4);
             this.textnp.Name = "textnp";
             this.textnp.Size = new System.Drawing.Size(416, 25);
@@ -136,18 +136,19 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(582, 55);
+            this.panel1.Size = new System.Drawing.Size(582, 30);
             this.panel1.TabIndex = 6;
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(132, 9);
+            this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(303, 27);
+            this.label1.Padding = new System.Windows.Forms.Padding(160, 0, 0, 0);
+            this.label1.Size = new System.Drawing.Size(400, 27);
             this.label1.TabIndex = 0;
             this.label1.Text = "Paramètres de connexion";
             // 
@@ -155,7 +156,7 @@
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pictureBox2.Image = global::Cogitel_QT.Properties.Resources.padlock;
-            this.pictureBox2.Location = new System.Drawing.Point(29, 198);
+            this.pictureBox2.Location = new System.Drawing.Point(29, 173);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(58, 58);
@@ -171,7 +172,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pictureBox1.Image = global::Cogitel_QT.Properties.Resources.user;
-            this.pictureBox1.Location = new System.Drawing.Point(29, 109);
+            this.pictureBox1.Location = new System.Drawing.Point(29, 84);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(58, 58);
@@ -185,7 +186,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(582, 400);
+            this.ClientSize = new System.Drawing.Size(582, 350);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textnp);
             this.Controls.Add(this.pictureBox2);
@@ -199,8 +200,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximumSize = new System.Drawing.Size(582, 400);
-            this.MinimumSize = new System.Drawing.Size(582, 400);
+            this.MaximumSize = new System.Drawing.Size(582, 350);
+            this.MinimumSize = new System.Drawing.Size(582, 350);
             this.Name = "modifiermotdepasse";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Paramètres de connexion";

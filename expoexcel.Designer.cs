@@ -44,32 +44,32 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.LimeGreen;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(573, 49);
+            this.panel1.Size = new System.Drawing.Size(573, 30);
             this.panel1.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Black;
             this.label1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 33);
+            this.label1.Size = new System.Drawing.Size(135, 27);
             this.label1.TabIndex = 8;
             this.label1.Text = "Exporte Excel";
             // 
             // button1
             // 
             this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button1.BackColor = System.Drawing.Color.LimeGreen;
+            this.button1.BackColor = System.Drawing.Color.White;
             this.button1.Dock = System.Windows.Forms.DockStyle.Right;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -77,9 +77,9 @@
             this.button1.ForeColor = System.Drawing.Color.Green;
             this.button1.Image = global::Cogitel_QT.Properties.Resources.cancel__1_;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.button1.Location = new System.Drawing.Point(522, 0);
+            this.button1.Location = new System.Drawing.Point(526, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(47, 45);
+            this.button1.Size = new System.Drawing.Size(47, 30);
             this.button1.TabIndex = 7;
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
@@ -98,7 +98,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 49);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 30);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.69893F));
@@ -171,9 +171,9 @@
             this.button8.Dock = System.Windows.Forms.DockStyle.Right;
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.Image = global::Cogitel_QT.Properties.Resources.excel__2_;
-            this.button8.Location = new System.Drawing.Point(424, 245);
+            this.button8.Location = new System.Drawing.Point(424, 226);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(149, 58);
+            this.button8.Size = new System.Drawing.Size(149, 59);
             this.button8.TabIndex = 39;
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
@@ -187,7 +187,7 @@
             this.button9.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.Image = global::Cogitel_QT.Properties.Resources.spreadsheet_column__1_;
-            this.button9.Location = new System.Drawing.Point(0, 245);
+            this.button9.Location = new System.Drawing.Point(0, 226);
             this.button9.MaximumSize = new System.Drawing.Size(135, 59);
             this.button9.MinimumSize = new System.Drawing.Size(135, 59);
             this.button9.Name = "button9";
@@ -203,15 +203,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(573, 303);
+            this.ClientSize = new System.Drawing.Size(573, 285);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(573, 303);
-            this.MinimumSize = new System.Drawing.Size(573, 303);
+            this.MaximumSize = new System.Drawing.Size(573, 285);
+            this.MinimumSize = new System.Drawing.Size(573, 285);
             this.Name = "expoexcel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "expoexcel";

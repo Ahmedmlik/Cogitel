@@ -17,7 +17,7 @@ namespace Cogitel_QT
     public partial class expoexcel : Form
     {
         string connectionString = ConfigurationManager.ConnectionStrings["MaConnexion"].ConnectionString;
-        SqlConnection connection;
+       
         public expoexcel()
         {
             InitializeComponent();

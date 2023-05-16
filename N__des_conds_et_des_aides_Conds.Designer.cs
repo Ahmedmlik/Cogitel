@@ -80,7 +80,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(918, 66);
+            this.panel1.Size = new System.Drawing.Size(918, 68);
             this.panel1.TabIndex = 1;
             // 
             // button2
@@ -90,10 +90,10 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = global::Cogitel_QT.Properties.Resources.edit__2___1_;
-            this.button2.Location = new System.Drawing.Point(152, 32);
+            this.button2.Location = new System.Drawing.Point(152, 30);
             this.button2.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(154, 34);
+            this.button2.Size = new System.Drawing.Size(154, 38);
             this.button2.TabIndex = 6;
             this.button2.TabStop = false;
             this.button2.UseVisualStyleBackColor = false;
@@ -108,10 +108,10 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = global::Cogitel_QT.Properties.Resources.bin__1_;
-            this.button3.Location = new System.Drawing.Point(685, 32);
+            this.button3.Location = new System.Drawing.Point(685, 30);
             this.button3.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(233, 34);
+            this.button3.Size = new System.Drawing.Size(233, 38);
             this.button3.TabIndex = 7;
             this.button3.TabStop = false;
             this.button3.UseVisualStyleBackColor = false;
@@ -126,10 +126,10 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = global::Cogitel_QT.Properties.Resources.add__8___1_;
-            this.button1.Location = new System.Drawing.Point(0, 32);
+            this.button1.Location = new System.Drawing.Point(0, 30);
             this.button1.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(152, 34);
+            this.button1.Size = new System.Drawing.Size(152, 38);
             this.button1.TabIndex = 5;
             this.button1.TabStop = false;
             this.button1.UseVisualStyleBackColor = false;
@@ -139,7 +139,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(124)))), ((int)(((byte)(146)))));
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.button4);
@@ -147,12 +147,13 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(918, 32);
+            this.panel2.Size = new System.Drawing.Size(918, 30);
             this.panel2.TabIndex = 4;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Black;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
@@ -169,10 +170,10 @@
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Image = global::Cogitel_QT.Properties.Resources.minus_sign__1___1_;
-            this.button6.Location = new System.Drawing.Point(744, 0);
+            this.button6.Location = new System.Drawing.Point(764, 0);
             this.button6.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(87, 32);
+            this.button6.Size = new System.Drawing.Size(77, 30);
             this.button6.TabIndex = 10;
             this.button6.TabStop = false;
             this.button6.UseVisualStyleBackColor = true;
@@ -182,15 +183,15 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(124)))), ((int)(((byte)(146)))));
+            this.button4.BackColor = System.Drawing.Color.White;
             this.button4.Dock = System.Windows.Forms.DockStyle.Right;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Image = global::Cogitel_QT.Properties.Resources.cancel__1_;
-            this.button4.Location = new System.Drawing.Point(831, 0);
+            this.button4.Location = new System.Drawing.Point(841, 0);
             this.button4.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(87, 32);
+            this.button4.Size = new System.Drawing.Size(77, 30);
             this.button4.TabIndex = 8;
             this.button4.TabStop = false;
             this.button4.UseVisualStyleBackColor = false;
@@ -218,7 +219,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 66);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 68);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
@@ -230,7 +231,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.BackColor = System.Drawing.Color.Gainsboro;
             this.label3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(463, 8);
@@ -243,7 +244,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.BackColor = System.Drawing.Color.Gainsboro;
             this.label4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label4.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(692, 8);
@@ -316,7 +317,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.BackColor = System.Drawing.Color.Gainsboro;
             this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(234, 8);
@@ -329,7 +330,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.BackColor = System.Drawing.Color.Gainsboro;
             this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(5, 8);
@@ -400,7 +401,7 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 136);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 138);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
@@ -423,7 +424,7 @@
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(918, 509);
+            this.dataGridView1.Size = new System.Drawing.Size(918, 507);
             this.dataGridView1.TabIndex = 28;
             this.dataGridView1.TabStop = false;
             this.dataGridView1.VirtualMode = true;

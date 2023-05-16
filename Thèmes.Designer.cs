@@ -73,7 +73,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(892, 67);
+            this.panel1.Size = new System.Drawing.Size(892, 68);
             this.panel1.TabIndex = 2;
             // 
             // button2
@@ -83,10 +83,10 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = global::Cogitel_QT.Properties.Resources.edit__2___1_;
-            this.button2.Location = new System.Drawing.Point(152, 36);
+            this.button2.Location = new System.Drawing.Point(152, 30);
             this.button2.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(154, 31);
+            this.button2.Size = new System.Drawing.Size(154, 38);
             this.button2.TabIndex = 6;
             this.button2.TabStop = false;
             this.button2.UseVisualStyleBackColor = false;
@@ -101,10 +101,10 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = global::Cogitel_QT.Properties.Resources.bin__1_;
-            this.button3.Location = new System.Drawing.Point(659, 36);
+            this.button3.Location = new System.Drawing.Point(659, 30);
             this.button3.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(233, 31);
+            this.button3.Size = new System.Drawing.Size(233, 38);
             this.button3.TabIndex = 7;
             this.button3.TabStop = false;
             this.button3.UseVisualStyleBackColor = false;
@@ -119,10 +119,10 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = global::Cogitel_QT.Properties.Resources.add__8___1_;
-            this.button1.Location = new System.Drawing.Point(0, 36);
+            this.button1.Location = new System.Drawing.Point(0, 30);
             this.button1.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(152, 31);
+            this.button1.Size = new System.Drawing.Size(152, 38);
             this.button1.TabIndex = 5;
             this.button1.TabStop = false;
             this.button1.UseVisualStyleBackColor = false;
@@ -132,7 +132,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(124)))), ((int)(((byte)(146)))));
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.button4);
@@ -140,12 +140,13 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(892, 36);
+            this.panel2.Size = new System.Drawing.Size(892, 30);
             this.panel2.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Black;
             this.label3.Dock = System.Windows.Forms.DockStyle.Left;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
@@ -162,10 +163,10 @@
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Image = global::Cogitel_QT.Properties.Resources.minus_sign__1___1_;
-            this.button6.Location = new System.Drawing.Point(718, 0);
+            this.button6.Location = new System.Drawing.Point(738, 0);
             this.button6.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(87, 36);
+            this.button6.Size = new System.Drawing.Size(77, 30);
             this.button6.TabIndex = 10;
             this.button6.TabStop = false;
             this.button6.UseVisualStyleBackColor = true;
@@ -175,15 +176,15 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(124)))), ((int)(((byte)(146)))));
+            this.button4.BackColor = System.Drawing.Color.White;
             this.button4.Dock = System.Windows.Forms.DockStyle.Right;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Image = global::Cogitel_QT.Properties.Resources.cancel__1_;
-            this.button4.Location = new System.Drawing.Point(805, 0);
+            this.button4.Location = new System.Drawing.Point(815, 0);
             this.button4.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(87, 36);
+            this.button4.Size = new System.Drawing.Size(77, 30);
             this.button4.TabIndex = 8;
             this.button4.TabStop = false;
             this.button4.UseVisualStyleBackColor = false;
@@ -202,7 +203,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.textBox2, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 67);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 68);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
@@ -227,12 +228,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.BackColor = System.Drawing.Color.Gainsboro;
             this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(6, 2);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(180, 0, 0, 0);
             this.label1.Size = new System.Drawing.Size(435, 27);
             this.label1.TabIndex = 0;
             this.label1.Text = "Défaut";
@@ -240,12 +242,13 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.BackColor = System.Drawing.Color.Gainsboro;
             this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(453, 2);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
+            this.label2.Padding = new System.Windows.Forms.Padding(180, 0, 0, 0);
             this.label2.Size = new System.Drawing.Size(433, 27);
             this.label2.TabIndex = 1;
             this.label2.Text = "Théme";
@@ -321,7 +324,7 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 126);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 127);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
@@ -344,7 +347,7 @@
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(892, 397);
+            this.dataGridView1.Size = new System.Drawing.Size(892, 396);
             this.dataGridView1.TabIndex = 28;
             this.dataGridView1.TabStop = false;
             this.dataGridView1.VirtualMode = true;
