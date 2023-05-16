@@ -162,7 +162,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(162, 107);
             this.label3.TabIndex = 1;
-            this.label3.Text = "l\'année : ";
+            this.label3.Text = "L\'année : ";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button8

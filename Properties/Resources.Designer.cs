@@ -123,6 +123,16 @@ namespace Cogitel_QT.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap checked__1_ {
+            get {
+                object obj = ResourceManager.GetObject("checked (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dashboard_removebg_preview__1_ {
             get {
                 object obj = ResourceManager.GetObject("dashboard-removebg-preview (1)", resourceCulture);
@@ -346,6 +356,16 @@ namespace Cogitel_QT.Properties {
         internal static System.Drawing.Bitmap utilisateur {
             get {
                 object obj = ResourceManager.GetObject("utilisateur", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap validated__1_ {
+            get {
+                object obj = ResourceManager.GetObject("validated (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

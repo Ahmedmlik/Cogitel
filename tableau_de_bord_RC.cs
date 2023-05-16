@@ -121,97 +121,47 @@ namespace Cogitel_QT
                 connection.Close();
                 comboBox1.SelectedIndex = 0;
             }
-           
 
 
-
-            // Créer la requête SQL pour extraire les noms de clients distincts et compter le nombre de réclamations de non-conformité pour chaque nom de client
-            string query = "SELECT DISTINCT Client, COUNT(*) AS NombreReclamations " +
-                            "FROM NCE " +
-                            "GROUP BY Client";
-
-            // Créer une liste pour stocker les résultats
-            List<ClientReclamations> clientsReclamations = new List<ClientReclamations>();
-
-            // Établir la connexion à la base de données
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
 
-                // Exécuter la requête SQL
-                using (SqlCommand command = new SqlCommand(query, connection))
+
+                string sqlQueryYears = "SELECT DISTINCT YEAR(Date_de_réclamtion) as year FROM NCE";
+                using (SqlCommand command = new SqlCommand(sqlQueryYears, connection))
                 {
-                    using (SqlDataReader reader = command.ExecuteReader())
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    DataTable tableYears = new DataTable();
+                    adapter.Fill(tableYears);
+                    // Create an empty row
+                    DataRow emptyRow = tableYears.NewRow();
+
+                    // Set the value of the "year" column to DBNull.Value
+                    DataTable modifiedTableYears = new DataTable();
+                    modifiedTableYears.Columns.Add("year", typeof(string));
+
+                    // Add the "TOUT" value as the first row
+                    modifiedTableYears.Rows.Add("TOUT");
+
+                    // Copy the remaining rows from the original table to the modified table
+                    foreach (DataRow row in tableYears.Rows)
                     {
-                        // Parcourir les résultats de la requête
-                        while (reader.Read())
-                        {
-                            // Extraire les valeurs du résultat de la requête
-                            string nomClient = reader["Client"].ToString();
-                            int nombreReclamations = Convert.ToInt32(reader["NombreReclamations"]);
-
-                            // Créer un objet ClientReclamations pour stocker les valeurs extraites
-                            ClientReclamations clientReclamations = new ClientReclamations
-                            {
-                                NomClient = nomClient,
-                                NombreReclamations = nombreReclamations
-                            };
-
-                            // Ajouter l'objet ClientReclamations à la liste des résultats
-                            clientsReclamations.Add(clientReclamations);
-                        }
+                        modifiedTableYears.ImportRow(row);
                     }
-                }
 
+                    // Bind the results to the ComboBox
+                    comboBox2.DataSource = modifiedTableYears;
+                    comboBox2.DisplayMember = "year";
+                    comboBox2.ValueMember = "year";
+                    // Set the default value to "TOUT"
+                    comboBox2.SelectedValue = "TOUT";
+
+
+                }
                 connection.Close();
             }
-            clientsReclamations.Sort((x, y) => y.NombreReclamations.CompareTo(x.NombreReclamations));
-
-            // Mettre à jour la source de données du DataGridView avec la liste triée
-            dataGridView1.DataSource = clientsReclamations;
-
-            // Définir les noms de colonnes dans le DataGridView
-            dataGridView1.Columns[0].HeaderText = "Client"; // Nom de colonne 1
-            dataGridView1.Columns[1].HeaderText = "N° R"; // Nom de colonne 2
-            dataGridView1.Columns[0].Width = 220;
-            dataGridView1.Columns[1].Width = 50;
-
-            Color couleurDebut = Color.LightSkyBlue; // Couleur de départ
-            Color couleurFin = Color.MidnightBlue; // Couleur de fin
-
-            // Parcourir les résultats et ajouter les données au graphique
-            foreach (ClientReclamations clientReclamation in clientsReclamations)
-            {
-                // Ajouter un point de données pour chaque barre du graphique
-                chart1.Series[0].Points.AddXY(clientReclamation.NomClient, clientReclamation.NombreReclamations);
-            }
-
-            // Définir la palette de couleurs pour la série du graphique à barres
-            chart1.Series[0].Palette = ChartColorPalette.None; // Désactiver la palette par défaut
-            chart1.ApplyPaletteColors(); // Appliquer les couleurs personnalisées aux points de données
-
-            // Calculer le pourcentage du nombre de réclamations par rapport au nombre maximum de réclamations
-            int maximumReclamations = clientsReclamations.Max(c => c.NombreReclamations);
-            foreach (var point in chart1.Series[0].Points)
-            {
-                double pourcentageReclamations = (double)point.YValues[0] / maximumReclamations;
-
-                // Calculer les valeurs de couleur RVB pour la dégradation en fonction du pourcentage de réclamations
-                int r = couleurDebut.R + (int)((couleurFin.R - couleurDebut.R) * pourcentageReclamations);
-                int g = couleurDebut.G + (int)((couleurFin.G - couleurDebut.G) * pourcentageReclamations);
-                int b = couleurDebut.B + (int)((couleurFin.B - couleurDebut.B) * pourcentageReclamations);
-
-                // Créer une couleur RVB en utilisant les valeurs calculées
-                Color couleurBarre = Color.FromArgb(r, g, b);
-
-                // Appliquer la couleur calculée au point de données
-                point.Color = couleurBarre;
-            }
-            chart1.ChartAreas[0].AxisX.LabelStyle.Interval = 1;
-            chart1.ChartAreas[0].AxisX.LabelStyle.Angle = -90;
-            chart1.ChartAreas[0].AxisX.LabelAutoFitStyle = LabelAutoFitStyles.WordWrap;
-            chart1.ChartAreas[0].AxisY.Title = "Nombre de réclamations";
-            chart1.ChartAreas[0].AxisX.Title = "Client";
 
             string query1 = "SELECT YEAR(Date_de_réclamtion) AS Annee, COUNT(*) AS NombreReclamations, SUM(Quantité_rebutée_totale_Kg) AS SommeQuantiteRebutée " +
                              "FROM NCE " +
@@ -532,6 +482,121 @@ namespace Cogitel_QT
         private void button1_MouseLeave(object sender, EventArgs e)
         {
             this.Cursor = Cursors.Arrow;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+
+        {
+            string selectedYear = comboBox2.SelectedValue?.ToString();
+            string query = "SELECT Client, COUNT(*) AS NombreReclamations " +
+                           "FROM NCE ";
+
+            if (selectedYear != "TOUT")
+            {
+                int year;
+                if (int.TryParse(selectedYear, out year))
+                {
+                    query += "WHERE YEAR(Date_de_réclamtion) = @Year ";
+                }
+                else
+                {
+                    // Handle invalid selectedYear value
+                    MessageBox.Show("Invalid selected year.");
+                    return;
+                }
+            }
+
+            query += "GROUP BY Client";
+
+
+            // Créer une liste pour stocker les résultats
+            List<ClientReclamations> clientsReclamations = new List<ClientReclamations>();
+
+            // Établir la connexion à la base de données
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                // Exécuter la requête SQL
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    if (selectedYear != "TOUT" && int.TryParse(selectedYear, out int year))
+                    {
+                        command.Parameters.AddWithValue("@Year", year);
+                    }
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        // Parcourir les résultats de la requête
+                        while (reader.Read())
+                        {
+                            // Extraire les valeurs du résultat de la requête
+                            string nomClient = reader["Client"].ToString();
+                            int nombreReclamations = Convert.ToInt32(reader["NombreReclamations"]);
+
+                            // Créer un objet ClientReclamations pour stocker les valeurs extraites
+                            ClientReclamations clientReclamations = new ClientReclamations
+                            {
+                                NomClient = nomClient,
+                                NombreReclamations = nombreReclamations
+                            };
+
+                            // Ajouter l'objet ClientReclamations à la liste des résultats
+                            clientsReclamations.Add(clientReclamations);
+                        }
+                    }
+                }
+
+                connection.Close();
+            }
+            clientsReclamations.Sort((x, y) => y.NombreReclamations.CompareTo(x.NombreReclamations));
+
+            // Mettre à jour la source de données du DataGridView avec la liste triée
+            dataGridView1.DataSource = clientsReclamations;
+
+            // Définir les noms de colonnes dans le DataGridView
+            dataGridView1.Columns[0].HeaderText = "Client"; // Nom de colonne 1
+            dataGridView1.Columns[1].HeaderText = "N° R"; // Nom de colonne 2
+            dataGridView1.Columns[0].Width = 220;
+            dataGridView1.Columns[1].Width = 50;
+
+            Color couleurDebut = Color.LightSkyBlue; // Couleur de départ
+            Color couleurFin = Color.MidnightBlue; // Couleur de fin
+            chart1.Series[0].Points.Clear();
+            // Parcourir les résultats et ajouter les données au graphique
+            foreach (ClientReclamations clientReclamation in clientsReclamations)
+            {
+                // Ajouter un point de données pour chaque barre du graphique
+                chart1.Series[0].Points.AddXY(clientReclamation.NomClient, clientReclamation.NombreReclamations);
+            }
+
+            // Définir la palette de couleurs pour la série du graphique à barres
+            chart1.Series[0].Palette = ChartColorPalette.None; // Désactiver la palette par défaut
+            chart1.ApplyPaletteColors(); // Appliquer les couleurs personnalisées aux points de données
+
+            // Calculer le pourcentage du nombre de réclamations par rapport au nombre maximum de réclamations
+            int maximumReclamations = clientsReclamations.Max(c => c.NombreReclamations);
+            foreach (var point in chart1.Series[0].Points)
+            {
+                double pourcentageReclamations = (double)point.YValues[0] / maximumReclamations;
+
+                // Calculer les valeurs de couleur RVB pour la dégradation en fonction du pourcentage de réclamations
+                int r = couleurDebut.R + (int)((couleurFin.R - couleurDebut.R) * pourcentageReclamations);
+                int g = couleurDebut.G + (int)((couleurFin.G - couleurDebut.G) * pourcentageReclamations);
+                int b = couleurDebut.B + (int)((couleurFin.B - couleurDebut.B) * pourcentageReclamations);
+
+                // Créer une couleur RVB en utilisant les valeurs calculées
+                Color couleurBarre = Color.FromArgb(r, g, b);
+
+                // Appliquer la couleur calculée au point de données
+                point.Color = couleurBarre;
+            }
+            chart1.ChartAreas[0].AxisX.LabelStyle.Interval = 1;
+            chart1.ChartAreas[0].AxisX.LabelStyle.Angle = -90;
+            chart1.ChartAreas[0].AxisX.LabelAutoFitStyle = LabelAutoFitStyles.WordWrap;
+            chart1.ChartAreas[0].AxisY.Title = "Nombre de réclamations";
+            chart1.ChartAreas[0].AxisX.Title = "Client";
+            chart1.Refresh();
+
         }
     }
 }
