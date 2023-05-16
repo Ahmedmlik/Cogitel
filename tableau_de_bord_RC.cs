@@ -93,7 +93,11 @@ namespace Cogitel_QT
 
         }
 
-
+        public class ConducteurReclamations
+        {
+            public string NomConducteur { get; set; }
+            public int NombreReclamations { get; set; }
+        }
         private void tableau_de_bord_RC_Load(object sender, EventArgs e)
         {
             string query4 = "SELECT DISTINCT Client FROM NCE";
@@ -157,10 +161,41 @@ namespace Cogitel_QT
                     comboBox2.ValueMember = "year";
                     // Set the default value to "TOUT"
                     comboBox2.SelectedValue = "TOUT";
+                    comboBox4.DataSource = modifiedTableYears;
+                    comboBox4.DisplayMember = "year";
+                    comboBox4.ValueMember = "year";
+                    // Set the default value to "TOUT"
+                    comboBox4.SelectedValue = "TOUT";
 
 
                 }
                 connection.Close();
+            }
+            string query5= "SELECT DISTINCT Nom_et_prénom_du_conducteur_du_défaut FROM NCE";
+
+            // Établissez la connexion à la base de données
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                // Exécutez la requête SQL
+                using (SqlCommand command = new SqlCommand(query5, connection))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        comboBox3.Items.Add("Veuillez sélectionner un conducteur");
+                        comboBox3.Items.Add("TOUS");
+                        // Parcourez les résultats de la requête
+                        while (reader.Read())
+                        {
+                            // Ajoutez le client au ComboBox
+                            comboBox3.Items.Add(reader["Nom_et_prénom_du_conducteur_du_défaut"].ToString());
+                        }
+                    }
+                }
+
+                connection.Close();
+                comboBox3.SelectedIndex = 0;
             }
 
             string query1 = "SELECT YEAR(Date_de_réclamtion) AS Annee, COUNT(*) AS NombreReclamations, SUM(Quantité_rebutée_totale_Kg) AS SommeQuantiteRebutée " +
@@ -598,5 +633,130 @@ namespace Cogitel_QT
             chart1.Refresh();
 
         }
-    }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (comboBox3.Text == "Veuillez sélectionner un conducteur")
+            {
+                MessageBox.Show("Veuillez sélectionner un conducteur.");
+                return;
+            }
+            string selectedYear1 = comboBox4.SelectedValue?.ToString();
+            string selectedConducteur = comboBox3.SelectedItem.ToString();
+
+            string query = "SELECT Nom_et_prénom_du_conducteur_du_défaut AS Conducteur, COUNT(*) AS NombreReclamations " +
+                "FROM NCE ";
+
+            if (selectedConducteur != "TOUS" && selectedYear1 != "TOUT")
+            {
+                int year;
+                if (int.TryParse(selectedYear1, out year))
+                {
+                    query += "WHERE Nom_et_prénom_du_conducteur_du_défaut = @Conducteur ";
+                    query += "AND YEAR(Date_de_réclamtion) = @Year ";
+                }
+                else
+                {
+                    // Handle invalid selectedYear value
+                    MessageBox.Show("Invalid selected year.");
+                    return;
+                }
+            }
+            else if (selectedConducteur != "TOUS")
+            {
+                query += "WHERE Nom_et_prénom_du_conducteur_du_défaut = @Conducteur ";
+            }
+            else if (selectedYear1 != "TOUT")
+            {
+                int year;
+                if (int.TryParse(selectedYear1, out year))
+                {
+                    query += "WHERE YEAR(Date_de_réclamtion) = @Year ";
+                }
+                else
+                {
+                    // Handle invalid selectedYear value
+                    MessageBox.Show("Invalid selected year.");
+                    return;
+                }
+            }
+
+            query += "GROUP BY Nom_et_prénom_du_conducteur_du_défaut";
+
+            List<ConducteurReclamations> conducteurReclamations = new List<ConducteurReclamations>();
+
+            // Établir la connexion à la base de données
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                // Exécuter la requête SQL
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    if (selectedConducteur != "TOUS")
+                    {
+                        command.Parameters.AddWithValue("@Conducteur", selectedConducteur);
+                    }
+
+                    if (selectedYear1 != "TOUT")
+                    {
+                        int year;
+                        if (int.TryParse(selectedYear1, out year))
+                        {
+                            command.Parameters.AddWithValue("@Year", year);
+                        }
+                    }
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        // Parcourir les résultats de la requête
+                        while (reader.Read())
+                        {
+                            // Extraire les valeurs du résultat de la requête
+                            string nomConducteur = reader["Conducteur"].ToString();
+                            int nombreReclamations = Convert.ToInt32(reader["NombreReclamations"]);
+
+                            // Créer un objet ConducteurReclamations pour stocker les valeurs extraites
+                            ConducteurReclamations conducteurReclamationsItem = new ConducteurReclamations
+                            {
+                                NomConducteur = nomConducteur,
+                                NombreReclamations = nombreReclamations
+                            };
+
+                            // Ajouter l'objet ConducteurReclamations à la liste des résultats
+                            conducteurReclamations.Add(conducteurReclamationsItem);
+                        }
+                    }
+                }
+
+                connection.Close();
+            }
+
+            conducteurReclamations.Sort((x, y) => y.NombreReclamations.CompareTo(x.NombreReclamations));
+
+            // Effacer les séries existantes dans le graphique à barres
+            chart5.Series[0].Points.Clear();
+
+            // Créer une nouvelle série pour le graphique à barres
+
+
+            // Parcourir les résultats et ajouter les données au graphique
+            foreach (ConducteurReclamations conducteurReclamation in conducteurReclamations)
+            {
+                // Ajouter un point de données pour chaque barre du graphique
+                chart5.Series[0].Points.AddXY(conducteurReclamation.NomConducteur, conducteurReclamation.NombreReclamations);
+            }
+
+            // Ajouter la série au graphique
+            
+
+            // Définir les propriétés du graphique
+            chart5.ChartAreas[0].AxisX.LabelStyle.Interval = 1;
+            chart5.ChartAreas[0].AxisX.LabelStyle.Angle = -90;
+            chart5.ChartAreas[0].AxisX.LabelAutoFitStyle = LabelAutoFitStyles.WordWrap;
+            chart5.ChartAreas[0].AxisY.Title = "Nombre de réclamations";
+            chart5.ChartAreas[0].AxisX.Title = "Conducteur";
+            chart5.Refresh();
+
+        }
+    } 
 }
