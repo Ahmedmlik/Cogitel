@@ -78,6 +78,11 @@ namespace Cogitel_QT
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.pFBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cogitelDataSet = new Cogitel_QT.CogitelDataSet();
             this.pFTableAdapter = new Cogitel_QT.CogitelDataSetTableAdapters.PFTableAdapter();
@@ -96,11 +101,6 @@ namespace Cogitel_QT
             this.nbPosesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nbcylindresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRIXDEVENTEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
@@ -313,7 +313,7 @@ namespace Cogitel_QT
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel6.Size = new System.Drawing.Size(833, 31);
             this.tableLayoutPanel6.TabIndex = 23;
             // 
@@ -720,6 +720,74 @@ namespace Cogitel_QT
             this.panel3.Size = new System.Drawing.Size(833, 50);
             this.panel3.TabIndex = 26;
             // 
+            // button7
+            // 
+            this.button7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Image = global::Cogitel_QT.Properties.Resources.multiply__1_;
+            this.button7.Location = new System.Drawing.Point(436, 10);
+            this.button7.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(122, 30);
+            this.button7.TabIndex = 48;
+            this.button7.TabStop = false;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button7.MouseLeave += new System.EventHandler(this.button7_MouseLeave);
+            this.button7.MouseHover += new System.EventHandler(this.button7_MouseHover);
+            // 
+            // button5
+            // 
+            this.button5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Image = global::Cogitel_QT.Properties.Resources.magnifying_glass__1_;
+            this.button5.Location = new System.Drawing.Point(314, 10);
+            this.button5.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(122, 30);
+            this.button5.TabIndex = 47;
+            this.button5.TabStop = false;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.MouseLeave += new System.EventHandler(this.button5_MouseLeave);
+            this.button5.MouseHover += new System.EventHandler(this.button5_MouseHover);
+            // 
+            // textBox14
+            // 
+            this.textBox14.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.textBox14.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox14.Dock = System.Windows.Forms.DockStyle.Left;
+            this.textBox14.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox14.Location = new System.Drawing.Point(0, 10);
+            this.textBox14.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(314, 27);
+            this.textBox14.TabIndex = 46;
+            this.textBox14.TabStop = false;
+            this.textBox14.Enter += new System.EventHandler(this.textBox14_Enter);
+            this.textBox14.Leave += new System.EventHandler(this.textBox14_Leave);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.DarkGray;
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel5.Location = new System.Drawing.Point(0, 40);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(833, 10);
+            this.panel5.TabIndex = 45;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.DarkGray;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(833, 10);
+            this.panel4.TabIndex = 44;
+            // 
             // pFBindingSource
             // 
             this.pFBindingSource.DataMember = "PF";
@@ -789,7 +857,7 @@ namespace Cogitel_QT
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dataGridView1.Location = new System.Drawing.Point(0, 309);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(5);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -945,74 +1013,6 @@ namespace Cogitel_QT
             this.pRIXDEVENTEDataGridViewTextBoxColumn.ReadOnly = true;
             this.pRIXDEVENTEDataGridViewTextBoxColumn.Width = 230;
             // 
-            // button7
-            // 
-            this.button7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Image = global::Cogitel_QT.Properties.Resources.multiply__1_;
-            this.button7.Location = new System.Drawing.Point(436, 10);
-            this.button7.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(122, 30);
-            this.button7.TabIndex = 48;
-            this.button7.TabStop = false;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            this.button7.MouseLeave += new System.EventHandler(this.button7_MouseLeave);
-            this.button7.MouseHover += new System.EventHandler(this.button7_MouseHover);
-            // 
-            // button5
-            // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Image = global::Cogitel_QT.Properties.Resources.magnifying_glass__1_;
-            this.button5.Location = new System.Drawing.Point(314, 10);
-            this.button5.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(122, 30);
-            this.button5.TabIndex = 47;
-            this.button5.TabStop = false;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            this.button5.MouseLeave += new System.EventHandler(this.button5_MouseLeave);
-            this.button5.MouseHover += new System.EventHandler(this.button5_MouseHover);
-            // 
-            // textBox14
-            // 
-            this.textBox14.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.textBox14.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox14.Dock = System.Windows.Forms.DockStyle.Left;
-            this.textBox14.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(0, 10);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(314, 27);
-            this.textBox14.TabIndex = 46;
-            this.textBox14.TabStop = false;
-            this.textBox14.Enter += new System.EventHandler(this.textBox14_Enter);
-            this.textBox14.Leave += new System.EventHandler(this.textBox14_Leave);
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.DarkGray;
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 40);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(833, 10);
-            this.panel5.TabIndex = 45;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.DarkGray;
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(833, 10);
-            this.panel4.TabIndex = 44;
-            // 
             // docpf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 31F);
@@ -1034,7 +1034,7 @@ namespace Cogitel_QT
             this.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "docpf";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ShowIcon = false;
