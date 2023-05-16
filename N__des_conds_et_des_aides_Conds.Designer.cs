@@ -88,7 +88,6 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(243)))));
             this.button2.Dock = System.Windows.Forms.DockStyle.Left;
             this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = global::Cogitel_QT.Properties.Resources.edit__2___1_;
             this.button2.Location = new System.Drawing.Point(152, 30);
             this.button2.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
@@ -106,7 +105,6 @@
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(243)))));
             this.button3.Dock = System.Windows.Forms.DockStyle.Right;
             this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = global::Cogitel_QT.Properties.Resources.bin__1_;
             this.button3.Location = new System.Drawing.Point(685, 30);
             this.button3.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
@@ -124,7 +122,6 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(243)))));
             this.button1.Dock = System.Windows.Forms.DockStyle.Left;
             this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = global::Cogitel_QT.Properties.Resources.add__8___1_;
             this.button1.Location = new System.Drawing.Point(0, 30);
             this.button1.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
