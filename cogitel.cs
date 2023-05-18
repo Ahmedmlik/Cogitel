@@ -585,12 +585,13 @@ namespace Cogitel_QT
 
         private void notifyIcon1_BalloonTipClicked(object sender, EventArgs e)
         {
-            if (formInstance9 == null || formInstance9.IsDisposed)
+            if (formInstance9 == null)
             {
                 formInstance9 = new notif();
                 formInstance9.MdiParent = this; // "this" fait référence à votre formulaire MDI
                 formInstance9.FormClosed += (s, args) => formInstance9 = null;
                 formInstance9.Show();
+                isFormOpen = true;
             }
             else
             {
