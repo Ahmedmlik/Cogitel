@@ -61,6 +61,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.id_lot = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.refDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,11 +78,7 @@
             this.prixlotBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cogitelDataSet = new Cogitel_QT.CogitelDataSet();
             this.prix_lotTableAdapter = new Cogitel_QT.CogitelDataSetTableAdapters.prix_lotTableAdapter();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -497,6 +498,74 @@
             this.panel3.Size = new System.Drawing.Size(1100, 50);
             this.panel3.TabIndex = 32;
             // 
+            // button7
+            // 
+            this.button7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Image = global::Cogitel_QT.Properties.Resources.multiply__1_;
+            this.button7.Location = new System.Drawing.Point(436, 10);
+            this.button7.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(122, 30);
+            this.button7.TabIndex = 38;
+            this.button7.TabStop = false;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button7.MouseLeave += new System.EventHandler(this.button7_MouseLeave);
+            this.button7.MouseHover += new System.EventHandler(this.button7_MouseHover);
+            // 
+            // button5
+            // 
+            this.button5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Image = global::Cogitel_QT.Properties.Resources.magnifying_glass__1_;
+            this.button5.Location = new System.Drawing.Point(314, 10);
+            this.button5.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(122, 30);
+            this.button5.TabIndex = 37;
+            this.button5.TabStop = false;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.MouseLeave += new System.EventHandler(this.button5_MouseLeave);
+            this.button5.MouseHover += new System.EventHandler(this.button5_MouseHover);
+            // 
+            // textBox14
+            // 
+            this.textBox14.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.textBox14.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox14.Dock = System.Windows.Forms.DockStyle.Left;
+            this.textBox14.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox14.Location = new System.Drawing.Point(0, 10);
+            this.textBox14.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(314, 27);
+            this.textBox14.TabIndex = 36;
+            this.textBox14.TabStop = false;
+            this.textBox14.Enter += new System.EventHandler(this.textBox14_Enter);
+            this.textBox14.Leave += new System.EventHandler(this.textBox14_Leave);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.DarkGray;
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel5.Location = new System.Drawing.Point(0, 40);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1100, 10);
+            this.panel5.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.DarkGray;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1100, 10);
+            this.panel4.TabIndex = 0;
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowDrop = true;
@@ -654,73 +723,9 @@
             // 
             this.prix_lotTableAdapter.ClearBeforeFill = true;
             // 
-            // panel4
+            // timer1
             // 
-            this.panel4.BackColor = System.Drawing.Color.DarkGray;
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1100, 10);
-            this.panel4.TabIndex = 0;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.DarkGray;
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 40);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1100, 10);
-            this.panel5.TabIndex = 1;
-            // 
-            // button7
-            // 
-            this.button7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Image = global::Cogitel_QT.Properties.Resources.multiply__1_;
-            this.button7.Location = new System.Drawing.Point(436, 10);
-            this.button7.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(122, 30);
-            this.button7.TabIndex = 38;
-            this.button7.TabStop = false;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            this.button7.MouseLeave += new System.EventHandler(this.button7_MouseLeave);
-            this.button7.MouseHover += new System.EventHandler(this.button7_MouseHover);
-            // 
-            // button5
-            // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Image = global::Cogitel_QT.Properties.Resources.magnifying_glass__1_;
-            this.button5.Location = new System.Drawing.Point(314, 10);
-            this.button5.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(122, 30);
-            this.button5.TabIndex = 37;
-            this.button5.TabStop = false;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            this.button5.MouseLeave += new System.EventHandler(this.button5_MouseLeave);
-            this.button5.MouseHover += new System.EventHandler(this.button5_MouseHover);
-            // 
-            // textBox14
-            // 
-            this.textBox14.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.textBox14.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox14.Dock = System.Windows.Forms.DockStyle.Left;
-            this.textBox14.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(0, 10);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(314, 27);
-            this.textBox14.TabIndex = 36;
-            this.textBox14.TabStop = false;
-            this.textBox14.Enter += new System.EventHandler(this.textBox14_Enter);
-            this.textBox14.Leave += new System.EventHandler(this.textBox14_Leave);
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // prix_lot
             // 
@@ -811,5 +816,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Timer timer1;
     }
 }

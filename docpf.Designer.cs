@@ -101,6 +101,7 @@ namespace Cogitel_QT
             this.nbPosesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nbcylindresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRIXDEVENTEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
@@ -1013,6 +1014,10 @@ namespace Cogitel_QT
             this.pRIXDEVENTEDataGridViewTextBoxColumn.ReadOnly = true;
             this.pRIXDEVENTEDataGridViewTextBoxColumn.Width = 230;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // docpf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 31F);
@@ -1133,5 +1138,6 @@ namespace Cogitel_QT
         private TextBox textBox14;
         private Panel panel5;
         private Panel panel4;
+        private Timer timer1;
     }
 }

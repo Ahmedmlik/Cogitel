@@ -690,5 +690,31 @@ namespace Cogitel_QT
             label1.Text = currentTime.ToString("dddd");
             label2.Text = currentTime.ToString("dd/MM/yyyy");
         }
+        private historique formInstance20 = null;
+        private bool isFormOpen1 = false;
+        private void button19_Click(object sender, EventArgs e)
+        {
+            if (!isFormOpen1)
+            {
+                formInstance20 = new historique ();
+                formInstance20.MdiParent = this; // "this" fait référence à votre formulaire MDI
+                formInstance20.FormClosed += (s, args) =>
+                {
+                    formInstance20 = null;
+                    isFormOpen1 = false;
+                };
+                formInstance20.Dock = DockStyle.Fill;
+                formInstance20.Show();
+
+                isFormOpen1 = true;
+            }
+            else
+            {
+                formInstance20.Close();
+                isFormOpen1 = false;
+            }
+
+        }
     }
+    
 }

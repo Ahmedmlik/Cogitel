@@ -197,6 +197,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="historique.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="historique.Designer.cs">
+      <DependentUpon>historique.cs</DependentUpon>
+    </Compile>
     <Compile Include="modifiermotdepasse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -288,6 +294,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="historique.resx">
+      <DependentUpon>historique.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="modifiermotdepasse.resx">
       <DependentUpon>modifiermotdepasse.cs</DependentUpon>
@@ -425,6 +434,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="21_gbd_sust_cogitel_r_8_5_res_586x371 %283%29.ico" />
+    <None Include="Resources\history %281%29.png" />
     <None Include="Resources\checked %281%29.png" />
     <None Include="Resources\validated %281%29.png" />
     <None Include="Resources\work %282%29.png" />

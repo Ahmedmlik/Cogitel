@@ -79,7 +79,9 @@ namespace Cogitel_QT
 
         private void prix_lot_Load(object sender, EventArgs e)
         {
-            
+            timer1.Interval = 2000;
+            // Démarrer le timer
+            timer1.Start();
             textBox1.Text = "Saisie RÉFÉRENCE";
             textBox1.ForeColor = System.Drawing.Color.Gray;
             textBox2.Text = "Saisie DÉSIGNATION";
@@ -137,7 +139,43 @@ namespace Cogitel_QT
 
             }
         }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            // Vérifier les nouvelles modifications
+            CheckForChanges();
+        }
+        private DateTime lastCheckDate = DateTime.Now;
+        private void CheckForChanges()
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
 
+                // Récupérer les nouvelles modifications depuis la table de suivi
+                string query = "SELECT MAX([Id]) FROM [Cogitel].[dbo].[ChangePrix_lot] WHERE [Timestamp] > @LastCheckDate";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@LastCheckDate", lastCheckDate); // lastCheckDate est la date de la dernière vérification
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                DataTable changesTable = new DataTable();
+                dataAdapter.Fill(changesTable);
+
+                if (changesTable.Rows.Count > 0)
+                {
+                    allData.Clear();
+
+                    // Restaurer la valeur de offset
+                    offset = 0;
+
+                    // Des modifications ont été détectées, appeler la méthode LoadData
+                    LoadData();
+                }
+
+                // Mettre à jour la date de la dernière vérification avec la date et l'heure actuelles
+                lastCheckDate = DateTime.Now;
+
+                connection.Close();
+            }
+        }
         private readonly DataTable allData = new DataTable();
         private readonly int limit = 35;
         private int offset = 0;
@@ -201,18 +239,7 @@ namespace Cogitel_QT
                 SqlConnection connection = new SqlConnection(connectionString);
                 connection.Open();
 
-                // Vérifier si la valeur de DOCUMENT existe déjà dans la table
-                string checkQuery = "SELECT COUNT(*) FROM PrixPF WHERE N_de_doc = @N_de_doc";
-                SqlCommand checkCommand = new SqlCommand(checkQuery, connection);
-                checkCommand.Parameters.AddWithValue("@N_de_doc", textBox1.Text);
-                int existingCount = (int)checkCommand.ExecuteScalar();
-
-                if (existingCount > 0)
-                {
-                    MessageBox.Show("Le N_de_doc existe déjà dans la table.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
+               
                     string query = "INSERT INTO prix_lot (ref, Désignation, Nlot, date, qté, unité, prix_lot) VALUES (@valeur1, @valeur2, @valeur3, @valeurDate, @valeur5, @valeur6, @valeur7)";
                     SqlCommand command = new SqlCommand(query, connection);
                     command.Parameters.AddWithValue("@valeur1", textBox1.Text);
@@ -230,9 +257,8 @@ namespace Cogitel_QT
                     command.Parameters.Add(valeurDateParam);
                     command.ExecuteNonQuery();
                     connection.Close();
-                    allData.Clear();
-                    LoadData();
-                }
+                    
+                
             }
             textBox1.Text = "Saisie RÉFÉRENCE";
             textBox1.ForeColor = System.Drawing.Color.Gray;
@@ -304,8 +330,6 @@ namespace Cogitel_QT
                         updateCommand.Parameters.AddWithValue("@id", id);
                         updateCommand.ExecuteNonQuery();
                         connection.Close();
-                        allData.Clear();
-                        LoadData();
                         MessageBox.Show("Les données ont été modifiées avec succès .");
                         textBox1.Text = "Saisie RÉFÉRENCE";
                         textBox1.ForeColor = System.Drawing.Color.Gray;
@@ -370,6 +394,7 @@ namespace Cogitel_QT
                             {
                                 Console.WriteLine("La ligne n'a pas été trouvée.");
                             }
+                            connection.Close();
                         }
                     }
 

@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Text;
 using System.Windows.Forms;
 using ClosedXML.Excel;
 using System.Configuration;
+using System.Threading;
 
 
 
@@ -22,10 +19,12 @@ namespace Cogitel_QT
     {
         SqlConnection connection;
         string connectionString = ConfigurationManager.ConnectionStrings["MaConnexion"].ConnectionString;
+
         public PrixPF()
         {
             InitializeComponent();
             connection = new SqlConnection(connectionString);
+
             if (!System.Windows.Forms.SystemInformation.TerminalServerSession)
             {
                 Type dgvType = dataGridView1.GetType();
@@ -129,9 +128,15 @@ namespace Cogitel_QT
                 pi.SetValue(button4, true, null);
             }
         }
-
+      
         private void PrixPF_Load(object sender, EventArgs e)
         {
+
+            timer1.Interval = 2000;
+            // Démarrer le timer
+            timer1.Start();
+            // Charger les données initiales
+            LoadData();
             textBox1.Text = "Saisie N° de doc";
             textBox1.ForeColor = System.Drawing.Color.Gray;
             textBox2.Text = "Saisie Article";
@@ -156,7 +161,7 @@ namespace Cogitel_QT
             textBox4.ForeColor = System.Drawing.Color.Gray;
             textBox14.Text = "Rechercher...";
             textBox14.ForeColor = System.Drawing.Color.Black;
-            LoadData();
+            
             //Ouvrir une connexion à la base de données
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -203,6 +208,8 @@ namespace Cogitel_QT
 
             }
         }
+      
+       
         private readonly DataTable allData = new DataTable();
         private readonly int limit = 35;
         private int offset = 0;
@@ -212,14 +219,8 @@ namespace Cogitel_QT
             {
                 connection.Open();
 
-                // Obtenir le nombre total de lignes dans la table PF
-                string countQuery = "SELECT COUNT(*) FROM PrixPF";
-                SqlCommand countCommand = new SqlCommand(countQuery, connection);
-                int rowCount = (int)countCommand.ExecuteScalar();
 
-                // Vérifier si le nombre de lignes dans allData est inférieur ou égal au nombre total de lignes
-                if (allData.Rows.Count <= rowCount)
-                {
+                
                     // Exécuter la requête de sélection
                     string query = "SELECT * FROM PrixPF ORDER BY id_pricpf DESC  OFFSET @Offset ROWS FETCH NEXT @Limit ROWS ONLY";
                     using (SqlCommand command = new SqlCommand(query, connection))
@@ -234,14 +235,46 @@ namespace Cogitel_QT
                         dataGridView1.DataSource = allData;
                         connection.Close();
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Tous les enregistrements ont été récupérés.");
-                }
+               
             }
         }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            // Vérifier les nouvelles modifications
+            CheckForChanges();
+        }
+        private DateTime lastCheckDate = DateTime.Now;
+        private void CheckForChanges()
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
 
+                // Récupérer les nouvelles modifications depuis la table de suivi
+                string query = "SELECT MAX([Id]) FROM [Cogitel].[dbo].[ChangePRIXPF] WHERE [Timestamp] > @LastCheckDate";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@LastCheckDate", lastCheckDate); // lastCheckDate est la date de la dernière vérification
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                DataTable changesTable = new DataTable();
+                dataAdapter.Fill(changesTable);
+
+                if (changesTable.Rows.Count > 0)
+                {
+                    allData.Clear();
+
+                    // Restaurer la valeur de offset
+                    offset = 0;
+
+                    // Des modifications ont été détectées, appeler la méthode LoadData
+                    LoadData();
+                }
+
+                // Mettre à jour la date de la dernière vérification avec la date et l'heure actuelles
+                lastCheckDate = DateTime.Now;
+
+                connection.Close();
+            }
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             if (textBox1.Text == "Saisie N° de doc" || textBox2.Text == "Saisie Article" || textBox3.Text == "Saisie Désignation" || textBox4.Text == "Saisie S.Client" || textBox5.Text == "Saisie Qté Stock" || textBox6.Text == "Saisie N° de lot" || textBox7.Text == "Saisie Q" || textBox8.Text == "Saisie F" || textBox9.Text == "Saisie Prix unitaire" || textBox10.Text == "Saisie P" || textBox11.Text == "Saisie date" ||
@@ -254,18 +287,7 @@ namespace Cogitel_QT
                 SqlConnection connection = new SqlConnection(connectionString);
                 connection.Open();
 
-                // Vérifier si la valeur de DOCUMENT existe déjà dans la table
-                string checkQuery = "SELECT COUNT(*) FROM PrixPF WHERE N_de_doc = @N_de_doc";
-                SqlCommand checkCommand = new SqlCommand(checkQuery, connection);
-                checkCommand.Parameters.AddWithValue("@N_de_doc", textBox1.Text);
-                int existingCount = (int)checkCommand.ExecuteScalar();
-
-                if (existingCount > 0)
-                {
-                    MessageBox.Show("Le N_de_doc existe déjà dans la table.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
+          
                     string query = "INSERT INTO PrixPF (N_de_doc, Article, Désignation, s_clinet, Qté_Stock, N_de_lot, Q, F, Prix_unitaire, P, date) VALUES (@valeur1, @valeur2, @valeur3, @valeur4, @valeur5, @valeur6, @valeur7, @valeur8, @valeur9, @valeur10, @valeurDate)";
                     SqlCommand command = new SqlCommand(query, connection);
                     command.Parameters.AddWithValue("@valeur1", textBox1.Text);
@@ -287,8 +309,7 @@ namespace Cogitel_QT
                     command.Parameters.Add(valeurDateParam);
                     command.ExecuteNonQuery();
                     connection.Close();
-                    allData.Clear();
-                    LoadData();
+                    
                     textBox1.Text = "Saisie N° de doc";
                     textBox1.ForeColor = System.Drawing.Color.Gray;
                     textBox2.Text = "Saisie Article";
@@ -311,7 +332,7 @@ namespace Cogitel_QT
                     textBox11.ForeColor = System.Drawing.Color.Gray;
                     textBox4.Text = "Saisie S.Client";
                     textBox4.ForeColor = System.Drawing.Color.Gray;
-                }
+                
             }
         }
         private void button2_Click(object sender, EventArgs e)
@@ -375,8 +396,7 @@ namespace Cogitel_QT
                         updateCommand.Parameters.AddWithValue("@id", id);
                         updateCommand.ExecuteNonQuery();
                         connection.Close();
-                        allData.Clear();
-                        LoadData();
+                        
                         MessageBox.Show("Les données ont été modifiées avec succès .");
                         textBox1.Text = "Saisie N° de doc";
                         textBox1.ForeColor = System.Drawing.Color.Gray;
@@ -450,6 +470,7 @@ namespace Cogitel_QT
                             {
                                 Console.WriteLine("La ligne n'a pas été trouvée.");
                             }
+                            connection.Close();
                         }
                     }
 
@@ -1059,8 +1080,7 @@ namespace Cogitel_QT
              
             }
           
-            allData.Clear();
-            LoadData();
+            
 
         }
 
@@ -1088,6 +1108,11 @@ namespace Cogitel_QT
         private void button6_MouseLeave(object sender, EventArgs e)
         {
             this.Cursor = Cursors.Arrow;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = null;
         }
     }
               

@@ -126,6 +126,9 @@ namespace Cogitel_QT
 
         private void docpf_Load(object sender, EventArgs e)
         {
+            timer1.Interval = 2000;
+            // Démarrer le timer
+            timer1.Start();
             textBox1.Text = "Saisie DOCUMENT";
             textBox1.ForeColor = Color.Gray;
             textBox2.Text = "Saisie OF";
@@ -204,7 +207,43 @@ namespace Cogitel_QT
             
 
         }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            // Vérifier les nouvelles modifications
+            CheckForChanges();
+        }
+        private DateTime lastCheckDate = DateTime.Now;
+        private void CheckForChanges()
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
 
+                // Récupérer les nouvelles modifications depuis la table de suivi
+                string query = "SELECT MAX([Id]) FROM [Cogitel].[dbo].[ChangePF] WHERE [Timestamp] > @LastCheckDate";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@LastCheckDate", lastCheckDate); // lastCheckDate est la date de la dernière vérification
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                DataTable changesTable = new DataTable();
+                dataAdapter.Fill(changesTable);
+
+                if (changesTable.Rows.Count > 0)
+                {
+                    allData.Clear();
+
+                    // Restaurer la valeur de offset
+                    offset = 0;
+
+                    // Des modifications ont été détectées, appeler la méthode LoadData
+                    LoadData();
+                }
+
+                // Mettre à jour la date de la dernière vérification avec la date et l'heure actuelles
+                lastCheckDate = DateTime.Now;
+
+                connection.Close();
+            }
+        }
 
         private readonly DataTable allData = new DataTable();
         private readonly int limit = 20;
@@ -288,8 +327,6 @@ namespace Cogitel_QT
                     command.Parameters.AddWithValue("@valeur13", float.Parse(textBox13.Text));
                     command.ExecuteNonQuery();
                     connection.Close();
-                    allData.Clear();
-                    LoadData();
                     textBox1.Text = "Saisie DOCUMENT";
                     textBox1.ForeColor = Color.Gray;
                     textBox2.Text = "Saisie OF";
@@ -376,8 +413,6 @@ namespace Cogitel_QT
                         updateCommand.Parameters.AddWithValue("@id", id);
                         updateCommand.ExecuteNonQuery();
                         connection.Close();
-                        allData.Clear();
-                        LoadData();
                         MessageBox.Show("Les données ont été modifiées avec succès .");
                         textBox1.Text = "Saisie DOCUMENT";
                         textBox1.ForeColor = Color.Gray;
@@ -459,6 +494,7 @@ namespace Cogitel_QT
                             {
                                 Console.WriteLine("La ligne n'a pas été trouvée.");
                             }
+                            connection.Close();
                         }
                     }
 

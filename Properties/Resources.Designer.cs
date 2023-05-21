@@ -203,6 +203,16 @@ namespace Cogitel_QT.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap history__1_ {
+            get {
+                object obj = ResourceManager.GetObject("history (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap knowledge_removebg_preview__1_ {
             get {
                 object obj = ResourceManager.GetObject("knowledge-removebg-preview (1)", resourceCulture);
