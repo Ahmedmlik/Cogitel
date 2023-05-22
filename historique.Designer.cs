@@ -47,8 +47,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -56,22 +56,25 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.cogitelDataSet = new Cogitel_QT.CogitelDataSet();
+            this.changePFBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.changePFTableAdapter = new Cogitel_QT.CogitelDataSetTableAdapters.ChangePFTableAdapter();
             this.changePRIXPFBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.changePRIXPFTableAdapter = new Cogitel_QT.CogitelDataSetTableAdapters.ChangePRIXPFTableAdapter();
             this.changePrixlotBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.changePrix_lotTableAdapter = new Cogitel_QT.CogitelDataSetTableAdapters.ChangePrix_lotTableAdapter();
-            this.changePFBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dOCUMENTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.utilisateurDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.actionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timestampDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ndedocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.utilisateurDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.actionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timestampDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.refDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.utilisateurDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.actionDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timestampDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
@@ -82,9 +85,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cogitelDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.changePFBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.changePRIXPFBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.changePrixlotBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.changePFBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -122,6 +125,18 @@
             this.panel2.Size = new System.Drawing.Size(679, 34);
             this.panel2.TabIndex = 2;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(280, 0, 0, 0);
+            this.label1.Size = new System.Drawing.Size(370, 27);
+            this.label1.TabIndex = 0;
+            this.label1.Text = " DOC PF";
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowDrop = true;
@@ -154,6 +169,7 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.dOCUMENTDataGridViewTextBoxColumn,
+            this.utilisateurDataGridViewTextBoxColumn,
             this.actionDataGridViewTextBoxColumn,
             this.timestampDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.changePFBindingSource;
@@ -200,18 +216,6 @@
             this.dataGridView1.VirtualMode = true;
             this.dataGridView1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dataGridView1_Scroll);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(280, 0, 0, 0);
-            this.label1.Size = new System.Drawing.Size(370, 27);
-            this.label1.TabIndex = 0;
-            this.label1.Text = " DOC PF";
-            // 
             // dataGridView2
             // 
             this.dataGridView2.AllowDrop = true;
@@ -244,6 +248,7 @@
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn1,
             this.ndedocDataGridViewTextBoxColumn,
+            this.utilisateurDataGridViewTextBoxColumn1,
             this.actionDataGridViewTextBoxColumn1,
             this.timestampDataGridViewTextBoxColumn1});
             this.dataGridView2.DataSource = this.changePRIXPFBindingSource;
@@ -344,6 +349,7 @@
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn2,
             this.refDataGridViewTextBoxColumn,
+            this.utilisateurDataGridViewTextBoxColumn2,
             this.actionDataGridViewTextBoxColumn2,
             this.timestampDataGridViewTextBoxColumn2});
             this.dataGridView3.DataSource = this.changePrixlotBindingSource;
@@ -417,6 +423,11 @@
             this.cogitelDataSet.DataSetName = "CogitelDataSet";
             this.cogitelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // changePFBindingSource
+            // 
+            this.changePFBindingSource.DataMember = "ChangePF";
+            this.changePFBindingSource.DataSource = this.cogitelDataSet;
+            // 
             // changePFTableAdapter
             // 
             this.changePFTableAdapter.ClearBeforeFill = true;
@@ -439,11 +450,6 @@
             // 
             this.changePrix_lotTableAdapter.ClearBeforeFill = true;
             // 
-            // changePFBindingSource
-            // 
-            this.changePFBindingSource.DataMember = "ChangePF";
-            this.changePFBindingSource.DataSource = this.cogitelDataSet;
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
@@ -460,6 +466,14 @@
             this.dOCUMENTDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dOCUMENTDataGridViewTextBoxColumn.Name = "dOCUMENTDataGridViewTextBoxColumn";
             this.dOCUMENTDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // utilisateurDataGridViewTextBoxColumn
+            // 
+            this.utilisateurDataGridViewTextBoxColumn.DataPropertyName = "Utilisateur";
+            this.utilisateurDataGridViewTextBoxColumn.HeaderText = "Utilisateur";
+            this.utilisateurDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.utilisateurDataGridViewTextBoxColumn.Name = "utilisateurDataGridViewTextBoxColumn";
+            this.utilisateurDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // actionDataGridViewTextBoxColumn
             // 
@@ -494,6 +508,14 @@
             this.ndedocDataGridViewTextBoxColumn.Name = "ndedocDataGridViewTextBoxColumn";
             this.ndedocDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // utilisateurDataGridViewTextBoxColumn1
+            // 
+            this.utilisateurDataGridViewTextBoxColumn1.DataPropertyName = "Utilisateur";
+            this.utilisateurDataGridViewTextBoxColumn1.HeaderText = "Utilisateur";
+            this.utilisateurDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.utilisateurDataGridViewTextBoxColumn1.Name = "utilisateurDataGridViewTextBoxColumn1";
+            this.utilisateurDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
             // actionDataGridViewTextBoxColumn1
             // 
             this.actionDataGridViewTextBoxColumn1.DataPropertyName = "Action";
@@ -526,6 +548,14 @@
             this.refDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.refDataGridViewTextBoxColumn.Name = "refDataGridViewTextBoxColumn";
             this.refDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // utilisateurDataGridViewTextBoxColumn2
+            // 
+            this.utilisateurDataGridViewTextBoxColumn2.DataPropertyName = "Utilisateur";
+            this.utilisateurDataGridViewTextBoxColumn2.HeaderText = "Utilisateur";
+            this.utilisateurDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.utilisateurDataGridViewTextBoxColumn2.Name = "utilisateurDataGridViewTextBoxColumn2";
+            this.utilisateurDataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // actionDataGridViewTextBoxColumn2
             // 
@@ -577,9 +607,9 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cogitelDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.changePFBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.changePRIXPFBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.changePrixlotBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.changePFBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -598,6 +628,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
         private CogitelDataSet cogitelDataSet;
+        private System.Windows.Forms.BindingSource changePFBindingSource;
         private CogitelDataSetTableAdapters.ChangePFTableAdapter changePFTableAdapter;
         private System.Windows.Forms.BindingSource changePRIXPFBindingSource;
         private CogitelDataSetTableAdapters.ChangePRIXPFTableAdapter changePRIXPFTableAdapter;
@@ -605,15 +636,17 @@
         private CogitelDataSetTableAdapters.ChangePrix_lotTableAdapter changePrix_lotTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dOCUMENTDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn utilisateurDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn actionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn timestampDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource changePFBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ndedocDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn utilisateurDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn actionDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn timestampDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn refDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn utilisateurDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn actionDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn timestampDataGridViewTextBoxColumn2;
     }

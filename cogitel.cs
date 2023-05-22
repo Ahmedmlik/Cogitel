@@ -142,6 +142,7 @@ namespace Cogitel_QT
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            
             System.Windows.Forms.Application.Exit();
         }
         private modifiermotdepasse formInstance1 = null;

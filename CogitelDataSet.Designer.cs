@@ -6657,6 +6657,8 @@ namespace Cogitel_QT {
             
             private global::System.Data.DataColumn columnDOCUMENT;
             
+            private global::System.Data.DataColumn columnUtilisateur;
+            
             private global::System.Data.DataColumn columnAction;
             
             private global::System.Data.DataColumn columnTimestamp;
@@ -6707,6 +6709,14 @@ namespace Cogitel_QT {
             public global::System.Data.DataColumn DOCUMENTColumn {
                 get {
                     return this.columnDOCUMENT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn UtilisateurColumn {
+                get {
+                    return this.columnUtilisateur;
                 }
             }
             
@@ -6763,11 +6773,12 @@ namespace Cogitel_QT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ChangePFRow AddChangePFRow(string DOCUMENT, string Action, System.DateTime Timestamp) {
+            public ChangePFRow AddChangePFRow(string DOCUMENT, string Utilisateur, string Action, System.DateTime Timestamp) {
                 ChangePFRow rowChangePFRow = ((ChangePFRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         DOCUMENT,
+                        Utilisateur,
                         Action,
                         Timestamp};
                 rowChangePFRow.ItemArray = columnValuesArray;
@@ -6801,6 +6812,7 @@ namespace Cogitel_QT {
             internal void InitVars() {
                 this.columnId = base.Columns["Id"];
                 this.columnDOCUMENT = base.Columns["DOCUMENT"];
+                this.columnUtilisateur = base.Columns["Utilisateur"];
                 this.columnAction = base.Columns["Action"];
                 this.columnTimestamp = base.Columns["Timestamp"];
             }
@@ -6812,6 +6824,8 @@ namespace Cogitel_QT {
                 base.Columns.Add(this.columnId);
                 this.columnDOCUMENT = new global::System.Data.DataColumn("DOCUMENT", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDOCUMENT);
+                this.columnUtilisateur = new global::System.Data.DataColumn("Utilisateur", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUtilisateur);
                 this.columnAction = new global::System.Data.DataColumn("Action", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAction);
                 this.columnTimestamp = new global::System.Data.DataColumn("Timestamp", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -6825,6 +6839,7 @@ namespace Cogitel_QT {
                 this.columnId.ReadOnly = true;
                 this.columnId.Unique = true;
                 this.columnDOCUMENT.MaxLength = 50;
+                this.columnUtilisateur.MaxLength = 50;
                 this.columnAction.MaxLength = 10;
             }
             
@@ -6963,6 +6978,8 @@ namespace Cogitel_QT {
             
             private global::System.Data.DataColumn columnref;
             
+            private global::System.Data.DataColumn columnUtilisateur;
+            
             private global::System.Data.DataColumn columnAction;
             
             private global::System.Data.DataColumn columnTimestamp;
@@ -7013,6 +7030,14 @@ namespace Cogitel_QT {
             public global::System.Data.DataColumn refColumn {
                 get {
                     return this.columnref;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn UtilisateurColumn {
+                get {
+                    return this.columnUtilisateur;
                 }
             }
             
@@ -7069,11 +7094,12 @@ namespace Cogitel_QT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ChangePrix_lotRow AddChangePrix_lotRow(string _ref, string Action, System.DateTime Timestamp) {
+            public ChangePrix_lotRow AddChangePrix_lotRow(string _ref, string Utilisateur, string Action, System.DateTime Timestamp) {
                 ChangePrix_lotRow rowChangePrix_lotRow = ((ChangePrix_lotRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         _ref,
+                        Utilisateur,
                         Action,
                         Timestamp};
                 rowChangePrix_lotRow.ItemArray = columnValuesArray;
@@ -7107,6 +7133,7 @@ namespace Cogitel_QT {
             internal void InitVars() {
                 this.columnId = base.Columns["Id"];
                 this.columnref = base.Columns["ref"];
+                this.columnUtilisateur = base.Columns["Utilisateur"];
                 this.columnAction = base.Columns["Action"];
                 this.columnTimestamp = base.Columns["Timestamp"];
             }
@@ -7121,6 +7148,8 @@ namespace Cogitel_QT {
                 this.columnref.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "columnref");
                 this.columnref.ExtendedProperties.Add("Generator_UserColumnName", "ref");
                 base.Columns.Add(this.columnref);
+                this.columnUtilisateur = new global::System.Data.DataColumn("Utilisateur", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUtilisateur);
                 this.columnAction = new global::System.Data.DataColumn("Action", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAction);
                 this.columnTimestamp = new global::System.Data.DataColumn("Timestamp", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -7134,6 +7163,7 @@ namespace Cogitel_QT {
                 this.columnId.ReadOnly = true;
                 this.columnId.Unique = true;
                 this.columnref.MaxLength = 255;
+                this.columnUtilisateur.MaxLength = 50;
                 this.columnAction.MaxLength = 10;
             }
             
@@ -7272,6 +7302,8 @@ namespace Cogitel_QT {
             
             private global::System.Data.DataColumn columnN_de_doc;
             
+            private global::System.Data.DataColumn columnUtilisateur;
+            
             private global::System.Data.DataColumn columnAction;
             
             private global::System.Data.DataColumn columnTimestamp;
@@ -7322,6 +7354,14 @@ namespace Cogitel_QT {
             public global::System.Data.DataColumn N_de_docColumn {
                 get {
                     return this.columnN_de_doc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn UtilisateurColumn {
+                get {
+                    return this.columnUtilisateur;
                 }
             }
             
@@ -7378,11 +7418,12 @@ namespace Cogitel_QT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ChangePRIXPFRow AddChangePRIXPFRow(string N_de_doc, string Action, System.DateTime Timestamp) {
+            public ChangePRIXPFRow AddChangePRIXPFRow(string N_de_doc, string Utilisateur, string Action, System.DateTime Timestamp) {
                 ChangePRIXPFRow rowChangePRIXPFRow = ((ChangePRIXPFRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         N_de_doc,
+                        Utilisateur,
                         Action,
                         Timestamp};
                 rowChangePRIXPFRow.ItemArray = columnValuesArray;
@@ -7416,6 +7457,7 @@ namespace Cogitel_QT {
             internal void InitVars() {
                 this.columnId = base.Columns["Id"];
                 this.columnN_de_doc = base.Columns["N_de_doc"];
+                this.columnUtilisateur = base.Columns["Utilisateur"];
                 this.columnAction = base.Columns["Action"];
                 this.columnTimestamp = base.Columns["Timestamp"];
             }
@@ -7427,6 +7469,8 @@ namespace Cogitel_QT {
                 base.Columns.Add(this.columnId);
                 this.columnN_de_doc = new global::System.Data.DataColumn("N_de_doc", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnN_de_doc);
+                this.columnUtilisateur = new global::System.Data.DataColumn("Utilisateur", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUtilisateur);
                 this.columnAction = new global::System.Data.DataColumn("Action", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAction);
                 this.columnTimestamp = new global::System.Data.DataColumn("Timestamp", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -7440,6 +7484,7 @@ namespace Cogitel_QT {
                 this.columnId.ReadOnly = true;
                 this.columnId.Unique = true;
                 this.columnN_de_doc.MaxLength = 150;
+                this.columnUtilisateur.MaxLength = 50;
                 this.columnAction.MaxLength = 10;
             }
             
@@ -13581,6 +13626,22 @@ namespace Cogitel_QT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Utilisateur {
+                get {
+                    try {
+                        return ((string)(this[this.tableChangePF.UtilisateurColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'Utilisateur\' dans la table \'ChangePF\' est DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableChangePF.UtilisateurColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string Action {
                 get {
                     try {
@@ -13621,6 +13682,18 @@ namespace Cogitel_QT {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetDOCUMENTNull() {
                 this[this.tableChangePF.DOCUMENTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsUtilisateurNull() {
+                return this.IsNull(this.tableChangePF.UtilisateurColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetUtilisateurNull() {
+                this[this.tableChangePF.UtilisateurColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13691,6 +13764,23 @@ namespace Cogitel_QT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Utilisateur {
+                get {
+                    try {
+                        return ((string)(this[this.tableChangePrix_lot.UtilisateurColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'Utilisateur\' dans la table \'ChangePrix_lot\' est DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableChangePrix_lot.UtilisateurColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string Action {
                 get {
                     try {
@@ -13731,6 +13821,18 @@ namespace Cogitel_QT {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Set_refNull() {
                 this[this.tableChangePrix_lot.refColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsUtilisateurNull() {
+                return this.IsNull(this.tableChangePrix_lot.UtilisateurColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetUtilisateurNull() {
+                this[this.tableChangePrix_lot.UtilisateurColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13801,6 +13903,22 @@ namespace Cogitel_QT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Utilisateur {
+                get {
+                    try {
+                        return ((string)(this[this.tableChangePRIXPF.UtilisateurColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'Utilisateur\' dans la table \'ChangePRIXPF\' est DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableChangePRIXPF.UtilisateurColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string Action {
                 get {
                     try {
@@ -13841,6 +13959,18 @@ namespace Cogitel_QT {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetN_de_docNull() {
                 this[this.tableChangePRIXPF.N_de_docColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsUtilisateurNull() {
+                return this.IsNull(this.tableChangePRIXPF.UtilisateurColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetUtilisateurNull() {
+                this[this.tableChangePRIXPF.UtilisateurColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -19104,40 +19234,47 @@ SELECT id, Ndéquipe, Matricule, NOMETPRENOM, SECTION, dateettemps FROM N__des_c
             tableMapping.DataSetTable = "ChangePF";
             tableMapping.ColumnMappings.Add("Id", "Id");
             tableMapping.ColumnMappings.Add("DOCUMENT", "DOCUMENT");
+            tableMapping.ColumnMappings.Add("Utilisateur", "Utilisateur");
             tableMapping.ColumnMappings.Add("Action", "Action");
             tableMapping.ColumnMappings.Add("Timestamp", "Timestamp");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[ChangePF] WHERE (([Id] = @Original_Id) AND ((@IsNull_DOCUMENT = 1 AND [DOCUMENT] IS NULL) OR ([DOCUMENT] = @Original_DOCUMENT)) AND ((@IsNull_Action = 1 AND [Action] IS NULL) OR ([Action] = @Original_Action)) AND ((@IsNull_Timestamp = 1 AND [Timestamp] IS NULL) OR ([Timestamp] = @Original_Timestamp)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[ChangePF] WHERE (([Id] = @Original_Id) AND ((@IsNull_DOCUMENT = 1 AND [DOCUMENT] IS NULL) OR ([DOCUMENT] = @Original_DOCUMENT)) AND ((@IsNull_Utilisateur = 1 AND [Utilisateur] IS NULL) OR ([Utilisateur] = @Original_Utilisateur)) AND ((@IsNull_Action = 1 AND [Action] IS NULL) OR ([Action] = @Original_Action)) AND ((@IsNull_Timestamp = 1 AND [Timestamp] IS NULL) OR ([Timestamp] = @Original_Timestamp)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DOCUMENT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DOCUMENT", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DOCUMENT", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DOCUMENT", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Utilisateur", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Utilisateur", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Utilisateur", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Utilisateur", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Action", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Action", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Action", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Action", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Timestamp", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Timestamp", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Timestamp", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Timestamp", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[ChangePF] ([DOCUMENT], [Action], [Timestamp]) VALUES (@DOCUMEN" +
-                "T, @Action, @Timestamp);\r\nSELECT Id, [DOCUMENT], Action, Timestamp FROM ChangePF" +
-                " WHERE (Id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[ChangePF] ([DOCUMENT], [Utilisateur], [Action], [Timestamp]) V" +
+                "ALUES (@DOCUMENT, @Utilisateur, @Action, @Timestamp);\r\nSELECT Id, [DOCUMENT], Ut" +
+                "ilisateur, Action, Timestamp FROM ChangePF WHERE (Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DOCUMENT", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DOCUMENT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Utilisateur", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Utilisateur", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Action", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Action", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Timestamp", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Timestamp", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[ChangePF] SET [DOCUMENT] = @DOCUMENT, [Action] = @Action, [Timestamp] = @Timestamp WHERE (([Id] = @Original_Id) AND ((@IsNull_DOCUMENT = 1 AND [DOCUMENT] IS NULL) OR ([DOCUMENT] = @Original_DOCUMENT)) AND ((@IsNull_Action = 1 AND [Action] IS NULL) OR ([Action] = @Original_Action)) AND ((@IsNull_Timestamp = 1 AND [Timestamp] IS NULL) OR ([Timestamp] = @Original_Timestamp)));
-SELECT Id, [DOCUMENT], Action, Timestamp FROM ChangePF WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[ChangePF] SET [DOCUMENT] = @DOCUMENT, [Utilisateur] = @Utilisateur, [Action] = @Action, [Timestamp] = @Timestamp WHERE (([Id] = @Original_Id) AND ((@IsNull_DOCUMENT = 1 AND [DOCUMENT] IS NULL) OR ([DOCUMENT] = @Original_DOCUMENT)) AND ((@IsNull_Utilisateur = 1 AND [Utilisateur] IS NULL) OR ([Utilisateur] = @Original_Utilisateur)) AND ((@IsNull_Action = 1 AND [Action] IS NULL) OR ([Action] = @Original_Action)) AND ((@IsNull_Timestamp = 1 AND [Timestamp] IS NULL) OR ([Timestamp] = @Original_Timestamp)));
+SELECT Id, [DOCUMENT], Utilisateur, Action, Timestamp FROM ChangePF WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DOCUMENT", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DOCUMENT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Utilisateur", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Utilisateur", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Action", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Action", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Timestamp", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Timestamp", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DOCUMENT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DOCUMENT", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DOCUMENT", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DOCUMENT", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Utilisateur", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Utilisateur", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Utilisateur", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Utilisateur", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Action", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Action", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Action", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Action", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Timestamp", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Timestamp", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -19158,7 +19295,7 @@ SELECT Id, [DOCUMENT], Action, Timestamp FROM ChangePF WHERE (Id = @Id)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, DOCUMENT, Action, Timestamp FROM dbo.ChangePF";
+            this._commandCollection[0].CommandText = "SELECT Id, DOCUMENT, Utilisateur, Action, Timestamp FROM dbo.ChangePF";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -19219,7 +19356,7 @@ SELECT Id, [DOCUMENT], Action, Timestamp FROM ChangePF WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, string Original_DOCUMENT, string Original_Action, global::System.Nullable<global::System.DateTime> Original_Timestamp) {
+        public virtual int Delete(int Original_Id, string Original_DOCUMENT, string Original_Utilisateur, string Original_Action, global::System.Nullable<global::System.DateTime> Original_Timestamp) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
             if ((Original_DOCUMENT == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -19229,21 +19366,29 @@ SELECT Id, [DOCUMENT], Action, Timestamp FROM ChangePF WHERE (Id = @Id)";
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_DOCUMENT));
             }
-            if ((Original_Action == null)) {
+            if ((Original_Utilisateur == null)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Action));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Utilisateur));
             }
-            if ((Original_Timestamp.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_Timestamp.Value));
-            }
-            else {
+            if ((Original_Action == null)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Action));
+            }
+            if ((Original_Timestamp.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((System.DateTime)(Original_Timestamp.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -19265,24 +19410,30 @@ SELECT Id, [DOCUMENT], Action, Timestamp FROM ChangePF WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string DOCUMENT, string Action, global::System.Nullable<global::System.DateTime> Timestamp) {
+        public virtual int Insert(string DOCUMENT, string Utilisateur, string Action, global::System.Nullable<global::System.DateTime> Timestamp) {
             if ((DOCUMENT == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(DOCUMENT));
             }
-            if ((Action == null)) {
+            if ((Utilisateur == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Action));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Utilisateur));
             }
-            if ((Timestamp.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(Timestamp.Value));
+            if ((Action == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Action));
+            }
+            if ((Timestamp.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(Timestamp.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -19304,51 +19455,65 @@ SELECT Id, [DOCUMENT], Action, Timestamp FROM ChangePF WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string DOCUMENT, string Action, global::System.Nullable<global::System.DateTime> Timestamp, int Original_Id, string Original_DOCUMENT, string Original_Action, global::System.Nullable<global::System.DateTime> Original_Timestamp, int Id) {
+        public virtual int Update(string DOCUMENT, string Utilisateur, string Action, global::System.Nullable<global::System.DateTime> Timestamp, int Original_Id, string Original_DOCUMENT, string Original_Utilisateur, string Original_Action, global::System.Nullable<global::System.DateTime> Original_Timestamp, int Id) {
             if ((DOCUMENT == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(DOCUMENT));
             }
-            if ((Action == null)) {
+            if ((Utilisateur == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Action));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Utilisateur));
             }
-            if ((Timestamp.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(Timestamp.Value));
-            }
-            else {
+            if ((Action == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_Id));
-            if ((Original_DOCUMENT == null)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Action));
+            }
+            if ((Timestamp.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(Timestamp.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_DOCUMENT));
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_Id));
+            if ((Original_DOCUMENT == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_DOCUMENT));
+            }
+            if ((Original_Utilisateur == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Utilisateur));
             }
             if ((Original_Action == null)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_Action));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Action));
             }
             if ((Original_Timestamp.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Original_Timestamp.Value));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Original_Timestamp.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Id));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -19369,8 +19534,8 @@ SELECT Id, [DOCUMENT], Action, Timestamp FROM ChangePF WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string DOCUMENT, string Action, global::System.Nullable<global::System.DateTime> Timestamp, int Original_Id, string Original_DOCUMENT, string Original_Action, global::System.Nullable<global::System.DateTime> Original_Timestamp) {
-            return this.Update(DOCUMENT, Action, Timestamp, Original_Id, Original_DOCUMENT, Original_Action, Original_Timestamp, Original_Id);
+        public virtual int Update(string DOCUMENT, string Utilisateur, string Action, global::System.Nullable<global::System.DateTime> Timestamp, int Original_Id, string Original_DOCUMENT, string Original_Utilisateur, string Original_Action, global::System.Nullable<global::System.DateTime> Original_Timestamp) {
+            return this.Update(DOCUMENT, Utilisateur, Action, Timestamp, Original_Id, Original_DOCUMENT, Original_Utilisateur, Original_Action, Original_Timestamp, Original_Id);
         }
     }
     
@@ -19497,40 +19662,47 @@ SELECT Id, [DOCUMENT], Action, Timestamp FROM ChangePF WHERE (Id = @Id)";
             tableMapping.DataSetTable = "ChangePrix_lot";
             tableMapping.ColumnMappings.Add("Id", "Id");
             tableMapping.ColumnMappings.Add("ref", "ref");
+            tableMapping.ColumnMappings.Add("Utilisateur", "Utilisateur");
             tableMapping.ColumnMappings.Add("Action", "Action");
             tableMapping.ColumnMappings.Add("Timestamp", "Timestamp");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[ChangePrix_lot] WHERE (([Id] = @Original_Id) AND ((@IsNull_ref = 1 AND [ref] IS NULL) OR ([ref] = @Original_ref)) AND ((@IsNull_Action = 1 AND [Action] IS NULL) OR ([Action] = @Original_Action)) AND ((@IsNull_Timestamp = 1 AND [Timestamp] IS NULL) OR ([Timestamp] = @Original_Timestamp)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[ChangePrix_lot] WHERE (([Id] = @Original_Id) AND ((@IsNull_ref = 1 AND [ref] IS NULL) OR ([ref] = @Original_ref)) AND ((@IsNull_Utilisateur = 1 AND [Utilisateur] IS NULL) OR ([Utilisateur] = @Original_Utilisateur)) AND ((@IsNull_Action = 1 AND [Action] IS NULL) OR ([Action] = @Original_Action)) AND ((@IsNull_Timestamp = 1 AND [Timestamp] IS NULL) OR ([Timestamp] = @Original_Timestamp)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ref", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ref", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ref", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ref", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Utilisateur", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Utilisateur", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Utilisateur", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Utilisateur", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Action", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Action", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Action", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Action", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Timestamp", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Timestamp", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Timestamp", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Timestamp", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[ChangePrix_lot] ([ref], [Action], [Timestamp]) VALUES (@ref, @" +
-                "Action, @Timestamp);\r\nSELECT Id, ref, Action, Timestamp FROM ChangePrix_lot WHER" +
-                "E (Id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[ChangePrix_lot] ([ref], [Utilisateur], [Action], [Timestamp]) " +
+                "VALUES (@ref, @Utilisateur, @Action, @Timestamp);\r\nSELECT Id, ref, Utilisateur, " +
+                "Action, Timestamp FROM ChangePrix_lot WHERE (Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ref", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ref", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Utilisateur", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Utilisateur", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Action", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Action", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Timestamp", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Timestamp", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[ChangePrix_lot] SET [ref] = @ref, [Action] = @Action, [Timestamp] = @Timestamp WHERE (([Id] = @Original_Id) AND ((@IsNull_ref = 1 AND [ref] IS NULL) OR ([ref] = @Original_ref)) AND ((@IsNull_Action = 1 AND [Action] IS NULL) OR ([Action] = @Original_Action)) AND ((@IsNull_Timestamp = 1 AND [Timestamp] IS NULL) OR ([Timestamp] = @Original_Timestamp)));
-SELECT Id, ref, Action, Timestamp FROM ChangePrix_lot WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[ChangePrix_lot] SET [ref] = @ref, [Utilisateur] = @Utilisateur, [Action] = @Action, [Timestamp] = @Timestamp WHERE (([Id] = @Original_Id) AND ((@IsNull_ref = 1 AND [ref] IS NULL) OR ([ref] = @Original_ref)) AND ((@IsNull_Utilisateur = 1 AND [Utilisateur] IS NULL) OR ([Utilisateur] = @Original_Utilisateur)) AND ((@IsNull_Action = 1 AND [Action] IS NULL) OR ([Action] = @Original_Action)) AND ((@IsNull_Timestamp = 1 AND [Timestamp] IS NULL) OR ([Timestamp] = @Original_Timestamp)));
+SELECT Id, ref, Utilisateur, Action, Timestamp FROM ChangePrix_lot WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ref", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ref", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Utilisateur", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Utilisateur", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Action", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Action", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Timestamp", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Timestamp", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ref", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ref", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ref", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ref", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Utilisateur", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Utilisateur", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Utilisateur", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Utilisateur", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Action", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Action", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Action", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Action", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Timestamp", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Timestamp", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -19551,7 +19723,7 @@ SELECT Id, ref, Action, Timestamp FROM ChangePrix_lot WHERE (Id = @Id)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, ref, Action, Timestamp FROM dbo.ChangePrix_lot";
+            this._commandCollection[0].CommandText = "SELECT Id, ref, Utilisateur, Action, Timestamp FROM dbo.ChangePrix_lot";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -19612,7 +19784,7 @@ SELECT Id, ref, Action, Timestamp FROM ChangePrix_lot WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, string Original_ref, string Original_Action, global::System.Nullable<global::System.DateTime> Original_Timestamp) {
+        public virtual int Delete(int Original_Id, string Original_ref, string Original_Utilisateur, string Original_Action, global::System.Nullable<global::System.DateTime> Original_Timestamp) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
             if ((Original_ref == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -19622,21 +19794,29 @@ SELECT Id, ref, Action, Timestamp FROM ChangePrix_lot WHERE (Id = @Id)";
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_ref));
             }
-            if ((Original_Action == null)) {
+            if ((Original_Utilisateur == null)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Action));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Utilisateur));
             }
-            if ((Original_Timestamp.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_Timestamp.Value));
-            }
-            else {
+            if ((Original_Action == null)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Action));
+            }
+            if ((Original_Timestamp.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((System.DateTime)(Original_Timestamp.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -19658,24 +19838,30 @@ SELECT Id, ref, Action, Timestamp FROM ChangePrix_lot WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string _ref, string Action, global::System.Nullable<global::System.DateTime> Timestamp) {
+        public virtual int Insert(string _ref, string Utilisateur, string Action, global::System.Nullable<global::System.DateTime> Timestamp) {
             if ((_ref == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(_ref));
             }
-            if ((Action == null)) {
+            if ((Utilisateur == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Action));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Utilisateur));
             }
-            if ((Timestamp.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(Timestamp.Value));
+            if ((Action == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Action));
+            }
+            if ((Timestamp.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(Timestamp.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -19697,51 +19883,65 @@ SELECT Id, ref, Action, Timestamp FROM ChangePrix_lot WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string _ref, string Action, global::System.Nullable<global::System.DateTime> Timestamp, int Original_Id, string Original_ref, string Original_Action, global::System.Nullable<global::System.DateTime> Original_Timestamp, int Id) {
+        public virtual int Update(string _ref, string Utilisateur, string Action, global::System.Nullable<global::System.DateTime> Timestamp, int Original_Id, string Original_ref, string Original_Utilisateur, string Original_Action, global::System.Nullable<global::System.DateTime> Original_Timestamp, int Id) {
             if ((_ref == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(_ref));
             }
-            if ((Action == null)) {
+            if ((Utilisateur == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Action));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Utilisateur));
             }
-            if ((Timestamp.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(Timestamp.Value));
-            }
-            else {
+            if ((Action == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_Id));
-            if ((Original_ref == null)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Action));
+            }
+            if ((Timestamp.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(Timestamp.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_ref));
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_Id));
+            if ((Original_ref == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_ref));
+            }
+            if ((Original_Utilisateur == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Utilisateur));
             }
             if ((Original_Action == null)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_Action));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Action));
             }
             if ((Original_Timestamp.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Original_Timestamp.Value));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Original_Timestamp.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Id));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -19762,8 +19962,8 @@ SELECT Id, ref, Action, Timestamp FROM ChangePrix_lot WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string _ref, string Action, global::System.Nullable<global::System.DateTime> Timestamp, int Original_Id, string Original_ref, string Original_Action, global::System.Nullable<global::System.DateTime> Original_Timestamp) {
-            return this.Update(_ref, Action, Timestamp, Original_Id, Original_ref, Original_Action, Original_Timestamp, Original_Id);
+        public virtual int Update(string _ref, string Utilisateur, string Action, global::System.Nullable<global::System.DateTime> Timestamp, int Original_Id, string Original_ref, string Original_Utilisateur, string Original_Action, global::System.Nullable<global::System.DateTime> Original_Timestamp) {
+            return this.Update(_ref, Utilisateur, Action, Timestamp, Original_Id, Original_ref, Original_Utilisateur, Original_Action, Original_Timestamp, Original_Id);
         }
     }
     
@@ -19890,40 +20090,47 @@ SELECT Id, ref, Action, Timestamp FROM ChangePrix_lot WHERE (Id = @Id)";
             tableMapping.DataSetTable = "ChangePRIXPF";
             tableMapping.ColumnMappings.Add("Id", "Id");
             tableMapping.ColumnMappings.Add("N_de_doc", "N_de_doc");
+            tableMapping.ColumnMappings.Add("Utilisateur", "Utilisateur");
             tableMapping.ColumnMappings.Add("Action", "Action");
             tableMapping.ColumnMappings.Add("Timestamp", "Timestamp");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[ChangePRIXPF] WHERE (([Id] = @Original_Id) AND ((@IsNull_N_de_doc = 1 AND [N_de_doc] IS NULL) OR ([N_de_doc] = @Original_N_de_doc)) AND ((@IsNull_Action = 1 AND [Action] IS NULL) OR ([Action] = @Original_Action)) AND ((@IsNull_Timestamp = 1 AND [Timestamp] IS NULL) OR ([Timestamp] = @Original_Timestamp)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[ChangePRIXPF] WHERE (([Id] = @Original_Id) AND ((@IsNull_N_de_doc = 1 AND [N_de_doc] IS NULL) OR ([N_de_doc] = @Original_N_de_doc)) AND ((@IsNull_Utilisateur = 1 AND [Utilisateur] IS NULL) OR ([Utilisateur] = @Original_Utilisateur)) AND ((@IsNull_Action = 1 AND [Action] IS NULL) OR ([Action] = @Original_Action)) AND ((@IsNull_Timestamp = 1 AND [Timestamp] IS NULL) OR ([Timestamp] = @Original_Timestamp)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_N_de_doc", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "N_de_doc", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_N_de_doc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "N_de_doc", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Utilisateur", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Utilisateur", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Utilisateur", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Utilisateur", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Action", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Action", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Action", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Action", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Timestamp", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Timestamp", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Timestamp", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Timestamp", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[ChangePRIXPF] ([N_de_doc], [Action], [Timestamp]) VALUES (@N_d" +
-                "e_doc, @Action, @Timestamp);\r\nSELECT Id, N_de_doc, Action, Timestamp FROM Change" +
-                "PRIXPF WHERE (Id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[ChangePRIXPF] ([N_de_doc], [Utilisateur], [Action], [Timestamp" +
+                "]) VALUES (@N_de_doc, @Utilisateur, @Action, @Timestamp);\r\nSELECT Id, N_de_doc, " +
+                "Utilisateur, Action, Timestamp FROM ChangePRIXPF WHERE (Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@N_de_doc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "N_de_doc", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Utilisateur", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Utilisateur", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Action", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Action", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Timestamp", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Timestamp", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[ChangePRIXPF] SET [N_de_doc] = @N_de_doc, [Action] = @Action, [Timestamp] = @Timestamp WHERE (([Id] = @Original_Id) AND ((@IsNull_N_de_doc = 1 AND [N_de_doc] IS NULL) OR ([N_de_doc] = @Original_N_de_doc)) AND ((@IsNull_Action = 1 AND [Action] IS NULL) OR ([Action] = @Original_Action)) AND ((@IsNull_Timestamp = 1 AND [Timestamp] IS NULL) OR ([Timestamp] = @Original_Timestamp)));
-SELECT Id, N_de_doc, Action, Timestamp FROM ChangePRIXPF WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[ChangePRIXPF] SET [N_de_doc] = @N_de_doc, [Utilisateur] = @Utilisateur, [Action] = @Action, [Timestamp] = @Timestamp WHERE (([Id] = @Original_Id) AND ((@IsNull_N_de_doc = 1 AND [N_de_doc] IS NULL) OR ([N_de_doc] = @Original_N_de_doc)) AND ((@IsNull_Utilisateur = 1 AND [Utilisateur] IS NULL) OR ([Utilisateur] = @Original_Utilisateur)) AND ((@IsNull_Action = 1 AND [Action] IS NULL) OR ([Action] = @Original_Action)) AND ((@IsNull_Timestamp = 1 AND [Timestamp] IS NULL) OR ([Timestamp] = @Original_Timestamp)));
+SELECT Id, N_de_doc, Utilisateur, Action, Timestamp FROM ChangePRIXPF WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@N_de_doc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "N_de_doc", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Utilisateur", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Utilisateur", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Action", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Action", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Timestamp", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Timestamp", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_N_de_doc", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "N_de_doc", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_N_de_doc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "N_de_doc", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Utilisateur", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Utilisateur", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Utilisateur", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Utilisateur", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Action", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Action", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Action", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Action", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Timestamp", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Timestamp", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -19944,7 +20151,7 @@ SELECT Id, N_de_doc, Action, Timestamp FROM ChangePRIXPF WHERE (Id = @Id)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, N_de_doc, Action, Timestamp FROM dbo.ChangePRIXPF";
+            this._commandCollection[0].CommandText = "SELECT Id, N_de_doc, Utilisateur, Action, Timestamp FROM dbo.ChangePRIXPF";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -20005,7 +20212,7 @@ SELECT Id, N_de_doc, Action, Timestamp FROM ChangePRIXPF WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, string Original_N_de_doc, string Original_Action, global::System.Nullable<global::System.DateTime> Original_Timestamp) {
+        public virtual int Delete(int Original_Id, string Original_N_de_doc, string Original_Utilisateur, string Original_Action, global::System.Nullable<global::System.DateTime> Original_Timestamp) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
             if ((Original_N_de_doc == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -20015,21 +20222,29 @@ SELECT Id, N_de_doc, Action, Timestamp FROM ChangePRIXPF WHERE (Id = @Id)";
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_N_de_doc));
             }
-            if ((Original_Action == null)) {
+            if ((Original_Utilisateur == null)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Action));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Utilisateur));
             }
-            if ((Original_Timestamp.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_Timestamp.Value));
-            }
-            else {
+            if ((Original_Action == null)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Action));
+            }
+            if ((Original_Timestamp.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((System.DateTime)(Original_Timestamp.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -20051,24 +20266,30 @@ SELECT Id, N_de_doc, Action, Timestamp FROM ChangePRIXPF WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string N_de_doc, string Action, global::System.Nullable<global::System.DateTime> Timestamp) {
+        public virtual int Insert(string N_de_doc, string Utilisateur, string Action, global::System.Nullable<global::System.DateTime> Timestamp) {
             if ((N_de_doc == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(N_de_doc));
             }
-            if ((Action == null)) {
+            if ((Utilisateur == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Action));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Utilisateur));
             }
-            if ((Timestamp.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(Timestamp.Value));
+            if ((Action == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Action));
+            }
+            if ((Timestamp.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(Timestamp.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -20090,51 +20311,65 @@ SELECT Id, N_de_doc, Action, Timestamp FROM ChangePRIXPF WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string N_de_doc, string Action, global::System.Nullable<global::System.DateTime> Timestamp, int Original_Id, string Original_N_de_doc, string Original_Action, global::System.Nullable<global::System.DateTime> Original_Timestamp, int Id) {
+        public virtual int Update(string N_de_doc, string Utilisateur, string Action, global::System.Nullable<global::System.DateTime> Timestamp, int Original_Id, string Original_N_de_doc, string Original_Utilisateur, string Original_Action, global::System.Nullable<global::System.DateTime> Original_Timestamp, int Id) {
             if ((N_de_doc == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(N_de_doc));
             }
-            if ((Action == null)) {
+            if ((Utilisateur == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Action));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Utilisateur));
             }
-            if ((Timestamp.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(Timestamp.Value));
-            }
-            else {
+            if ((Action == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_Id));
-            if ((Original_N_de_doc == null)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Action));
+            }
+            if ((Timestamp.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(Timestamp.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_N_de_doc));
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_Id));
+            if ((Original_N_de_doc == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_N_de_doc));
+            }
+            if ((Original_Utilisateur == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Utilisateur));
             }
             if ((Original_Action == null)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_Action));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Action));
             }
             if ((Original_Timestamp.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Original_Timestamp.Value));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Original_Timestamp.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Id));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -20155,8 +20390,8 @@ SELECT Id, N_de_doc, Action, Timestamp FROM ChangePRIXPF WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string N_de_doc, string Action, global::System.Nullable<global::System.DateTime> Timestamp, int Original_Id, string Original_N_de_doc, string Original_Action, global::System.Nullable<global::System.DateTime> Original_Timestamp) {
-            return this.Update(N_de_doc, Action, Timestamp, Original_Id, Original_N_de_doc, Original_Action, Original_Timestamp, Original_Id);
+        public virtual int Update(string N_de_doc, string Utilisateur, string Action, global::System.Nullable<global::System.DateTime> Timestamp, int Original_Id, string Original_N_de_doc, string Original_Utilisateur, string Original_Action, global::System.Nullable<global::System.DateTime> Original_Timestamp) {
+            return this.Update(N_de_doc, Utilisateur, Action, Timestamp, Original_Id, Original_N_de_doc, Original_Utilisateur, Original_Action, Original_Timestamp, Original_Id);
         }
     }
     

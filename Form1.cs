@@ -43,7 +43,7 @@ namespace Cogitel_QT
             else
             {
                 SHA256 sha256 = SHA256.Create();
-
+                
                 // Get the plaintext password from the textbox
                 string password = textBox2.Text;
 
@@ -62,6 +62,8 @@ namespace Cogitel_QT
                 con.sda.Fill(dt);
                 if (dt.Rows.Count > 0)
                 {
+
+                    
                     if (textBox1.Text == "admin")
                     {
                         // Get the instance of the form where the buttons are located
