@@ -49,45 +49,45 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cogitelDataSet = new Cogitel_QT.CogitelDataSet();
-            this.changePFBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.changePFTableAdapter = new Cogitel_QT.CogitelDataSetTableAdapters.ChangePFTableAdapter();
-            this.changePRIXPFBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.changePRIXPFTableAdapter = new Cogitel_QT.CogitelDataSetTableAdapters.ChangePRIXPFTableAdapter();
-            this.changePrixlotBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.changePrix_lotTableAdapter = new Cogitel_QT.CogitelDataSetTableAdapters.ChangePrix_lotTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dOCUMENTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.utilisateurDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.actionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timestampDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.changePFBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cogitelDataSet = new Cogitel_QT.CogitelDataSet();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ndedocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.utilisateurDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.actionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timestampDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.changePRIXPFBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.refDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.utilisateurDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.actionDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timestampDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.changePrixlotBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.changePFTableAdapter = new Cogitel_QT.CogitelDataSetTableAdapters.ChangePFTableAdapter();
+            this.changePRIXPFTableAdapter = new Cogitel_QT.CogitelDataSetTableAdapters.ChangePRIXPFTableAdapter();
+            this.changePrix_lotTableAdapter = new Cogitel_QT.CogitelDataSetTableAdapters.ChangePrix_lotTableAdapter();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.changePFBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cogitelDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.changePRIXPFBindingSource)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cogitelDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.changePFBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.changePRIXPFBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.changePrixlotBindingSource)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -216,6 +216,57 @@
             this.dataGridView1.VirtualMode = true;
             this.dataGridView1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dataGridView1_Scroll);
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // dOCUMENTDataGridViewTextBoxColumn
+            // 
+            this.dOCUMENTDataGridViewTextBoxColumn.DataPropertyName = "DOCUMENT";
+            this.dOCUMENTDataGridViewTextBoxColumn.HeaderText = "DOCUMENT";
+            this.dOCUMENTDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dOCUMENTDataGridViewTextBoxColumn.Name = "dOCUMENTDataGridViewTextBoxColumn";
+            this.dOCUMENTDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // utilisateurDataGridViewTextBoxColumn
+            // 
+            this.utilisateurDataGridViewTextBoxColumn.DataPropertyName = "Utilisateur";
+            this.utilisateurDataGridViewTextBoxColumn.HeaderText = "Utilisateur";
+            this.utilisateurDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.utilisateurDataGridViewTextBoxColumn.Name = "utilisateurDataGridViewTextBoxColumn";
+            this.utilisateurDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // actionDataGridViewTextBoxColumn
+            // 
+            this.actionDataGridViewTextBoxColumn.DataPropertyName = "Action";
+            this.actionDataGridViewTextBoxColumn.HeaderText = "Action";
+            this.actionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.actionDataGridViewTextBoxColumn.Name = "actionDataGridViewTextBoxColumn";
+            this.actionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // timestampDataGridViewTextBoxColumn
+            // 
+            this.timestampDataGridViewTextBoxColumn.DataPropertyName = "Timestamp";
+            this.timestampDataGridViewTextBoxColumn.HeaderText = "Temps de modification";
+            this.timestampDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.timestampDataGridViewTextBoxColumn.Name = "timestampDataGridViewTextBoxColumn";
+            this.timestampDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // changePFBindingSource
+            // 
+            this.changePFBindingSource.DataMember = "ChangePF";
+            this.changePFBindingSource.DataSource = this.cogitelDataSet;
+            // 
+            // cogitelDataSet
+            // 
+            this.cogitelDataSet.DataSetName = "CogitelDataSet";
+            this.cogitelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // dataGridView2
             // 
             this.dataGridView2.AllowDrop = true;
@@ -294,6 +345,52 @@
             this.dataGridView2.TabIndex = 8;
             this.dataGridView2.VirtualMode = true;
             this.dataGridView2.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dataGridView2_Scroll);
+            // 
+            // idDataGridViewTextBoxColumn1
+            // 
+            this.idDataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // ndedocDataGridViewTextBoxColumn
+            // 
+            this.ndedocDataGridViewTextBoxColumn.DataPropertyName = "N_de_doc";
+            this.ndedocDataGridViewTextBoxColumn.HeaderText = "N°de doc";
+            this.ndedocDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.ndedocDataGridViewTextBoxColumn.Name = "ndedocDataGridViewTextBoxColumn";
+            this.ndedocDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // utilisateurDataGridViewTextBoxColumn1
+            // 
+            this.utilisateurDataGridViewTextBoxColumn1.DataPropertyName = "Utilisateur";
+            this.utilisateurDataGridViewTextBoxColumn1.HeaderText = "Utilisateur";
+            this.utilisateurDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.utilisateurDataGridViewTextBoxColumn1.Name = "utilisateurDataGridViewTextBoxColumn1";
+            this.utilisateurDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // actionDataGridViewTextBoxColumn1
+            // 
+            this.actionDataGridViewTextBoxColumn1.DataPropertyName = "Action";
+            this.actionDataGridViewTextBoxColumn1.HeaderText = "Action";
+            this.actionDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.actionDataGridViewTextBoxColumn1.Name = "actionDataGridViewTextBoxColumn1";
+            this.actionDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // timestampDataGridViewTextBoxColumn1
+            // 
+            this.timestampDataGridViewTextBoxColumn1.DataPropertyName = "Timestamp";
+            this.timestampDataGridViewTextBoxColumn1.HeaderText = "Temps de modification";
+            this.timestampDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.timestampDataGridViewTextBoxColumn1.Name = "timestampDataGridViewTextBoxColumn1";
+            this.timestampDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // changePRIXPFBindingSource
+            // 
+            this.changePRIXPFBindingSource.DataMember = "ChangePRIXPF";
+            this.changePRIXPFBindingSource.DataSource = this.cogitelDataSet;
             // 
             // panel3
             // 
@@ -396,142 +493,6 @@
             this.dataGridView3.VirtualMode = true;
             this.dataGridView3.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dataGridView3_Scroll);
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 684);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(679, 34);
-            this.panel4.TabIndex = 9;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Name = "label3";
-            this.label3.Padding = new System.Windows.Forms.Padding(280, 0, 0, 0);
-            this.label3.Size = new System.Drawing.Size(381, 27);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "PRIX LOT";
-            // 
-            // cogitelDataSet
-            // 
-            this.cogitelDataSet.DataSetName = "CogitelDataSet";
-            this.cogitelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // changePFBindingSource
-            // 
-            this.changePFBindingSource.DataMember = "ChangePF";
-            this.changePFBindingSource.DataSource = this.cogitelDataSet;
-            // 
-            // changePFTableAdapter
-            // 
-            this.changePFTableAdapter.ClearBeforeFill = true;
-            // 
-            // changePRIXPFBindingSource
-            // 
-            this.changePRIXPFBindingSource.DataMember = "ChangePRIXPF";
-            this.changePRIXPFBindingSource.DataSource = this.cogitelDataSet;
-            // 
-            // changePRIXPFTableAdapter
-            // 
-            this.changePRIXPFTableAdapter.ClearBeforeFill = true;
-            // 
-            // changePrixlotBindingSource
-            // 
-            this.changePrixlotBindingSource.DataMember = "ChangePrix_lot";
-            this.changePrixlotBindingSource.DataSource = this.cogitelDataSet;
-            // 
-            // changePrix_lotTableAdapter
-            // 
-            this.changePrix_lotTableAdapter.ClearBeforeFill = true;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // dOCUMENTDataGridViewTextBoxColumn
-            // 
-            this.dOCUMENTDataGridViewTextBoxColumn.DataPropertyName = "DOCUMENT";
-            this.dOCUMENTDataGridViewTextBoxColumn.HeaderText = "DOCUMENT";
-            this.dOCUMENTDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dOCUMENTDataGridViewTextBoxColumn.Name = "dOCUMENTDataGridViewTextBoxColumn";
-            this.dOCUMENTDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // utilisateurDataGridViewTextBoxColumn
-            // 
-            this.utilisateurDataGridViewTextBoxColumn.DataPropertyName = "Utilisateur";
-            this.utilisateurDataGridViewTextBoxColumn.HeaderText = "Utilisateur";
-            this.utilisateurDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.utilisateurDataGridViewTextBoxColumn.Name = "utilisateurDataGridViewTextBoxColumn";
-            this.utilisateurDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // actionDataGridViewTextBoxColumn
-            // 
-            this.actionDataGridViewTextBoxColumn.DataPropertyName = "Action";
-            this.actionDataGridViewTextBoxColumn.HeaderText = "Action";
-            this.actionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.actionDataGridViewTextBoxColumn.Name = "actionDataGridViewTextBoxColumn";
-            this.actionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // timestampDataGridViewTextBoxColumn
-            // 
-            this.timestampDataGridViewTextBoxColumn.DataPropertyName = "Timestamp";
-            this.timestampDataGridViewTextBoxColumn.HeaderText = "Temps de modification";
-            this.timestampDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.timestampDataGridViewTextBoxColumn.Name = "timestampDataGridViewTextBoxColumn";
-            this.timestampDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idDataGridViewTextBoxColumn1
-            // 
-            this.idDataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
-            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // ndedocDataGridViewTextBoxColumn
-            // 
-            this.ndedocDataGridViewTextBoxColumn.DataPropertyName = "N_de_doc";
-            this.ndedocDataGridViewTextBoxColumn.HeaderText = "N°de doc";
-            this.ndedocDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ndedocDataGridViewTextBoxColumn.Name = "ndedocDataGridViewTextBoxColumn";
-            this.ndedocDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // utilisateurDataGridViewTextBoxColumn1
-            // 
-            this.utilisateurDataGridViewTextBoxColumn1.DataPropertyName = "Utilisateur";
-            this.utilisateurDataGridViewTextBoxColumn1.HeaderText = "Utilisateur";
-            this.utilisateurDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.utilisateurDataGridViewTextBoxColumn1.Name = "utilisateurDataGridViewTextBoxColumn1";
-            this.utilisateurDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // actionDataGridViewTextBoxColumn1
-            // 
-            this.actionDataGridViewTextBoxColumn1.DataPropertyName = "Action";
-            this.actionDataGridViewTextBoxColumn1.HeaderText = "Action";
-            this.actionDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.actionDataGridViewTextBoxColumn1.Name = "actionDataGridViewTextBoxColumn1";
-            this.actionDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // timestampDataGridViewTextBoxColumn1
-            // 
-            this.timestampDataGridViewTextBoxColumn1.DataPropertyName = "Timestamp";
-            this.timestampDataGridViewTextBoxColumn1.HeaderText = "Temps de modification";
-            this.timestampDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.timestampDataGridViewTextBoxColumn1.Name = "timestampDataGridViewTextBoxColumn1";
-            this.timestampDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
             // idDataGridViewTextBoxColumn2
             // 
             this.idDataGridViewTextBoxColumn2.DataPropertyName = "Id";
@@ -573,6 +534,45 @@
             this.timestampDataGridViewTextBoxColumn2.Name = "timestampDataGridViewTextBoxColumn2";
             this.timestampDataGridViewTextBoxColumn2.ReadOnly = true;
             // 
+            // changePrixlotBindingSource
+            // 
+            this.changePrixlotBindingSource.DataMember = "ChangePrix_lot";
+            this.changePrixlotBindingSource.DataSource = this.cogitelDataSet;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 684);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(679, 34);
+            this.panel4.TabIndex = 9;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Name = "label3";
+            this.label3.Padding = new System.Windows.Forms.Padding(280, 0, 0, 0);
+            this.label3.Size = new System.Drawing.Size(381, 27);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "PRIX LOT";
+            // 
+            // changePFTableAdapter
+            // 
+            this.changePFTableAdapter.ClearBeforeFill = true;
+            // 
+            // changePRIXPFTableAdapter
+            // 
+            this.changePRIXPFTableAdapter.ClearBeforeFill = true;
+            // 
+            // changePrix_lotTableAdapter
+            // 
+            this.changePrix_lotTableAdapter.ClearBeforeFill = true;
+            // 
             // historique
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 27F);
@@ -600,16 +600,16 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.changePFBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cogitelDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.changePRIXPFBindingSource)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.changePrixlotBindingSource)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cogitelDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.changePFBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.changePRIXPFBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.changePrixlotBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

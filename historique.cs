@@ -23,12 +23,6 @@ namespace Cogitel_QT
 
         private void historique_Load(object sender, EventArgs e)
         {
-            // TODO: cette ligne de code charge les données dans la table 'cogitelDataSet.ChangePrix_lot'. Vous pouvez la déplacer ou la supprimer selon les besoins.
-            this.changePrix_lotTableAdapter.Fill(this.cogitelDataSet.ChangePrix_lot);
-            // TODO: cette ligne de code charge les données dans la table 'cogitelDataSet.ChangePRIXPF'. Vous pouvez la déplacer ou la supprimer selon les besoins.
-            this.changePRIXPFTableAdapter.Fill(this.cogitelDataSet.ChangePRIXPF);
-            // TODO: cette ligne de code charge les données dans la table 'cogitelDataSet.ChangePF'. Vous pouvez la déplacer ou la supprimer selon les besoins.
-            this.changePFTableAdapter.Fill(this.cogitelDataSet.ChangePF);
             LoadData();
             LoadData1();
             LoadData2();

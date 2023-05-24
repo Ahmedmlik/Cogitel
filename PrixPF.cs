@@ -251,7 +251,7 @@ namespace Cogitel_QT
                 connection.Open();
 
                 // Récupérer les nouvelles modifications depuis la table de suivi
-                string query = "SELECT MAX([Id]) FROM [Cogitel].[dbo].[ChangePRIXPF] WHERE [Timestamp] > @LastCheckDate";
+                string query = "SELECT * FROM [Cogitel].[dbo].[ChangePRIXPF] WHERE [Timestamp] > @LastCheckDate AND [Id] = (SELECT MAX([Id]) FROM [Cogitel].[dbo].[ChangePRIXPF]);";
 
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@LastCheckDate", lastCheckDate); // lastCheckDate est la date de la dernière vérification
