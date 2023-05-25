@@ -23,6 +23,7 @@ namespace Cogitel_QT
 
         private void historique_Load(object sender, EventArgs e)
         {
+            LoadData3();
             LoadData();
             LoadData1();
             LoadData2();
@@ -143,6 +144,46 @@ namespace Cogitel_QT
                 LoadData2();
                 dataGridView3.FirstDisplayedScrollingRowIndex = firstDisplayedRowIndex;
             }
+        }
+        private readonly DataTable allData3 = new DataTable();
+        private readonly int limit3 = 20;
+        private int offset3 = 0;
+        private void LoadData3()
+        {
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+
+                // Exécuter la requête de sélection
+                string query = "SELECT * FROM ChangeNCE ORDER BY Id DESC  OFFSET @Offset ROWS FETCH NEXT @Limit ROWS ONLY";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Offset", offset3);
+                    command.Parameters.AddWithValue("@Limit", limit3);
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                    DataTable newDataTable = new DataTable();
+                    dataAdapter.Fill(newDataTable);
+
+                    allData3.Merge(newDataTable); // Merge the new data with existing data
+                    dataGridView4.DataSource = allData3;
+                    connection.Close();
+                }
+
+            }
+        }
+
+        private void dataGridView4_Scroll(object sender, ScrollEventArgs e)
+        {
+            if (e.Type == ScrollEventType.SmallIncrement && e.ScrollOrientation == ScrollOrientation.VerticalScroll && e.NewValue >= dataGridView4.Rows.Count - dataGridView4.DisplayedRowCount(true))
+            {
+                int firstDisplayedRowIndex = dataGridView4.FirstDisplayedScrollingRowIndex;
+                offset3 += limit3;
+                LoadData3();
+                dataGridView4.FirstDisplayedScrollingRowIndex = firstDisplayedRowIndex;
+            }
+
         }
     }
 }

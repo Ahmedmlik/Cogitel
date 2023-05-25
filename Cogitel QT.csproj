@@ -155,6 +155,9 @@
     <Compile Include="cogitel.Designer.cs">
       <DependentUpon>cogitel.cs</DependentUpon>
     </Compile>
+    <Compile Include="CogitelDataSet.cs">
+      <DependentUpon>CogitelDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CogitelDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

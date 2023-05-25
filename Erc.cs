@@ -46,7 +46,9 @@ namespace Cogitel_QT
 
         private void Erc_Load(object sender, System.EventArgs e)
         {
-
+            timer1.Interval = 3000;
+            // Démarrer le timer
+            timer1.Start();
 
             textBox14.Text = "Rechercher...";
             textBox14.ForeColor = System.Drawing.Color.Black;
@@ -96,7 +98,44 @@ namespace Cogitel_QT
 
             }
         }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            // Vérifier les nouvelles modifications
+            CheckForChanges();
+        }
+        private DateTime lastCheckDate = DateTime.Now;
+        private void CheckForChanges()
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
 
+                // Récupérer les nouvelles modifications depuis la table de suivi
+                string query = "SELECT * FROM [Cogitel].[dbo].[ChangeNCE] WHERE [Timestamp] > @LastCheckDate AND [Id] = (SELECT MAX([Id]) FROM [Cogitel].[dbo].[ChangeNCE]);";
+
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@LastCheckDate", lastCheckDate); // lastCheckDate est la date de la dernière vérification
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                DataTable changesTable = new DataTable();
+                dataAdapter.Fill(changesTable);
+
+                if (changesTable.Rows.Count > 0)
+                {
+                    allData.Clear();
+
+                    // Restaurer la valeur de offset
+                    offset = 0;
+
+                    // Des modifications ont été détectées, appeler la méthode LoadData
+                    LoadData();
+                }
+
+                // Mettre à jour la date de la dernière vérification avec la date et l'heure actuelles
+                lastCheckDate = DateTime.Now;
+
+                connection.Close();
+            }
+        }
         private void button6_Click(object sender, System.EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
