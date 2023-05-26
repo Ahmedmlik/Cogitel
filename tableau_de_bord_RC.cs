@@ -85,6 +85,11 @@ namespace Cogitel_QT
             public int Annee { get; set; }
             public double SommeCoutGlobal { get; set; }
         }
+        public class QuantiteReclamations
+        {
+            public int Annee { get; set; }
+            public int QuantiteNC { get; set; }
+        }
         public class AnneeReclamations
         {
             public int Annee { get; set; }
@@ -176,12 +181,16 @@ namespace Cogitel_QT
                     comboBox5.ValueMember = "year";
                     // Set the default value to "TOUT"
                     comboBox5.SelectedValue = "TOUT";
-
+                    comboBox6.DataSource = modifiedTableYears;
+                    comboBox6.DisplayMember = "year";
+                    comboBox6.ValueMember = "year";
+                    // Set the default value to "TOUT"
+                    comboBox6.SelectedValue = "TOUT";
 
                 }
                 connection.Close();
             }
-            string query5= "SELECT DISTINCT Nom_et_prénom_du_conducteur_du_défaut FROM NCE";
+            string query5 = "SELECT DISTINCT Nom_et_prénom_du_conducteur_du_défaut FROM NCE";
 
             // Établissez la connexion à la base de données
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -757,7 +766,7 @@ namespace Cogitel_QT
             }
 
             // Ajouter la série au graphique
-            
+
 
             // Définir les propriétés du graphique
             chart5.ChartAreas[0].AxisX.LabelStyle.Interval = 1;
@@ -849,9 +858,124 @@ namespace Cogitel_QT
             chart6.ChartAreas[0].AxisX.LabelStyle.Interval = 1;
             chart6.ChartAreas[0].AxisX.LabelStyle.Angle = -90;
             chart6.ChartAreas[0].AxisX.LabelAutoFitStyle = LabelAutoFitStyles.WordWrap;
-            chart6.ChartAreas[0].AxisY.Title = "Coût global NC";
+            chart6.ChartAreas[0].AxisY.Title = "Coût global NC DT";
             chart6.ChartAreas[0].AxisX.Title = "Année";
             chart6.Refresh();
         }
-    } 
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            string selectedYear = comboBox6.SelectedValue?.ToString();
+            string query = "SELECT YEAR(Date_de_réclamtion) AS Annee, SUM(Quantité_NC_Kg) AS SommeQuantiteNC " +
+                       "FROM NCE ";
+
+            if (selectedYear != "TOUT")
+            {
+                int year;
+                if (int.TryParse(selectedYear, out year))
+                {
+                    query += "WHERE YEAR(Date_de_réclamtion) = @SelectedYear ";
+                }
+                else
+                {
+                    MessageBox.Show("Invalid selected year.");
+                    return;
+                }
+            }
+
+            query += "GROUP BY YEAR(Date_de_réclamtion)";
+            List<QuantiteReclamations> quantiteReclamations = new List<QuantiteReclamations>();
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    if (selectedYear != "TOUT")
+                    {
+                        command.Parameters.AddWithValue("@SelectedYear", selectedYear);
+                    }
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            int year = Convert.ToInt32(reader["Annee"]);
+                            int quantitySum = Convert.ToInt32(reader["SommeQuantiteNC"]);
+
+                            QuantiteReclamations reclamations = new QuantiteReclamations
+                            {
+                                Annee = year,
+                                QuantiteNC = quantitySum
+                            };
+
+                            quantiteReclamations.Add(reclamations);
+                        }
+                    }
+                }
+
+                connection.Close();
+            }
+            quantiteReclamations.Sort((x, y) => x.Annee.CompareTo(y.Annee));
+            chart7.Series[0].Points.Clear();
+            foreach (QuantiteReclamations reclamations in quantiteReclamations)
+            {
+                chart7.Series[0].Points.AddXY(reclamations.Annee, reclamations.QuantiteNC);
+            }
+            chart7.ChartAreas[0].AxisX.LabelStyle.Interval = 1;
+            chart7.ChartAreas[0].AxisX.LabelStyle.Angle = -90;
+            chart7.ChartAreas[0].AxisX.LabelAutoFitStyle = LabelAutoFitStyles.WordWrap;
+            chart7.ChartAreas[0].AxisY.Title = "Quantité non conformes KG";
+            chart7.ChartAreas[0].AxisX.Title = "Année";
+            chart7.Refresh();
+        }
+
+        private void button2_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip toolTip = new System.Windows.Forms.ToolTip();
+            toolTip.SetToolTip(this.button2, "Valider");
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void button2_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
+        }
+
+        private void button3_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip toolTip = new System.Windows.Forms.ToolTip();
+            toolTip.SetToolTip(this.button3, "Valider");
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void button3_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
+        }
+
+        private void button5_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip toolTip = new System.Windows.Forms.ToolTip();
+            toolTip.SetToolTip(this.button5, "Valider");
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void button5_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
+        }
+
+        private void button7_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip toolTip = new System.Windows.Forms.ToolTip();
+            toolTip.SetToolTip(this.button7, "Valider");
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void button7_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
+        }
+    }
 }
