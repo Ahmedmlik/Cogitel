@@ -80,6 +80,11 @@ namespace Cogitel_QT
             public string NomClient { get; set; }
             public int NombreReclamations { get; set; }
         }
+        public class CoutReclamations
+        {
+            public int Annee { get; set; }
+            public double SommeCoutGlobal { get; set; }
+        }
         public class AnneeReclamations
         {
             public int Annee { get; set; }
@@ -166,6 +171,11 @@ namespace Cogitel_QT
                     comboBox4.ValueMember = "year";
                     // Set the default value to "TOUT"
                     comboBox4.SelectedValue = "TOUT";
+                    comboBox5.DataSource = modifiedTableYears;
+                    comboBox5.DisplayMember = "year";
+                    comboBox5.ValueMember = "year";
+                    // Set the default value to "TOUT"
+                    comboBox5.SelectedValue = "TOUT";
 
 
                 }
@@ -757,6 +767,91 @@ namespace Cogitel_QT
             chart5.ChartAreas[0].AxisX.Title = "Conducteur";
             chart5.Refresh();
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            string selectedYear = comboBox5.SelectedValue?.ToString();
+
+            string query = "SELECT YEAR(Date_de_réclamtion) AS Annee, SUM(Coût_globale_de_la_NC_DT) AS SommeCoutGlobal " +
+                           "FROM NCE ";
+
+            if (selectedYear != "TOUT")
+            {
+                int year;
+                if (int.TryParse(selectedYear, out year))
+                {
+                    query += "WHERE YEAR(Date_de_réclamtion) = @SelectedYear ";
+                }
+                else
+                {
+                    // Gérer une valeur d'année sélectionnée invalide
+                    MessageBox.Show("Invalid selected year.");
+                    return;
+                }
+            }
+
+            query += "GROUP BY YEAR(Date_de_réclamtion)";
+
+            List<CoutReclamations> coutReclamations = new List<CoutReclamations>();
+
+            // Établir la connexion à la base de données
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                // Exécuter la requête SQL
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    if (selectedYear != "TOUT")
+                    {
+                        int year;
+                        if (int.TryParse(selectedYear, out year))
+                        {
+                            command.Parameters.AddWithValue("@SelectedYear", year);
+                        }
+                    }
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        // Parcourir les résultats de la requête
+                        while (reader.Read())
+                        {
+                            // Extraire les valeurs du résultat de la requête
+                            int year = Convert.ToInt32(reader["Annee"]);
+                            double cost = Convert.ToDouble(reader["SommeCoutGlobal"]);
+
+                            // Créer un objet CoutReclamations pour stocker les valeurs extraites
+                            CoutReclamations reclamations = new CoutReclamations
+                            {
+                                Annee = year,
+                                SommeCoutGlobal = cost
+                            };
+
+                            // Ajouter l'objet CoutReclamations à la liste des coûts de réclamations
+                            coutReclamations.Add(reclamations);
+                        }
+                    }
+                }
+
+                connection.Close();
+            }
+
+            // Effacer les séries existantes dans le graphique à barres
+            chart6.Series[0].Points.Clear();
+            // Parcourir les coûts de réclamations et ajouter les données au graphique
+            foreach (CoutReclamations reclamations in coutReclamations)
+            {
+                // Ajouter un point de données pour chaque barre du graphique
+                chart6.Series[0].Points.AddXY(reclamations.Annee, reclamations.SommeCoutGlobal);
+            }
+
+            // Définir les propriétés du graphique
+            chart6.ChartAreas[0].AxisX.LabelStyle.Interval = 1;
+            chart6.ChartAreas[0].AxisX.LabelStyle.Angle = -90;
+            chart6.ChartAreas[0].AxisX.LabelAutoFitStyle = LabelAutoFitStyles.WordWrap;
+            chart6.ChartAreas[0].AxisY.Title = "Coût global NC";
+            chart6.ChartAreas[0].AxisX.Title = "Année";
+            chart6.Refresh();
         }
     } 
 }

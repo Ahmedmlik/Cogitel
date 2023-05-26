@@ -58,6 +58,9 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
@@ -94,6 +97,11 @@
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel11 = new System.Windows.Forms.Panel();
             this.chart5 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart6 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -112,6 +120,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart6)).BeginInit();
+            this.panel13.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -854,11 +864,98 @@
             this.chart5.TabIndex = 45;
             this.chart5.Text = "chart5";
             // 
+            // chart6
+            // 
+            this.chart6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(243)))));
+            chartArea6.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
+            chartArea6.Area3DStyle.Rotation = 10;
+            chartArea6.Area3DStyle.WallWidth = 10;
+            chartArea6.BackColor = System.Drawing.SystemColors.Control;
+            chartArea6.Name = "ChartArea2";
+            this.chart6.ChartAreas.Add(chartArea6);
+            this.chart6.Dock = System.Windows.Forms.DockStyle.Top;
+            legend6.BackColor = System.Drawing.Color.Black;
+            legend6.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend6.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend6.ForeColor = System.Drawing.Color.White;
+            legend6.IsTextAutoFit = false;
+            legend6.Name = "Legend2";
+            this.chart6.Legends.Add(legend6);
+            this.chart6.Location = new System.Drawing.Point(0, 2345);
+            this.chart6.Name = "chart6";
+            series6.ChartArea = "ChartArea2";
+            series6.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series6.Legend = "Legend2";
+            series6.LegendText = "Client / Défaut %";
+            series6.Name = "Series1";
+            this.chart6.Series.Add(series6);
+            this.chart6.Size = new System.Drawing.Size(1128, 300);
+            this.chart6.TabIndex = 12;
+            this.chart6.TabStop = false;
+            this.chart6.Text = "Client/nombre de réclamations";
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.DarkGray;
+            this.panel13.Controls.Add(this.button5);
+            this.panel13.Controls.Add(this.comboBox5);
+            this.panel13.Controls.Add(this.label6);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel13.Location = new System.Drawing.Point(0, 2313);
+            this.panel13.Margin = new System.Windows.Forms.Padding(0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(1128, 32);
+            this.panel13.TabIndex = 11;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.DarkGray;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button5.Image = global::Cogitel_QT.Properties.Resources.checked__1_;
+            this.button5.Location = new System.Drawing.Point(622, 0);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(102, 32);
+            this.button5.TabIndex = 2;
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.BackColor = System.Drawing.Color.Silver;
+            this.comboBox5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox5.DropDownWidth = 150;
+            this.comboBox5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.IntegralHeight = false;
+            this.comboBox5.Location = new System.Drawing.Point(121, 0);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(501, 32);
+            this.comboBox5.TabIndex = 1;
+            this.comboBox5.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label6.Font = new System.Drawing.Font("Arial Narrow", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(0, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(121, 33);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "L\'année : ";
+            // 
             // tableau_de_bord_RC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
+            this.AutoScrollMargin = new System.Drawing.Size(0, 100);
             this.ClientSize = new System.Drawing.Size(1149, 900);
+            this.Controls.Add(this.chart6);
+            this.Controls.Add(this.panel13);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -898,6 +995,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             this.panel11.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart6)).EndInit();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -940,5 +1040,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart6;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.Label label6;
     }
 }
