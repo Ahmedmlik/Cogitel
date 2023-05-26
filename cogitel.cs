@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
