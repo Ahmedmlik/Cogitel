@@ -219,8 +219,6 @@ namespace Cogitel_QT
             {
                 connection.Open();
 
-
-                
                     // Exécuter la requête de sélection
                     string query = "SELECT * FROM PrixPF ORDER BY id_pricpf DESC  OFFSET @Offset ROWS FETCH NEXT @Limit ROWS ONLY";
                     using (SqlCommand command = new SqlCommand(query, connection))
@@ -233,9 +231,9 @@ namespace Cogitel_QT
 
                         allData.Merge(newDataTable); // Merge the new data with existing data
                         dataGridView1.DataSource = allData;
-                        connection.Close();
+                    
                     }
-               
+                connection.Close();
             }
         }
         private void timer1_Tick(object sender, EventArgs e)

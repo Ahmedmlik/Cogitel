@@ -205,13 +205,15 @@ namespace Cogitel_QT
 
                         allData.Merge(newDataTable); // Merge the new data with existing data
                         dataGridView1.DataSource = allData;
-                        connection.Close();
+                      
                     }
+
                 }
                 else
                 {
                     MessageBox.Show("Tous les enregistrements ont été récupérés.");
                 }
+                connection.Close();
             }
         }
 

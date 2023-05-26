@@ -250,7 +250,7 @@ namespace Cogitel_QT
         private int offset = 0;
         private void LoadData()
         {
-           
+
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -282,9 +282,9 @@ namespace Cogitel_QT
                 {
                     MessageBox.Show("Tous les enregistrements ont été récupérés.");
                 }
-            } }
+            }
 
-
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             if (textBox1.Text == "Saisie DOCUMENT" || textBox2.Text == "Saisie OF" || textBox3.Text == "Saisie CATEG" || textBox4.Text == "Saisie CLIENT" || textBox5.Text == "Saisie FAMILLE" || textBox6.Text == "Saisie REF" || textBox7.Text == "Saisie DESIGNTION" || textBox8.Text == "Saisie GRAMMAGE" || textBox9.Text == "Saisie LT" || textBox10.Text == "Saisie LD" || textBox11.Text == "Saisie Nb Poses" || textBox12.Text == "Saisie Nb cylindres" || textBox13.Text == "Saisie PRIX DE VENTE" ||
