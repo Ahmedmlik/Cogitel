@@ -309,6 +309,8 @@
             this.button19.Name = "button19";
             this.button19.UseVisualStyleBackColor = true;
             this.button19.Click += new System.EventHandler(this.button19_Click);
+            this.button19.MouseLeave += new System.EventHandler(this.button19_MouseLeave);
+            this.button19.MouseHover += new System.EventHandler(this.button19_MouseHover);
             // 
             // button18
             // 

@@ -501,6 +501,8 @@ namespace Cogitel_QT
 
         private void Erc_MouseHover(object sender, EventArgs e)
         {
+            System.Windows.Forms.ToolTip toolTip = new System.Windows.Forms.ToolTip();
+            toolTip.SetToolTip(this.Erc, "ETAT DES RÉCLAMATIONS CLIENTS");
             this.Cursor = Cursors.Hand;
         }
 
@@ -511,6 +513,8 @@ namespace Cogitel_QT
 
         private void button9_MouseHover(object sender, EventArgs e)
         {
+            System.Windows.Forms.ToolTip toolTip = new System.Windows.Forms.ToolTip();
+            toolTip.SetToolTip(this.button9, "Tableau de bord des réclamations clients");
             this.Cursor = Cursors.Hand;
         }
 
@@ -521,6 +525,8 @@ namespace Cogitel_QT
 
         private void button11_MouseHover(object sender, EventArgs e)
         {
+            System.Windows.Forms.ToolTip toolTip = new System.Windows.Forms.ToolTip();
+            toolTip.SetToolTip(this.button11, "État des réclamations fournisseurs");
             this.Cursor = Cursors.Hand;
         }
 
@@ -676,7 +682,10 @@ namespace Cogitel_QT
         }
         private void button18_MouseHover(object sender, EventArgs e)
         {
+            System.Windows.Forms.ToolTip toolTip = new System.Windows.Forms.ToolTip();
+            toolTip.SetToolTip(this.button18, "Notification");
             this.Cursor = Cursors.Hand;
+           
         }
 
         private void button18_MouseLeave(object sender, EventArgs e)
@@ -715,6 +724,18 @@ namespace Cogitel_QT
                 isFormOpen1 = false;
             }
 
+        }
+
+        private void button19_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip toolTip = new System.Windows.Forms.ToolTip();
+            toolTip.SetToolTip(this.button19, "Historique");
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void button19_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
         }
     }
     
