@@ -5,6 +5,8 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Linq;
 using System.Configuration;
+using System.Drawing;
+
 
 
 
@@ -49,7 +51,6 @@ namespace Cogitel_QT
             timer1.Interval = 3000;
             // Démarrer le timer
             timer1.Start();
-
             textBox14.Text = "Rechercher...";
             textBox14.ForeColor = System.Drawing.Color.Black;
             LoadData();
@@ -150,7 +151,7 @@ namespace Cogitel_QT
         }
         public readonly DataTable allData = new DataTable();
         public readonly int limit = 25;
-        private int offset = 0;
+        public int offset = 0;
         public void LoadData()
         {
 
@@ -185,7 +186,7 @@ namespace Cogitel_QT
 
                         allData.Merge(newDataTable); // Merge the new data with existing data
                         dataGridView1.DataSource = allData;
-
+                        dataGridView1.ClearSelection();
                         connection.Close();
                     }
                 }
@@ -594,6 +595,20 @@ namespace Cogitel_QT
             this.Cursor = Cursors.Arrow;
         }
 
+        private void dataGridView1_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
 
+                // Vérifier si la colonne de la date de réception client est vide
+                if (string.IsNullOrEmpty(row.Cells["dateréponseclientDataGridViewTextBoxColumn"].Value?.ToString()))
+                {
+                    // Colorer toute la ligne en rouge
+                    row.DefaultCellStyle.BackColor = Color.Red;
+                    row.DefaultCellStyle.ForeColor = Color.White;
+                }
+            }
+        }
     }
 }

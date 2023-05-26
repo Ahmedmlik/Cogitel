@@ -116,13 +116,22 @@ namespace Cogitel_QT
         
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
-
+            string disableTriggerQuery = "DISABLE TRIGGER [dbo].[DataChangeTriggerNCE] ON [dbo].[NCE];";
+            using (SqlCommand disableTriggerCommand = new SqlCommand(disableTriggerQuery, connection))
+            {
+                disableTriggerCommand.ExecuteNonQuery();
+            }
             // Requête SQL pour mettre à jour la colonne
             string sqlQuery = "UPDATE NCE SET F70 = DATEDIFF(day, Date_de_réclamtion, GETDATE())";
-
-            // Exécution de la requête SQL
             SqlCommand command = new SqlCommand(sqlQuery, connection);
             int rowsAffected = command.ExecuteNonQuery();
+            string enableTriggerQuery = "ENABLE TRIGGER [dbo].[DataChangeTriggerNCE] ON [dbo].[NCE];";
+            using (SqlCommand enableTriggerCommand = new SqlCommand(enableTriggerQuery, connection))
+            {
+                enableTriggerCommand.ExecuteNonQuery();
+            }
+            // Exécution de la requête SQL
+            
             string sqlQuery3 = "SELECT LastEmailSent FROM EmailConfig WHERE id_email = 1";
             SqlCommand command3 = new SqlCommand(sqlQuery3, connection);
             object result = command3.ExecuteScalar();

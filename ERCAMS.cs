@@ -159,6 +159,7 @@ namespace Cogitel_QT
             command.ExecuteNonQuery();
             // Fermeture de la connexion
             connection.Close();
+            Erc.offset = 0;
             Erc.allData.Clear();
             Erc.LoadData();
             this.Close();
@@ -1356,8 +1357,7 @@ namespace Cogitel_QT
 
                 // Fermeture de la connexion
                 connection.Close();
-                Erc.allData.Clear();
-                Erc.LoadData();
+               
                 this.Close();
 
             }
