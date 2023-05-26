@@ -1,5 +1,4 @@
-﻿using DocumentFormat.OpenXml.Drawing.Diagrams;
-using DocumentFormat.OpenXml.VariantTypes;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -159,9 +158,6 @@ namespace Cogitel_QT
             command.ExecuteNonQuery();
             // Fermeture de la connexion
             connection.Close();
-            Erc.offset = 0;
-            Erc.allData.Clear();
-            Erc.LoadData();
             this.Close();
         }
 
