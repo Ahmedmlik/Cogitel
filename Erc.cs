@@ -358,6 +358,7 @@ namespace Cogitel_QT
             textBox14.Text = "Rechercher..."; // réinitialise le contenu du texte de recherche
             textBox14.ForeColor = System.Drawing.Color.Black;
             dataGridView1.DataSource = allData;
+            dataGridView1.ClearSelection();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -374,6 +375,7 @@ namespace Cogitel_QT
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);
                     dataGridView1.DataSource = dt;
+                    dataGridView1.ClearSelection();
                 }
                 connection.Close();
             }
@@ -385,6 +387,7 @@ namespace Cogitel_QT
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);
                     dataGridView1.DataSource = dt;
+                    dataGridView1.ClearSelection();
                 }
 
                 connection.Close();

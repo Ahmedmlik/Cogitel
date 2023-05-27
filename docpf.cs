@@ -996,6 +996,7 @@ namespace Cogitel_QT
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 dataGridView1.DataSource = dt;
+               
             }
 
             connection.Close();
@@ -1006,6 +1007,7 @@ namespace Cogitel_QT
             textBox14.Text = "Rechercher..."; // réinitialise le contenu du texte de recherche
             textBox14.ForeColor = Color.Black;
             dataGridView1.DataSource = allData;
+           
 
         }
 
