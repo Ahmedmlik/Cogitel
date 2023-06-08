@@ -87,6 +87,7 @@ namespace Cogitel_QT
             this.cogitelDataSet = new Cogitel_QT.CogitelDataSet();
             this.pFTableAdapter = new Cogitel_QT.CogitelDataSetTableAdapters.PFTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.id_pf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dOCUMENTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nOFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -101,7 +102,6 @@ namespace Cogitel_QT
             this.nbPosesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nbcylindresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRIXDEVENTEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
@@ -891,6 +891,10 @@ namespace Cogitel_QT
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             this.dataGridView1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dataGridView1_Scroll);
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // id_pf
             // 
             this.id_pf.DataPropertyName = "id_pf";
@@ -899,16 +903,16 @@ namespace Cogitel_QT
             this.id_pf.Name = "id_pf";
             this.id_pf.ReadOnly = true;
             this.id_pf.Visible = false;
-            this.id_pf.Width = 73;
+            this.id_pf.Width = 69;
             // 
             // dOCUMENTDataGridViewTextBoxColumn
             // 
             this.dOCUMENTDataGridViewTextBoxColumn.DataPropertyName = "DOCUMENT";
-            this.dOCUMENTDataGridViewTextBoxColumn.HeaderText = "DOCUMENT";
+            this.dOCUMENTDataGridViewTextBoxColumn.HeaderText = "N°de doc";
             this.dOCUMENTDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dOCUMENTDataGridViewTextBoxColumn.Name = "dOCUMENTDataGridViewTextBoxColumn";
             this.dOCUMENTDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dOCUMENTDataGridViewTextBoxColumn.Width = 176;
+            this.dOCUMENTDataGridViewTextBoxColumn.Width = 139;
             // 
             // nOFDataGridViewTextBoxColumn
             // 
@@ -1018,10 +1022,6 @@ namespace Cogitel_QT
             this.pRIXDEVENTEDataGridViewTextBoxColumn.ReadOnly = true;
             this.pRIXDEVENTEDataGridViewTextBoxColumn.Width = 230;
             // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // docpf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 31F);
@@ -1123,6 +1123,12 @@ namespace Cogitel_QT
         private Button button2;
         private Label label14;
         private DataGridView dataGridView1;
+        private Button button7;
+        private Button button5;
+        private TextBox textBox14;
+        private Panel panel5;
+        private Panel panel4;
+        private Timer timer1;
         private DataGridViewTextBoxColumn id_pf;
         private DataGridViewTextBoxColumn dOCUMENTDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn nOFDataGridViewTextBoxColumn;
@@ -1137,11 +1143,5 @@ namespace Cogitel_QT
         private DataGridViewTextBoxColumn nbPosesDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn nbcylindresDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn pRIXDEVENTEDataGridViewTextBoxColumn;
-        private Button button7;
-        private Button button5;
-        private TextBox textBox14;
-        private Panel panel5;
-        private Panel panel4;
-        private Timer timer1;
     }
 }
